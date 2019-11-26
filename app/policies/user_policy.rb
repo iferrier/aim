@@ -5,6 +5,10 @@ class UserPolicy < ApplicationPolicy
     end
   end
 
+  def update?
+    true
+  end
+
   def show?
     true
   end
