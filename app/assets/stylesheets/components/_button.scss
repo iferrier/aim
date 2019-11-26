@@ -1,5 +1,7 @@
 
 
+
+// More-button
 .more-button {
 width: 142px;
 height: 55px;
@@ -11,15 +13,16 @@ letter-spacing: 0.03em;
 text-indent: 1px;
 padding: 13px 27px;
 color: grey;
+
 }
 
 .more-button:hover {
-color: #000000;
-text-decoration: none;
+  color: #000000;
+  text-decoration: none;
 }
 
 
-//
+// all-campaign-button
 .all-campaign-button {
 width: 145px;
 height: 70px;
@@ -31,15 +34,12 @@ letter-spacing: 0.03em;
 text-indent: 1px;
 padding: 13px 27px;
 color: grey;
-
 }
 
 .all-campaign-button:hover {
   color: #000000;
   text-decoration: none;
 }
-
-
 
 
 
