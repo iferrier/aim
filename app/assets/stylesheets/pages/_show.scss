@@ -1,0 +1,49 @@
+.user-card {
+  width: 454px;
+  height: 38px;
+  margin: 100px;
+  width: 300px;
+  height: 400px;
+  background: #FFFFFF;
+  border: 0.5px solid #c1baba;
+  box-sizing: border-box;
+  border-radius: 1ßpx;
+
+}
+
+.user-image {
+  width: 150px;
+  margin: 0 auto;
+}
+
+.user-info {
+  font-family: Roboto;
+  font-size: 15px;
+  line-height: 27px;
+  margin: 45px;
+}
+
+p {
+  font-weight: 300;
+}
+
+.user-story {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-user-card {
+  border-radius: 50px
+}
+
+.user-about {
+  margin-left: 5px;
+  max-width: 400px;
+  height: 40px;
+}
+
+.container {
+margin: 0 auto;
+}
+
+
