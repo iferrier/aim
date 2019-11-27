@@ -1,5 +1,5 @@
 
-.card-trip {
+.card-campaign {
   background: white;
   width: 333px;
   margin:50px;
@@ -9,11 +9,12 @@
   text-indent: 1px;
 }
 
-.card-trip-infos {
+.card-campaign-infos {
   padding:20px 0 20px 20px;
+  width: 333px;
 }
 
-.card-trip h2 {
+.card-campaign h2 {
   font-weight: bold;
   font-size: 24px;
   line-height: 124.9%;
@@ -21,13 +22,17 @@
   text-indent: 1px;
 }
 
-.card-trip .descript {
+.card-campaign .descript {
   font-family: "Crimson Text";
   line-height: 124.9%;
   letter-spacing: -0.02em;
   text-indent: 1px;
 }
 
-.card-trip .date {
+.card-campaign .date {
   font-weight: bold;
+}
+
+.join  {
+  text-decoration: underline;
 }
