@@ -37,6 +37,18 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  position: relative;
+  .joined-button {
+    background-color: #1EDD88;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 3px;
+    opacity: .7;
+    font-size: 12px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
 }
 
 #index-card-infos {
