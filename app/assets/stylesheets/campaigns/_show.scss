@@ -1,22 +1,39 @@
-// overall styling
-
-
 // banner styling
 .header {
+  display: flex;
+  margin: 50px auto;
+  border: 0.5px solid #000000;
+  width: 1000px;
+  position: relative;
   .header-content {
+    // padding: 50px 0;
+    margin-top: 75px;
+    margin-left:50px;
     h1 {
       font-family: Roboto;
       font-style: normal;
       font-weight: bold;
-      font-size: 24px;
+      font-size: 30px;
+      padding-bottom: 25px;
     }
-    p {
-      font-size: 22px;
+    h2 {
+      font-size: 18px;
+      max-lines: 2;
     }
-  padding: 35px 20px;
   }
-  display: flex;
-  margin: 30px;
-  border: 0.5px solid #000000;
+  .campaign-picture {
+    width: 50%;
+  }
+  .brand-logo {
+  position: absolute;
+  right: 5%;
+  top: 10%
+  }
 }
 
+// content styling
+.content {
+  width: 750px;
+  margin: 10px auto;
+  padding-top: 40px;
+}

@@ -1,12 +1,20 @@
+<!-- Banner -->
+
 <div class="header">
-  <%= cl_image_tag(@campaign.campaign_picture,
+  <%= cl_image_tag(@campaign.campaign_picture, class: 'campaign-picture',
       width: 400, height: 300, crop: :fill) %>
   <div class="header-content">
     <h1><%= @campaign.title %></h1>
-    <p> <%= @campaign.campaign_description %></p>
+    <h2> <%= truncate(@campaign.campaign_description, length: 45) %></h2>
     <p><%= @campaign.launch_date %></p>
+    <br>
+    <p>There will be the participants avatars here</p>
   </div>
-  <%= cl_image_tag(@campaign.brand_logo,
-      width: 40, height: 30, crop: :fill) %>
+  <%= cl_image_tag(@campaign.brand_logo, class: 'brand-logo',
+      width: 80, crop: :scale) %>
 </div>
 
+<!-- Content -->
+<div class="content">
+  <p><%= @campaign.campaign_description  %></p>
+</div>
