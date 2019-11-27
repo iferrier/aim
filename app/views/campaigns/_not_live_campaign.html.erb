@@ -1,1 +1,12 @@
-<p>not live campaign</p>
+<div class="header">
+  <%= cl_image_tag(@campaign.campaign_picture,
+      width: 400, height: 300, crop: :fill) %>
+  <div class="header-content">
+    <h1><%= @campaign.title %></h1>
+    <p> <%= @campaign.campaign_description %></p>
+    <p><%= @campaign.launch_date %></p>
+  </div>
+  <%= cl_image_tag(@campaign.brand_logo,
+      width: 40, height: 30, crop: :fill) %>
+</div>
+

@@ -32,6 +32,6 @@ class CampaignsController < ApplicationController
   def campaign_params
     params.require(:campaign)
           .permit(:title, :campaign_description, :cause, :campaign_picture,
-                  :location, :organisation, :launch_date, :live)
+                  :location, :organisation, :launch_date, :live, :brand_logo)
   end
 end
