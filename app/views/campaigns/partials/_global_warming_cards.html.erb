@@ -1,0 +1,24 @@
+<div id="cause_container">
+  <!--Iterate over campaigns-->
+  <% @campaigns.each do |campaign|%>
+    <div id="index-card">
+      <!--campaign image-->
+      <%= image_tag("https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?v=1530129081") %>
+      <!--campaign infos-->
+      <div id="index-card-infos">
+        <div>
+          <h2><%= campaign.title %></h2>
+          <p><%= campaign.campaign_description %></p>
+          <p>01.01.1901</p>
+        </div>
+        <div id="campaign-users">
+          <% campaign.users.each do |user| %>
+            <%= cl_image_tag(user.picture, class: 'avatar') %>
+          <% end %>
+        </div>
+        <!-- link to participate-->
+        <%= link_to 'Join', campaign_selections_path(campaign), method: 'post' %>
+      </div>
+    </div>
+  <% end %>
+</div>
