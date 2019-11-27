@@ -3,7 +3,7 @@
   <% @lgbtq_campaigns.each do |campaign|%>
     <div id="index-card">
       <!--campaign image-->
-      <%= image_tag("https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?v=1530129081") %>
+      <%= cl_image_tag(campaign.campaign_picture) %>
       <% if campaign.users.include?(current_user) %>
         <p class="joined-button">Joined</p>
       <% end %>
@@ -16,7 +16,7 @@
         </div>
         <div id="campaign-users">
           <% campaign.users.each do |user| %>
-            <%= image_tag("https://www.changingourworld.com/wp-content/uploads/2018/01/avatar-placeholder.png", class: "avatar") %>
+            <%= link_to cl_image_tag(user.picture, class: "avatar"), user_path(user) %>
           <% end %>
         </div>
         <!-- link to participate-->
