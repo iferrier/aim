@@ -1,12 +1,13 @@
 <!-- Banner -->
-
 <div class="header">
-  <%= cl_image_tag(@campaign.campaign_picture, class: 'campaign-picture',
-      width: 400, height: 300, crop: :fill) %>
+  <div class="d-flex">
+    <%= cl_image_tag(@campaign.campaign_picture, class: 'campaign-picture',
+      crop: :scale) %>
+  </div>
   <div class="header-content">
     <h1><%= @campaign.title %></h1>
-    <h2> <%= truncate(@campaign.campaign_description, length: 45) %></h2>
-    <p><%= @campaign.launch_date %></p>
+    <h2> <%= truncate(@campaign.campaign_description, length: 100) %></h2>
+    <p><%= @campaign.launch_date.strftime("%d. %B %Y") %></p>
     <br>
     <p>There will be the participants avatars here</p>
   </div>
@@ -15,6 +16,9 @@
 </div>
 
 <!-- Content -->
+<div class="join-button">
+  <a href="#" class="more-button more-button:hover">Join now!</a>
+</div>
 <div class="content">
   <p><%= @campaign.campaign_description  %></p>
 </div>

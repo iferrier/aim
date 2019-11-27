@@ -4,11 +4,12 @@
   margin: 50px auto;
   border: 0.5px solid #000000;
   width: 1000px;
+  height: 400px;
   position: relative;
   .header-content {
-    // padding: 50px 0;
     margin-top: 75px;
     margin-left:50px;
+    padding-right: 25px;
     h1 {
       font-family: Roboto;
       font-style: normal;
@@ -19,10 +20,18 @@
     h2 {
       font-size: 18px;
       max-lines: 2;
+      height: 100px;
+    }
+    p{
+      text-decoration: underline;
     }
   }
   .campaign-picture {
-    width: 50%;
+    width: 500px;
+    height:99.9%;
+    // position: absolute;
+    // left: -0.5px;
+    // top: -0.5px;
   }
   .brand-logo {
   position: absolute;
@@ -36,4 +45,10 @@
   width: 750px;
   margin: 10px auto;
   padding-top: 40px;
+}
+
+.join-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
