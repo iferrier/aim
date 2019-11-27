@@ -4,9 +4,9 @@ class SelectionsController < ApplicationController
     @selection.user = current_user
     @selection.campaign = Campaign.find(params[:campaign_id])
     if @selection.save
-      redirect_to campaign_path(@selection.campaign)
-    else
       redirect_to campaigns_path
+    else
+      redirect_to root_path
     end
     authorize @selection
   end
