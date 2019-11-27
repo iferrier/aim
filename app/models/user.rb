@@ -7,5 +7,6 @@ class User < ApplicationRecord
   mount_uploader :picture, PhotoUploader
 
   has_many :comments
-
+  has_many :selections
+  has_many :campaigns, through: :selections
 end
