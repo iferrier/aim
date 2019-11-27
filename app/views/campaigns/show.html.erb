@@ -1,0 +1,5 @@
+<% if @campaign.live %>
+  <%= render 'live_campaign' %>
+<% else %>
+  <%= render 'not_live_campaign' %>
+<% end %>
