@@ -5,7 +5,7 @@
       <!--campaign image-->
       <%= image_tag("https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?v=1530129081") %>
       <% if campaign.users.include?(current_user) %>
-        <p class="btn btn-success" class="joined-button">Joined</p>
+        <p class="joined-button">Joined</p>
       <% end %>
       <!--campaign infos-->
       <div id="index-card-infos">
@@ -20,7 +20,11 @@
           <% end %>
         </div>
         <!-- link to participate-->
-        <%= link_to 'Join', campaign_selections_path(campaign), method: 'post' %>
+        <% if campaign.users.include?(current_user) %>
+          <%= link_to 'TODO Remove link', campaigns_path %>
+        <% else %>
+          <%= link_to 'Join', campaign_selections_path(campaign), method: 'post' %>
+        <% end %>
       </div>
     </div>
   <% end %>
