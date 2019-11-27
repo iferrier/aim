@@ -5,7 +5,7 @@
   <!--Featured campaign description-->
   <div id="featured_campaign_text">
     <h1>
-      <%= link_to @featured_campaign.title.upcase, root_path %>
+      <%= link_to @featured_campaign.title.upcase, campaign_path(@featured_campaign) %>
     </h1>
     <p>
       <%= @featured_campaign.campaign_description %>
@@ -29,7 +29,7 @@
       <!--campaign infos-->
       <div id="index-card-infos">
         <div>
-          <h2><%= campaign.title %></h2>
+          <h2><%= link_to campaign.title, campaign_path(campaign) %></h2>
           <p><%= campaign.campaign_description %></p>
           <p>01.01.1901</p>
         </div>
@@ -53,7 +53,7 @@
       <%= image_tag("https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?v=1530129081") %>
       <div id="index-card-infos">
         <div>
-          <h2><%= campaign.title %></h2>
+          <h2><%= link_to campaign.title, campaign_path(campaign) %></h2>
           <p><%= campaign.campaign_description %></p>
           <p>01.01.1901</p>
         </div>
@@ -76,7 +76,7 @@
       <%= image_tag("https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?v=1530129081") %>
       <div id="index-card-infos">
         <div>
-          <h2><%= campaign.title %></h2>
+          <h2><%= link_to campaign.title, campaign_path(campaign) %></h2>
           <p><%= campaign.campaign_description %></p>
           <p>01.01.1901</p>
         </div>
