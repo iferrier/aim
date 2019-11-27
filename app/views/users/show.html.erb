@@ -1,4 +1,15 @@
 <h1>Test</h1>
-<%= link_to 'home', root_path %>
-<%= @user.email  %>
+
+<%= simple_form_for(@user) do |f| %>
+  <%= f.input :picture %>
+  <%= f.input :picture_cache, as: :hidden %>
+  <%= f.submit %>
+<% end %>
+
+<%= cl_image_tag(@user.picture,
+      width: 150, height: 150, crop: :thumb, gravity: :face) %>
+
 <br>
+
+<%= link_to 'home', root_path %>
+
