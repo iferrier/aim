@@ -5,3 +5,20 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+puts "Creating campaigns..."
+
+Campaign.create([
+  {
+    title:
+    campaign_description:
+    campaign_picture:
+    cause:
+    location:
+    organisation:
+    launch_date:
+    live:
+  }
+])
+
+puts "Finished!"
