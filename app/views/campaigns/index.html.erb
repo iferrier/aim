@@ -1,1 +1,88 @@
-<h1>This is the campaigns page!</h1>
+<!--Featured campaign-->
+<div id="featured_campaign">
+  <!--Featured campaign image-->
+  <%= image_tag(@featured_campaign.campaign_picture) %>
+  <!--Featured campaign description-->
+  <div id="featured_campaign_text">
+    <h1>
+      <%= link_to @featured_campaign.title.upcase, root_path %>
+    </h1>
+    <p>
+      <%= @featured_campaign.campaign_description %>
+    </p>
+  </div>
+</div>
+
+<!--Other campaigns-->
+
+<!--Global warming-->
+<div class="title_container">
+  <!--CAUSE-->
+  <h2>GLOBAL WARMING</h2>
+</div>
+<div id="cause_container">
+  <!--Iterate over campaigns-->
+  <% @campaigns.each do |campaign|%>
+    <div id="index-card">
+      <!--campaign image-->
+      <%= image_tag(campaign.campaign_picture) %>
+      <!--campaign infos-->
+      <div id="index-card-infos">
+        <div>
+          <h2><%= campaign.title %></h2>
+          <p><%= campaign.campaign_description %></p>
+          <p>01.01.1901</p>
+        </div>
+        <p>TODO: avatars of participants</p>
+        <!-- link to participate-->
+        <%= link_to 'Join', root_path %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+
+<!--LGBTQ-->
+
+<div class="title_container">
+  <h2>LGBTQ</h2>
+</div>
+<div id="cause_container">
+  <% @campaigns.each do |campaign|%>
+    <div id="index-card">
+      <%= image_tag(campaign.campaign_picture) %>
+      <div id="index-card-infos">
+        <div>
+          <h2><%= campaign.title %></h2>
+          <p><%= campaign.campaign_description %></p>
+          <p>01.01.1901</p>
+        </div>
+        <p>TODO: avatars of participants</p>
+        <%= link_to 'Join', root_path %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+
+<!--Children Rights-->
+
+<div class="title_container">
+  <h2>CHILDREN RIGHTS</h2>
+</div>
+<div id="cause_container">
+  <% @campaigns.each do |campaign|%>
+    <div id="index-card">
+      <%= image_tag(campaign.campaign_picture) %>
+      <div id="index-card-infos">
+        <div>
+          <h2><%= campaign.title %></h2>
+          <p><%= campaign.campaign_description %></p>
+          <p>01.01.1901</p>
+        </div>
+        <p>TODO: avatars of participants</p>
+        <%= link_to 'Join', root_path %>
+      </div>
+    </div>
+  <% end %>
+</div>
