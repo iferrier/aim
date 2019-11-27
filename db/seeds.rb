@@ -8,17 +8,6 @@
 
 puts "Creating campaigns..."
 
-Campaign.create([
-  {
-    title:
-    campaign_description:
-    campaign_picture:
-    cause:
-    location:
-    organisation:
-    launch_date:
-    live:
-  }
-])
+
 
 puts "Finished!"
