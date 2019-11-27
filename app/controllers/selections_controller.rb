@@ -1,5 +1,4 @@
 class SelectionsController < ApplicationController
-
   def create
     @selection = Selection.new
     @selection.user = current_user
