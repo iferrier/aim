@@ -1,1 +1,12 @@
-<h1>This is the campaigns page!</h1>
+<div id="featured_campaign">
+  <%= image_tag(@featured_campaign.campaign_picture) %>
+  <div id="featured_campaign_text">
+    <h1>
+      <%= link_to @featured_campaign.title.upcase, root_path %>
+    </h1>
+    <p>
+      <%= @featured_campaign.campaign_description %>
+    </p>
+  </div>
+</div>
+

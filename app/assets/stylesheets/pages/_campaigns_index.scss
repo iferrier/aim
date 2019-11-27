@@ -1,0 +1,18 @@
+#featured_campaign {
+  display: flex;
+  padding: 120px 0;
+  width: 80vw;
+  margin: auto;
+}
+
+#featured_campaign_text {
+  padding-left: 50px;
+  padding-top: 50px;
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  a:hover {
+    color: black;
+  }
+}
