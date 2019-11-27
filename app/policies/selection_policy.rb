@@ -5,7 +5,7 @@ class SelectionPolicy < ApplicationPolicy
     end
   end
 
-  def create
-    true
+  def create?
+    return true
   end
 end
