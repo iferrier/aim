@@ -8,23 +8,27 @@
 
 .profil, .login, .aim {
   display:flex;
-  margin: -19px 0px;
+  margin:-18px -.5px;
   padding: 18px 55px;
   border:solid .5px black;
-  // text-decoration: none;
-  // color:black;
 }
 
 .aim {
   font-weight: 600px;
   font-size:40px;
   border: none;
-  margin: -18px 240px;
+  margin: -18px auto;
 }
 
-.profil, .login, .aim:hover{
-  // text-decoration: none;
-  // color:black;
+
+a {
+  text-decoration: none;
+  color:black;
+}
+
+a:hover{
+  text-decoration: none;
+  color:blue;
 }
 
 
