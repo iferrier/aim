@@ -1,1 +1,8 @@
 <h1>test</h1>
+
+
+<% if @campaign.live %>
+  <%= render 'live_campaign' %>
+<% else %>
+  <%= render 'not_live_campaign' %>
+<% end %>
