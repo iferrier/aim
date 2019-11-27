@@ -1,0 +1,14 @@
+<h1>Internal View for creating campaigns</h1>
+<%= simple_form_for(@campaign) do |f| %>
+<%= f.input :title %>
+<%= f.input :campaign_description %>
+<%= f.input :cause, collection: ['Global Warming', 'LGBT', 'Crowdfunding'] %>
+<%= f.input :location %>
+<%= f.input :organisation %>
+<%= f.input :launch_date %>
+<%= f.input :campaign_picture %>
+<%= f.input :campaign_picture_cache, as: :hidden %>
+<%= f.input :live %>
+<%= f.submit %>
+<% end %>
+
