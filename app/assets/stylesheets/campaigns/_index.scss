@@ -3,6 +3,14 @@
   padding: 120px 0;
   width: 80vw;
   margin: auto;
+  a {
+    width: 40%;
+  }
+  img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
 }
 
 #featured_campaign_text {
@@ -19,8 +27,8 @@
 
 #cause_container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
   width: 80vw;
   margin: auto;
 }
@@ -35,21 +43,22 @@
 
 #index-card {
   position: relative;
+  margin: 0 auto;
 }
 
-.joined-button {
-    background-color: #1EDD88;
+.live-flag {
+    background-color: white;
     color: black;
     padding: 5px 10px;
     border-radius: 3px;
-    opacity: .7;
+    opacity: .5;
     font-size: 12px;
     position: absolute;
     top: 30px;
     right: 30px;
 }
 
-  .remove-link {
+  .index-card-btn {
     border: .5px solid black;
     padding: 5px 10px;
     border-radius: 3px;
