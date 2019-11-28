@@ -30,6 +30,7 @@ class CampaignsController < ApplicationController
   def update
     set_campaign
     @campaign.update(campaign_params)
+    redirect_to campaign_path(@campaign)
   end
 
   def show
