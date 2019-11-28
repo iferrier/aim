@@ -3,5 +3,61 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
   width: 80vw;
-  margin: auto;
+  margin: 0px auto 100px auto;
 }
+
+.user-card {
+  margin: 30px 50px 0px 0px;
+  width: 50%;
+  border: 0.5px solid #c1baba;
+  border-radius: 1px;
+  padding: 40px 40px;
+}
+
+.user-info {
+  font-family: Roboto;
+  font-size: 15px;
+  line-height: 27px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 30px;
+}
+
+p {
+  font-weight: 300;
+}
+
+.user-story {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.user-image {
+  text-align: center;
+}
+
+.avatar-user-card {
+  border-radius: 50%;
+}
+
+.user-about {
+  margin-left: 5px;
+  max-width: 400px;
+  height: 40px;
+}
+
+.share-link {
+  border: .5px solid black;
+  padding: 5px 10px;
+  border-radius: 3px;
+  opacity: .7;
+  font-size: 12px;
+  color: black;
+  position: absolute;
+  bottom: 80px;
+  right: 30px;
+}
+

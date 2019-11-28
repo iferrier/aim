@@ -1,48 +1,53 @@
-<div class="container">
-  <div class="user-story">
-    <div class="user-card">
-      <div class="user-image">
-        <%= cl_image_tag @user.picture, class: "avatar-user-card", width: 150, height: 150, crop: :thumb, gravity: :face %>
-      </div>
-      <div class="user-info">
-        <p><%= @user.name %></p>
-        <p><%= @user.email %></p>
-        <p><%= @user.bio %></p>
-      </div>
+<div class="user-story">
+  <div class="user-card">
+    <div class="user-image">
+      <%= cl_image_tag @user.picture, class: "avatar-user-card", width: 150, height: 150, crop: :thumb, gravity: :face %>
     </div>
-    <div class="user-about">
-      <p>Participating in the campaign is one of my biggest dream ever and I hope to be able to gather many people as possible to bring awareness <em></em> to this matter. I am looking forward to exchange thoughts on this problem and mobilize trillions of people to do so too. </p>
+    <div class="user-info">
+      <p><strong><%= @user.name %></strong></p>
+      <p><%= @user.email %></p>
+      <p><%= @user.bio %></p>
     </div>
   </div>
-
-  <div id="card-container">
-    <% @user.campaigns.each do |campaign| %>
-      <div id="index-card">
-        <!--campaign image-->
-        <%= cl_image_tag(campaign.campaign_picture) %>
-        <% if campaign.users.include?(current_user) %>
-          <p class="joined-button">Joined</p>
-        <% end %>
-        <!--campaign infos-->
-        <div id="index-card-infos">
-          <div>
-            <h2><%= link_to campaign.title, campaign_path(campaign) %></h2>
-            <p><%= campaign.campaign_description %></p>
-            <p><%= campaign.launch_date || 'TBD' %></p>
-          </div>
-          <div id="campaign-users">
-            <% campaign.users.each do |user| %>
-              <%= link_to cl_image_tag(user.picture, class: "avatar"), user_path(user) %>
-            <% end %>
-          </div>
-          <!-- link to participate-->
-          <% if campaign.users.include?(current_user) %>
-            <%= link_to 'REMOVE', campaign_selection_path(campaign, current_user), method: 'delete', class: 'remove-link' %>
-          <% else %>
-            <%= link_to 'Join', campaign_selections_path(campaign), method: 'post' %>
-          <% end %>
-        </div>
-      </div>
-    <% end %>
+  <div class="user-about">
+    <p>Participating in the campaign is one of my biggest dream ever and I hope to be able to gather many people as possible to bring awareness <em></em> to this matter. I am looking forward to exchange thoughts on this problem and mobilize trillions of people to do so too. </p>
   </div>
 </div>
+
+
+<div class="title_container">
+  <h2><%= @user.name %> Campaigns</h2>
+</div>
+
+<div id="card-container">
+  <% @user.campaigns.each do |campaign| %>
+    <div id="index-card">
+      <!--campaign image-->
+      <%= cl_image_tag(campaign.campaign_picture) %>
+      <% if campaign.users.include?(current_user) %>
+        <p class="joined-button">Joined</p>
+      <% end %>
+      <!--campaign infos-->
+      <div id="index-card-infos">
+        <div>
+          <h2><%= link_to campaign.title, campaign_path(campaign) %></h2>
+          <p><%= campaign.campaign_description %></p>
+          <p><%= campaign.launch_date || 'TBD' %></p>
+        </div>
+        <div id="campaign-users">
+          <% campaign.users.each do |user| %>
+            <%= link_to cl_image_tag(user.picture, class: "avatar"), user_path(user) %>
+          <% end %>
+        </div>
+        <!-- link to participate-->
+        <% if campaign.users.include?(current_user) %>
+          <%= link_to 'ASSETS', '#', class: 'remove-link' %>
+        <% else %>
+          <%= link_to 'Join', campaign_selections_path(campaign), method: 'post' %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+
