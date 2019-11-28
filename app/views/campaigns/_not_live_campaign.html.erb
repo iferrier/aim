@@ -17,7 +17,11 @@
 
 <!-- Content -->
 <div class="join-button">
-  <a href="#" class="more-button more-button:hover">Join now!</a>
+  <% if @campaign.users.include?(current_user) %>
+    <%= link_to 'REMOVE', campaign_selection_path(@campaign, current_user), method: 'delete', class: 'remove-link' %>
+  <% else %>
+    <%= link_to 'Join', campaign_selections_path(@campaign), method: 'post', class: 'more-button more-button:hover' %>
+  <% end %>
 </div>
 <div class="content">
   <p><%= @campaign.campaign_description  %></p>
