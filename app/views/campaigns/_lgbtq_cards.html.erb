@@ -3,8 +3,8 @@
   <% @lgbtq_campaigns.each do |campaign|%>
     <div class="card-campaign" id="index-card">
       <%= cl_image_tag(campaign.campaign_picture,  class:"card-img") %>
-      <% if campaign.users.include?(current_user) %>
-        <p class="joined-button">Joined</p>
+      <% if campaign.live %>
+        <p class="joined-button">LIVE</p>
       <% end %>
       <div class="card-campaign-infos">
         <h2><%= link_to campaign.title, campaign_path(campaign) %></h2>
