@@ -37,7 +37,15 @@
 <div class="grid">
   <div class="aim"><a href="#">AIM</a></div>
   <div class="profil"><a href="#">PROFIL</a></div>
-  <div class="login"><a href="#">LOG IN</a></div>
+  <% if current_user %>
+    <div class="login">
+      <%= link_to 'LOG OUT', destroy_user_session_path(current_user), method: :delete %>
+    </div>
+  <% else %>
+    <div class="login">
+      <%= link_to 'LOG IN', new_user_session_path %>
+    </div>
+  <% end %>
 </div>
 
 
