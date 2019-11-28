@@ -8,7 +8,7 @@
       <% end %>
       <div class="card-campaign-infos">
         <h2><%= link_to campaign.title, campaign_path(campaign) %></h2>
-        <p class="descript"><%= campaign.campaign_description %></p>
+        <p class="descript"><%= campaign.campaign_description.split(/[!||.||?]/).first %></p>
         <p class="date"><%= campaign.launch_date || 'TBD' %></p>
         <div id="campaign-users">
           <% campaign.users.each do |user| %>
