@@ -5,7 +5,7 @@
   <!--Featured campaign description-->
   <div id="featured_campaign_text">
     <h1>
-      <%= link_to @featured_campaign.title.upcase, root_path %>
+      <%= link_to @featured_campaign.title.upcase, campaign_path(@featured_campaign) %>
     </h1>
     <p>
       <%= @featured_campaign.campaign_description %>
@@ -22,7 +22,6 @@
 </div>
 <%= render 'global_warming_cards' %>
 
-
 <!--LGBTQ-->
 
 <div class="title_container">
@@ -30,7 +29,8 @@
 </div>
 <%= render 'lgbtq_cards' %>
 
-<!--Children Rights-->
+
+<!--Fundraisers-->
 
 <div class="title_container">
   <h2>FUNDRAISERS</h2>
