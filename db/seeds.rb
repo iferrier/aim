@@ -45,7 +45,7 @@ User.create ([
     email: 'masha@example.com',
     password: '123123',
     bio: 'Lifestyle blogger looking for helping good causes.',
-    picture: 'https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&dl=matheus-ferrero-W7b3eDUb_2I-unsplash.jpg',
+    picture: 'https://res.cloudinary.com/dazdahxln/image/upload/v1574951855/lady3_jd2qvn.jpg',
     location: 'Spreewald',
     instagram: 'https://www.instagram.com/masha/'
   },
@@ -54,7 +54,7 @@ User.create ([
     email: 'amandine@example.com',
     password: '123123',
     bio: 'As a travel blogger, I would like to encourage people to take action against global warming!',
-    picture: 'https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&dl=kal-visuals-b1Hg7QI-zcc-unsplash.jpg',
+    picture: 'https://res.cloudinary.com/dazdahxln/image/upload/v1574951855/lady1_jo1wlr.jpg',
     location: 'Rosenheim',
     instagram: 'https://www.instagram.com/lesberlinettes/'
   },
@@ -63,7 +63,7 @@ User.create ([
     email: 'vreni@example.com',
     password: '123123',
     bio: 'Living in Berlin and having a lot of LGBT friends made me sensitive to that cause for which I would like to speak up.',
-    picture: 'https://images.unsplash.com/photo-1485199692108-c3b5069de6a0?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&dl=freestocks-org-ujdUqduwCls-unsplash.jpg',
+    picture: 'https://res.cloudinary.com/dazdahxln/image/upload/v1574951856/lady2_l1xuw1.jpg',
     location: 'Berlin',
     instagram: 'https://www.instagram.com/vrenifrost/'
   },
