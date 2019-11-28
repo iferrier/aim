@@ -1,25 +1,43 @@
 
-
-.more-button {
-width: 142px;
-height: 55px;
-border: .5px black solid;
-font-size: 17px;
-line-height: 124.9%;
-text-align: center;
-letter-spacing: 0.03em;
-text-indent: 1px;
-padding: 13px 27px;
-color: grey;
+.banner {
+  display:flex;
+  width: 100%;
+  margin-top: 57px;
 }
-
-.more-button:hover {
-color: #000000;
-text-decoration: none;
+.frame {
+  width: 50%;
+  //height: 442px;
+  border: black solid .3px;
+  background-color: white;
 }
 
 
-//
+
+.banner-picture {
+  height: auto;
+  width: 100%;
+}
+
+.logo-big {
+  font-size: 95px;
+  font-weight:700;
+  margin: 50px 0 0 60px;
+}
+
+.tagline {
+  margin: -10px 0 45px 60px;
+}
+
+.all-campaign-button {
+  margin: -10px 0 0 60px;
+}
+
+.card-flex {
+  display:flex;
+}
+
+
+
 .all-campaign-button {
 width: 145px;
 height: 70px;
@@ -30,17 +48,13 @@ text-align: center;
 letter-spacing: 0.03em;
 text-indent: 1px;
 padding: 13px 27px;
-color: grey;
+color: black;
 }
 
 .all-campaign-button:hover {
-  color: #000000;
+  color: blue;
   text-decoration: none;
 }
-
-
-
-
 
 
 .card-campaign {
@@ -52,6 +66,56 @@ color: grey;
   letter-spacing: 0.03em;
   text-indent: 1px;
 }
+
+
+
+.about-aim {
+}
+
+
+.how-wrap {
+  margin:150px;
+  border:solid black .5px;
+  //display:flex;
+
+}
+
+.how-we-do {
+  display: inline-block;
+  //justify-content: space-between;
+
+}
+
+.link-t {
+}
+
+.link {
+  display: inline-block;
+
+
+}
+
+
+.content {
+ // display:block;
+  padding: 20px 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .card-campaign-infos {
   padding:20px 0 20px 20px;
@@ -76,6 +140,26 @@ color: grey;
 .card-campaign .date {
   font-weight: bold;
 }
+
+
+.more-campaign-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 300px;
+
+}
+.more-button {
+  border: .5px black solid;
+  font-size: 17px;
+  line-height: 124.9%;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-indent: 1px;
+  padding: 13px 27px;
+  color: black;
+}
+
 
 
 
