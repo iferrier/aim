@@ -69,32 +69,32 @@ color: black;
 
 
 
-.about-aim {
-}
-
-
 .how-wrap {
-  margin:150px;
+  margin: 150px 150px 0 150px;
   border:solid black .5px;
-  //display:flex;
-
 }
+
+.how-wrap1 {
+  margin: 0 150px;
+  border:solid black .5px;
+}
+
+.flexxxing {
+  display:flex;
+  justify-content: space-between;
+  height:120px;
+}
+
 
 .how-we-do {
-  display: inline-block;
-  //justify-content: space-between;
-
+  margin: 30px 0 0 20px;
+  justify-content: space-between;
 }
 
-.link-t {
+.link-move{
+  margin-right: 24px;
+  margin-top: 30px;
 }
-
-.link {
-  display: inline-block;
-
-
-}
-
 
 .content {
  // display:block;
@@ -159,8 +159,6 @@ color: black;
   padding: 13px 27px;
   color: black;
 }
-
-
 
 
 
