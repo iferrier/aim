@@ -19,13 +19,13 @@ ActiveRecord::Schema.define(version: 2019_11_27_141859) do
     t.string "title"
     t.text "campaign_description"
     t.string "cause"
-    t.string "campaign_picture"
     t.string "location"
     t.string "organisation"
     t.date "launch_date"
     t.boolean "live"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "campaign_picture"
     t.string "brand_logo"
   end
 
