@@ -1,7 +1,7 @@
 <!--Featured campaign-->
 <div id="featured_campaign">
   <!--Featured campaign image-->
-  <%= image_tag("https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?v=1530129081") %>
+  <%= link_to cl_image_tag(@featured_campaign.campaign_picture), campaign_path(@featured_campaign) %>
   <!--Featured campaign description-->
   <div id="featured_campaign_text">
     <h1>
