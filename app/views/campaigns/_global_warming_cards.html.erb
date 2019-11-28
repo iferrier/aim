@@ -12,7 +12,7 @@
         <p class="date"><%= campaign.launch_date || 'TBD' %></p>
         <div id="campaign-users">
           <% campaign.users.each do |user| %>
-            <%= link_to cl_image_tag(user.picture, class: "avatar"), user_path(user) %>
+            <%= link_to cl_image_tag(user.picture, class: "avatar", width: 40, height: 40, crop: :thumb, gravity: :face), user_path(user) %>
           <% end %>
         </div>
         <!-- link to participate-->
