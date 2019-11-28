@@ -47,8 +47,25 @@
   padding-top: 40px;
 }
 
-.join-button {
+.activation-button {
   display: flex;
-  align-items: center;
   justify-content: space-around;
+  .more-button {
+    padding-top: 17px;
+  }
 }
+
+// .asset {
+//   display: flex;
+//   justify-content: space-around;
+//   margin-top: 30px;
+// }
+
+.container-comments {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+

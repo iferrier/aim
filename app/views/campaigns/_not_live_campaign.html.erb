@@ -16,13 +16,18 @@
 </div>
 
 <!-- Content -->
-<div class="join-button">
+<div class="activation-button">
   <% if @campaign.users.include?(current_user) %>
-    <%= link_to 'REMOVE', campaign_selection_path(@campaign, current_user), method: 'delete', class: 'remove-link' %>
+    <%= link_to 'REMOVE', campaign_selection_path(@campaign, current_user), method: 'delete', class: 'more-button more-button:hover remove-link' %>
   <% else %>
     <%= link_to 'Join', campaign_selections_path(@campaign), method: 'post', class: 'more-button more-button:hover' %>
   <% end %>
 </div>
 <div class="content">
   <p><%= @campaign.campaign_description  %></p>
+</div>
+
+<!-- Link Back  -->
+<div class="activation-button">
+  <%= link_to 'Back', campaigns_path, class: 'more-button more-button:hover' %>
 </div>
