@@ -20,7 +20,7 @@ User.create ([
     bio: 'I am Princess Carolyn - nothing to add!',
     picture: 'https://vignette.wikia.nocookie.net/bojackhorseman/images/d/de/Princess_Carolyn.png/revision/latest?cb=20171017002131',
     location: 'Dresden',
-    instagram: 'https://www.instagram.com/princessecarolinedemonaco/',
+    instagram: 'https://www.instagram.com/princessecarolinedemonaco/'
   },
   {
     name: 'Bojack Horseman',
@@ -78,7 +78,8 @@ Campaign.create([
     cause: 'Global Warming',
     campaign_picture: 'https://www.maz-online.de/var/storage/images/rnd/nachrichten/politik/fridays-for-future-wie-die-schueler-europa-ihren-stempel-aufdruecken/720657963-3-ger-DE/Fridays-for-Future-Wie-die-Schueler-Europa-ihren-Stempel-aufdruecken_big_teaser_article.jpg',
     location: 'Berlin',
-    organisation: 'Fridays for Future'
+    organisation: 'Fridays for Future',
+    launch_date: '2019-06-30'
   },
   {
     title: 'Fridays for Future2',
@@ -86,7 +87,8 @@ Campaign.create([
     cause: 'Global Warming',
     campaign_picture: 'https://www.maz-online.de/var/storage/images/rnd/nachrichten/politik/fridays-for-future-wie-die-schueler-europa-ihren-stempel-aufdruecken/720657963-3-ger-DE/Fridays-for-Future-Wie-die-Schueler-Europa-ihren-Stempel-aufdruecken_big_teaser_article.jpg',
     location: 'Berlin',
-    organisation: 'Fridays for Future'
+    organisation: 'Fridays for Future',
+    launch_date: '2019-06-30'
   },
   {
     title: 'Fridays for Future3',
@@ -94,7 +96,8 @@ Campaign.create([
     cause: 'Global Warming',
     campaign_picture: 'https://www.maz-online.de/var/storage/images/rnd/nachrichten/politik/fridays-for-future-wie-die-schueler-europa-ihren-stempel-aufdruecken/720657963-3-ger-DE/Fridays-for-Future-Wie-die-Schueler-Europa-ihren-Stempel-aufdruecken_big_teaser_article.jpg',
     location: 'Berlin',
-    organisation: 'Fridays for Future'
+    organisation: 'Fridays for Future',
+    launch_date: '2019-06-30'
   },
   {
     title: 'Against discrimination',
@@ -102,7 +105,8 @@ Campaign.create([
     cause: 'LGBTQ',
     campaign_picture: 'https://www.maz-online.de/var/storage/images/rnd/nachrichten/politik/fridays-for-future-wie-die-schueler-europa-ihren-stempel-aufdruecken/720657963-3-ger-DE/Fridays-for-Future-Wie-die-Schueler-Europa-ihren-Stempel-aufdruecken_big_teaser_article.jpg',
     location: 'Berlin',
-    organisation: 'CSD'
+    organisation: 'CSD',
+    launch_date: '2019-06-30'
   },
   {
     title: 'Against discrimination',
@@ -110,7 +114,8 @@ Campaign.create([
     cause: 'LGBTQ',
     campaign_picture: 'https://www.maz-online.de/var/storage/images/rnd/nachrichten/politik/fridays-for-future-wie-die-schueler-europa-ihren-stempel-aufdruecken/720657963-3-ger-DE/Fridays-for-Future-Wie-die-Schueler-Europa-ihren-Stempel-aufdruecken_big_teaser_article.jpg',
     location: 'Berlin',
-    organisation: 'CSD'
+    organisation: 'CSD',
+    launch_date: '2019-06-30'
   },
   {
     title: 'Against discrimination',
@@ -118,7 +123,8 @@ Campaign.create([
     cause: 'LGBTQ',
     campaign_picture: 'https://www.maz-online.de/var/storage/images/rnd/nachrichten/politik/fridays-for-future-wie-die-schueler-europa-ihren-stempel-aufdruecken/720657963-3-ger-DE/Fridays-for-Future-Wie-die-Schueler-Europa-ihren-Stempel-aufdruecken_big_teaser_article.jpg',
     location: 'Berlin',
-    organisation: 'CSD'
+    organisation: 'CSD',
+    launch_date: '2019-06-30'
   },
   {
     title: 'Fundraiser',
@@ -126,7 +132,8 @@ Campaign.create([
     cause: 'Fundraiser',
     campaign_picture: 'https://www.maz-online.de/var/storage/images/rnd/nachrichten/politik/fridays-for-future-wie-die-schueler-europa-ihren-stempel-aufdruecken/720657963-3-ger-DE/Fridays-for-Future-Wie-die-Schueler-Europa-ihren-Stempel-aufdruecken_big_teaser_article.jpg',
     location: 'Berlin',
-    organisation: 'Bill and Melinda Foundation'
+    organisation: 'Bill and Melinda Foundation',
+    launch_date: '2019-06-30'
   },
   {
     title: 'Fundraiser',
@@ -134,7 +141,8 @@ Campaign.create([
     cause: 'Fundraiser',
     campaign_picture: 'https://www.maz-online.de/var/storage/images/rnd/nachrichten/politik/fridays-for-future-wie-die-schueler-europa-ihren-stempel-aufdruecken/720657963-3-ger-DE/Fridays-for-Future-Wie-die-Schueler-Europa-ihren-Stempel-aufdruecken_big_teaser_article.jpg',
     location: 'Berlin',
-    organisation: 'Bill and Melinda Foundation'
+    organisation: 'Bill and Melinda Foundation',
+    launch_date: '2019-06-30'
   },
   {
     title: 'Fundraiser',
@@ -142,7 +150,8 @@ Campaign.create([
     cause: 'Fundraiser',
     campaign_picture: 'https://www.maz-online.de/var/storage/images/rnd/nachrichten/politik/fridays-for-future-wie-die-schueler-europa-ihren-stempel-aufdruecken/720657963-3-ger-DE/Fridays-for-Future-Wie-die-Schueler-Europa-ihren-Stempel-aufdruecken_big_teaser_article.jpg',
     location: 'Berlin',
-    organisation: 'Bill and Melinda Foundation'
+    organisation: 'Bill and Melinda Foundation',
+    launch_date: '2019-06-30'
   }
 ])
 
