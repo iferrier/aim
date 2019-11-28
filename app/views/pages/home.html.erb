@@ -5,10 +5,10 @@
     <p class="logo-big">AIM</p>
     <h1 class="tagline">Do things that matter<br>
     better, together</h1>
-      <a href="#" class="all-campaign-button">ALL CAMPAIGNS</a>
+      <%= link_to 'ALL CAMPAIGNS', campaigns_path, class: "all-campaign-button" %>
   </div>
   <div class="banner-img">
-    <%= image_tag "protest.png", alt:"protest", class:"banner-picture"%>
+    <%= image_tag "protest.png", alt:"protest", class: "banner-picture"%>
   </div>
 </div>
 
@@ -50,44 +50,24 @@ link2.addEventListener('click', (event) => {
 
 
 <div class="card-flex">
-  <div class="card-campaign">
-   <%= image_tag "protest.png", alt:"protest", class:"card-img" %>
-    <div class="card-campaign-infos">
-      <h2>Friday for Future</h2>
-      <p class="descript">On 27 September, an estimated 2 million people participated in demonstrations worldwide.</p>
-      <p class="date">13.February 2020</p>
-      <a href="#" class="join">Join</a>
+  <% @campaigns.sample(5).each do |campaign|%>
+    <div class="card-campaign" id="index-card">
+      <%= cl_image_tag(campaign.campaign_picture,  class:"card-img") %>
+      <% if campaign.live %>
+        <p class="live-flag">LIVE</p>
+      <% end %>
+      <div class="card-campaign-infos">
+        <h2><%= link_to campaign.title, campaign_path(campaign) %></h2>
+        <p class="descript"><%= campaign.campaign_description.split(/[!||.||?]/).first  %></p>
+        <p class="date"><%= campaign.launch_date || 'TBD' %></p>
+      </div>
     </div>
-  </div>
-
-
-  <div class="card-campaign">
-    <%= image_tag "protest.png", alt:"protest", class:"card-img" %>
-    <div class="card-campaign-infos">
-      <h2>Friday for Future</h2>
-      <p class="descript">On 27 September, an estimated 2 million people participated in demonstrations worldwide.</p>
-      <p class="date">13.February 2020</p>
-      <a href="#" class="join">Join</a>
-    </div>
-  </div>
-
-  <div class="card-campaign">
-    <%= image_tag "protest.png", alt:"protest", class:"card-img" %>
-    <div class="card-campaign-infos">
-      <h2>Friday for Future</h2>
-      <p class="descript">On 27 September, an estimated 2 million people participated in demonstrations worldwide.</p>
-      <p class="date">13.February 2020</p>
-      <a href="#" class="join">Join</a>
-    </div>
-  </div>
+  <% end %>
 </div>
-
+<br><br>
 <div class="more-campaign-button">
-  <a href="#" class="more-button .more-button:hover">MORE</a>
+  <%= link_to 'MORE', campaigns_path, class: "more-button .more-button:hover"  %>
 </div>
-
-
-
 
 
 <div class="footer">
