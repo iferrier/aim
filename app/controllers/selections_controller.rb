@@ -3,10 +3,11 @@ class SelectionsController < ApplicationController
     @selection = Selection.new
     @selection.user = current_user
     @selection.campaign = Campaign.find(params[:campaign_id])
+    redirect_to_same
     if @selection.save
-      redirect_to campaigns_path
+      flash[:notice] = "Thanks for joining!"
     else
-      redirect_to root_path
+      flash[:alert] = "You already joined!"
     end
     authorize @selection
   end
@@ -15,11 +16,18 @@ class SelectionsController < ApplicationController
     @campaign = Campaign.find(params[:campaign_id])
     @user = current_user
     @selection = Selection.find_by(user: @user, campaign: @campaign)
+    redirect_to_same
     if @selection.destroy
-      redirect_to campaigns_path
+      flash[:notice] = "Successfully removed!"
     else
-      redirect_to root_path
+      flash[:alert] = "Whoops - something went wrong!"
     end
     authorize @selection
+  end
+
+  private
+
+  def redirect_to_same
+    redirect_back(fallback_location: "/")
   end
 end
