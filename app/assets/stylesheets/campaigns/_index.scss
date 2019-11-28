@@ -3,6 +3,12 @@
   padding: 120px 0;
   width: 80vw;
   margin: auto;
+  a {
+    width: 40%;
+  }
+  img {
+    width: 100%;
+  }
 }
 
 #featured_campaign_text {
@@ -19,8 +25,8 @@
 
 #cause_container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
   width: 80vw;
   margin: auto;
 }
@@ -35,6 +41,7 @@
 
 #index-card {
   position: relative;
+  margin: 0 auto;
 }
 
 .joined-button {
