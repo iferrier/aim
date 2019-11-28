@@ -1,0 +1,15 @@
+<h1>Internal View for updating campaigns</h1>
+<%= simple_form_for(@campaign) do |f| %>
+<%= f.input :title %>
+<%= f.input :campaign_description %>
+<%= f.input :cause, collection: ['Global Warming', 'LGBTQ', 'Fundraiser'] %>
+<%= f.input :location %>
+<%= f.input :organisation %>
+<%= f.input :launch_date %>
+<%= f.input :campaign_picture %>
+<%= f.input :campaign_picture_cache, as: :hidden %>
+<%= f.input :brand_logo %>
+<%= f.input :brand_logo_cache, as: :hidden %>
+<%= f.input :live %>
+<%= f.submit %>
+<% end %>
