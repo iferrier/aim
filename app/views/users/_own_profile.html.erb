@@ -6,14 +6,13 @@
     <div class="user-info">
       <p><strong><%= @user.name %></strong></p>
       <p><%= @user.email %></p>
-      <p><%= @user.bio %></p>
       <p><%= @user.location %></p>
       <p><a href= <%= @user.instagram %>>@<%= @user.name %></a></p>
       <p><%= link_to 'Edit', edit_user_path(@user) %></p>
     </div>
   </div>
   <div class="user-about">
-    <p>Participating in the campaign is one of my biggest dream ever and I hope to be able to gather many people as possible to bring awareness <em></em> to this matter. I am looking forward to exchange thoughts on this problem and mobilize trillions of people to do so too. </p>
+    <p><%= @user.bio %></p>
   </div>
 </div>
 
