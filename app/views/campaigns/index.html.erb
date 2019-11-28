@@ -20,69 +20,19 @@
   <!--CAUSE-->
   <h2>GLOBAL WARMING</h2>
 </div>
-<div id="cause_container">
-  <!--Iterate over campaigns-->
-  <% @campaigns.each do |campaign|%>
-    <div id="index-card">
-      <!--campaign image-->
-      <%= image_tag("https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?v=1530129081") %>
-      <!--campaign infos-->
-      <div id="index-card-infos">
-        <div>
-          <h2><%= link_to campaign.title, campaign_path(campaign) %></h2>
-          <p><%= campaign.campaign_description %></p>
-          <p>01.01.1901</p>
-        </div>
-        <p>TODO: avatars of participants</p>
-        <!-- link to participate-->
-        <%= link_to 'Join', root_path %>
-      </div>
-    </div>
-  <% end %>
-</div>
-
+<%= render 'global_warming_cards' %>
 
 <!--LGBTQ-->
 
 <div class="title_container">
   <h2>LGBTQ</h2>
 </div>
-<div id="cause_container">
-  <% @campaigns.each do |campaign|%>
-    <div id="index-card">
-      <%= image_tag("https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?v=1530129081") %>
-      <div id="index-card-infos">
-        <div>
-          <h2><%= link_to campaign.title, campaign_path(campaign) %></h2>
-          <p><%= campaign.campaign_description %></p>
-          <p>01.01.1901</p>
-        </div>
-        <p>TODO: avatars of participants</p>
-        <%= link_to 'Join', root_path %>
-      </div>
-    </div>
-  <% end %>
-</div>
+<%= render 'lgbtq_cards' %>
 
 
-<!--Children Rights-->
+<!--Fundraisers-->
 
 <div class="title_container">
-  <h2>CHILDREN RIGHTS</h2>
+  <h2>FUNDRAISERS</h2>
 </div>
-<div id="cause_container">
-  <% @campaigns.each do |campaign|%>
-    <div id="index-card">
-      <%= image_tag("https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?v=1530129081") %>
-      <div id="index-card-infos">
-        <div>
-          <h2><%= link_to campaign.title, campaign_path(campaign) %></h2>
-          <p><%= campaign.campaign_description %></p>
-          <p>01.01.1901</p>
-        </div>
-        <p>TODO: avatars of participants</p>
-        <%= link_to 'Join', root_path %>
-      </div>
-    </div>
-  <% end %>
-</div>
+<%= render 'fundraisers_cards' %>
