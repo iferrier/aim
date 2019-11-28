@@ -34,11 +34,10 @@
 
 
 #index-card {
-  overflow: hidden;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   position: relative;
-  .joined-button {
+}
+
+.joined-button {
     background-color: #1EDD88;
     color: black;
     padding: 5px 10px;
@@ -49,7 +48,8 @@
     top: 30px;
     right: 30px;
 }
-  .remove-link {
+
+.remove-link {
     background-color: $red;
     padding: 5px 10px;
     border-radius: 3px;
@@ -60,30 +60,6 @@
     bottom: 30px;
     right: 30px;
   }
-}
 
-#index-card-infos {
-  padding: 20px 20px;
-  a {
-    color: black;
-  }
-}
 
-#index-card > img {
-  height: 350px;
-  width: 100%;
-  object-fit: cover;
-}
-
-#index-card h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-}
-
-#index-card p {
-  font-size: 12px;
-  opacity: .7;
-  margin: 0;
-}
 
