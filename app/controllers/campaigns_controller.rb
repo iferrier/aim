@@ -25,6 +25,9 @@ class CampaignsController < ApplicationController
 
   def show
     set_campaign
+    if @campaign.live
+      @comment = Comment.new
+    end
   end
 
   private
