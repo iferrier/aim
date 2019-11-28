@@ -3,7 +3,7 @@
 // = require_tree .
 
 
-const content = document.querySelector('.content');
+const content = document.querySelector('.content-how');
 const link2 = document.querySelector('.link-t');
 
 console.log(link2)
@@ -12,10 +12,10 @@ link2.addEventListener('click', (event) => {
   event.preventDefault()
   console.log(event);
   if (content.classList.contains('d-none')) {
-    link2.innerText = 'Read Less'
+    link2.innerText = '--'
     content.classList.remove('d-none')
   } else {
-    link2.innerText = 'Read More'
+    link2.innerText = '+'
     content.classList.add('d-none')
   }
 })
