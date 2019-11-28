@@ -5,17 +5,17 @@
   </div>
 <div class="menu">
   <% if current_user %>
-    <div class="profil">
-      <%= link_to 'PROFILE', user_path(current_user) %>
-    </div>
 
-    <div class="login">
-      <%= link_to 'LOG OUT', destroy_user_session_path(current_user), method: :delete %>
-    </div>
+      <%= link_to 'PROFILE', user_path(current_user), class:"profil" %>
+
+
+
+      <%= link_to 'LOG OUT', destroy_user_session_path(current_user), method: :delete, class:"login" %>
+
   <% else %>
-    <div class="login">
-      <%= link_to 'LOG IN', new_user_session_path %>
-    </div>
+
+      <%= link_to 'LOG IN', new_user_session_path, class:"login" %>
+
   <% end %>
 </div>
 </div>
