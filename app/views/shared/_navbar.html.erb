@@ -34,16 +34,21 @@
   </div>
 </div> -->
 
-<div class="grid">
   <div class="aim">
     <%= link_to 'AIM', root_path %>
   </div>
   <div class="profil">
     <%= link_to 'PROFILE', user_path(current_user) %>
   </div>
-  <div class="login">
-    <%= link_to 'LOG IN', new_user_session_path %>
-  </div>
+  <% if current_user %>
+    <div class="login">
+      <%= link_to 'LOG OUT', destroy_user_session_path(current_user), method: :delete %>
+    </div>
+  <% else %>
+    <div class="login">
+      <%= link_to 'LOG IN', new_user_session_path %>
+    </div>
+  <% end %>
 </div>
 
 
