@@ -67,6 +67,56 @@ color: black;
   text-indent: 1px;
 }
 
+
+
+.about-aim {
+}
+
+
+.how-wrap {
+  margin:150px;
+  border:solid black .5px;
+  //display:flex;
+
+}
+
+.how-we-do {
+  display: inline-block;
+  //justify-content: space-between;
+
+}
+
+.link-t {
+}
+
+.link {
+  display: inline-block;
+
+
+}
+
+
+.content {
+ // display:block;
+  padding: 20px 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .card-campaign-infos {
   padding:20px 0 20px 20px;
   width: 333px;
@@ -96,11 +146,10 @@ color: black;
   display: flex;
   align-items: center;
   justify-content: space-around;
-}
+  margin-bottom: 300px;
 
-.more-camapign-button {
-  width: 142px;
-  height: 55px;
+}
+.more-button {
   border: .5px black solid;
   font-size: 17px;
   line-height: 124.9%;
@@ -111,10 +160,7 @@ color: black;
   color: black;
 }
 
-.more-campaign-button:hover {
-color: blue;
-text-decoration: none;
-}
+
 
 
 

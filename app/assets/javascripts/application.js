@@ -19,3 +19,5 @@ link2.addEventListener('click', (event) => {
     content.classList.add('d-none')
   }
 })
+
+

@@ -13,10 +13,40 @@
 </div>
 
 
+<!--
+const content = document.querySelector('.content');
+const link2 = document.querySelector('.link-t');
+
+console.log(link2)
+
+link2.addEventListener('click', (event) => {
+  event.preventDefault()
+  console.log(event);
+  if (content.classList.contains('d-none')) {
+    link2.innerText = 'Read Less'
+    content.classList.remove('d-none')
+  } else {
+    link2.innerText = 'Read More'
+    content.classList.add('d-none')
+  }
+})
+ -->
 
 
-<p class='content d-none'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, aliquid ullam? Esse aut, nesciunt repellendus aliquid ex fugit iusto velit ullam facere iste nihil, deleniti perspiciatis molestias, sequi veritatis earum?</p>
-<a href='#' class='link-t'>Read more</a>
+  <div class="how-wrap">
+    <div class="how-we-do">
+      <h1>HOW WE DO IT</h1>
+    </div>
+    <div class="link-move">
+      <a href='#' class='link-t'>Read more</a><br>
+    </div>
+
+     <div class="para">
+      <p class="content d-none">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, aliquid ullam? Esse aut, nesciunt repellendus aliquid ex fugit iusto velit ullam facere iste nihil, deleniti perspiciatis molestias, sequi veritatis earum?
+      </p>
+   </div>
+  </div>
+
 
 
 <div class="card-flex">
@@ -53,7 +83,7 @@
 </div>
 
 <div class="more-campaign-button">
-  <a href="#" class="more-button">MORE</a>
+  <a href="#" class="more-button .more-button:hover">MORE</a>
 </div>
 
 
