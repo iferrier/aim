@@ -16,11 +16,20 @@ class CampaignsController < ApplicationController
 
   def index
     @campaigns = policy_scope(Campaign)
-    @featured_campaign = Campaign.find(1)
+    @featured_campaign = Campaign.last
     @global_warming_campaigns = Campaign.where cause: 'Global Warming'
     @lgbtq_campaigns = Campaign.where cause: 'LGBTQ'
     @fundraisers_campaigns = Campaign.where cause: 'Fundraiser'
     @selection = Selection.new
+  end
+
+  def edit
+    set_campaign
+  end
+
+  def update
+    set_campaign
+    @campaign.update(campaign_params)
   end
 
   def show
