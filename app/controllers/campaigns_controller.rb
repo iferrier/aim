@@ -16,7 +16,7 @@ class CampaignsController < ApplicationController
 
   def index
     @campaigns = policy_scope(Campaign)
-    @featured_campaign = Campaign.find_by organisation: 'Fridays for Future'
+    @featured_campaign = Campaign.find(1)
     @global_warming_campaigns = Campaign.where cause: 'Global Warming'
     @lgbtq_campaigns = Campaign.where cause: 'LGBTQ'
     @fundraisers_campaigns = Campaign.where cause: 'Fundraiser'
