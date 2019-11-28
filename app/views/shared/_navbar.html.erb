@@ -35,9 +35,15 @@
 </div> -->
 
 <div class="grid">
-  <div class="aim"><a href="#">AIM</a></div>
-  <div class="profil"><a href="#">PROFIL</a></div>
-  <div class="login"><a href="#">LOG IN</a></div>
+  <div class="aim">
+    <%= link_to 'AIM', root_path %>
+  </div>
+  <div class="profil">
+    <%= link_to 'PROFILE', user_path(current_user) %>
+  </div>
+  <div class="login">
+    <%= link_to 'LOG IN', new_user_session_path %>
+  </div>
 </div>
 
 
