@@ -9,7 +9,11 @@
     <h2> <%= truncate(@campaign.campaign_description, length: 100) %></h2>
     <p><%= @campaign.launch_date.strftime("%d. %B %Y") %></p>
     <br>
-    <p>There will be the participants avatars here</p>
+    <div id="campaign-users">
+      <% @campaign.users.each do |user| %>
+        <%= link_to cl_image_tag(user.picture, width: 50, heigh: 50, class: "avatar"), user_path(user) %>
+      <% end %>
+    </div>
   </div>
   <%= cl_image_tag(@campaign.brand_logo, class: 'brand-logo',
       width: 80, crop: :scale) %>
@@ -18,7 +22,7 @@
 <!-- Content -->
 <div class="activation-button">
   <% if @campaign.users.include?(current_user) %>
-    <%= link_to 'REMOVE', campaign_selection_path(@campaign, current_user), method: 'delete', class: 'more-button more-button:hover remove-link' %>
+    <%= link_to 'Unjoin', campaign_selection_path(@campaign, current_user), method: 'delete', class: 'more-button more-button:hover' %>
   <% else %>
     <%= link_to 'Join', campaign_selections_path(@campaign), method: 'post', class: 'more-button more-button:hover' %>
   <% end %>
