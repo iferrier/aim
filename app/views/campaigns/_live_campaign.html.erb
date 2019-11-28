@@ -43,15 +43,17 @@
 
 <!-- Comments -->
 <div class="container-comments">
-  <div class="comments">
-    <h2>Create your comment here</h2>
-    <br>
-    <%= render 'comment/new' %>
-    <br>
-    <ul>
-      <% @campaign.comments.each do |comment| %>
-      <ol><%= comment.content %></ol>
-      <% end %>
-    </ul>
-  </div>
+  <% if @campaign.users.include?(current_user) %>
+    <div class="comments">
+      <h2>Create your comment here</h2>
+      <br>
+      <%= render 'comment/new' %>
+      <br>
+      <ul>
+        <% @campaign.comments.each do |comment| %>
+        <ol><%= comment.content %></ol>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
 </div>
