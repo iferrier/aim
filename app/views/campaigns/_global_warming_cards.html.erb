@@ -1,0 +1,31 @@
+<div id="cause_container">
+  <!--Iterate over campaigns-->
+  <% @global_warming_campaigns.each do |campaign|%>
+    <div id="index-card">
+      <!--campaign image-->
+      <%= cl_image_tag(campaign.campaign_picture) %>
+      <% if campaign.users.include?(current_user) %>
+        <p class="joined-button">Joined</p>
+      <% end %>
+      <!--campaign infos-->
+      <div id="index-card-infos">
+        <div>
+          <h2><%= link_to campaign.title, campaign_path(campaign) %></h2>
+          <p><%= campaign.campaign_description %></p>
+          <p><%= campaign.launch_date || 'TBD' %></p>
+        </div>
+        <div id="campaign-users">
+          <% campaign.users.each do |user| %>
+            <%= link_to cl_image_tag(user.picture, class: "avatar"), user_path(user) %>
+          <% end %>
+        </div>
+        <!-- link to participate-->
+        <% if campaign.users.include?(current_user) %>
+          <%= link_to 'REMOVE', campaign_selection_path(campaign, current_user), method: 'delete', class: 'remove-link' %>
+        <% else %>
+          <%= link_to 'Join', campaign_selections_path(campaign), method: 'post' %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>

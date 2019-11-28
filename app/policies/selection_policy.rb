@@ -1,4 +1,4 @@
-class CampaignPolicy < ApplicationPolicy
+class SelectionPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.all
@@ -6,10 +6,10 @@ class CampaignPolicy < ApplicationPolicy
   end
 
   def create?
-    true
+    return true
   end
 
-  def show?
-    true
+  def destroy?
+    record.user == user
   end
 end
