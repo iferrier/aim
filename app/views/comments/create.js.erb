@@ -1,0 +1,7 @@
+var comments = document.getElementById('comments');
+var newComment = '<p><%= @comment.content %></p>';
+var inputField = document.getElementById('comment_content');
+
+comments.insertAdjacentHTML('afterbegin', newComment);
+inputField.value = '';
+

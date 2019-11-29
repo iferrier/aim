@@ -1,0 +1,4 @@
+<%= simple_form_for([campaign, comment], remote: true) do |f| %>
+<%= f.input :content %>
+<%= f.submit 'Comment', class: 'more-button more-button:hover', id: 'new-comment' %>
+<% end %>
