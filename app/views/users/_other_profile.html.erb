@@ -23,7 +23,7 @@
   <% @user.campaigns.each do |campaign| %>
     <div id="index-card">
       <!--campaign image-->
-      <%= cl_image_tag(campaign.campaign_picture, class:"card-img") %>
+      <%= cl_image_tag(campaign.campaign_picture, class:"card-img", width: 333, height: 333, crop: :scale) %>
       <% if campaign.users.include?(current_user) %>
         <p class="joined-button">Joined</p>
       <% end %>
