@@ -1,0 +1,16 @@
+function refreshForm(innerHTML) {
+  const newReviewForm = document.querySelector('new_comment');
+  newReviewForm.innerHTML = innerHTML;
+}
+
+function addReview(reviewHTML) {
+  const reviews = document.querySelector('all-comments');
+  reviews.insertAdjacentHTML('beforeend', reviewHTML);
+}
+
+<% if @comment.errors.any? %>
+  refreshForm('<%= j render "comments/new", campaign: @campaign, commment: @comment %>');
+<% else %>
+  addReview('<%= j render "comments/new", comment: @comment %>');
+  refreshForm('<%= j render "comments/new", campaign: @campaign, commment: Comment.new %>');
+<% end %>
