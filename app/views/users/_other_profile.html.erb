@@ -2,11 +2,12 @@
   <div class="user-card">
     <div class="user-image">
       <%= cl_image_tag @user.picture, class: "avatar-user-card", width: 150, height: 150, crop: :thumb, gravity: :face %>
+      <br>
+      <p><a href= <%= @user.instagram %>><i class="fab fa-instagram"></i></a></p>
     </div>
     <div class="user-info">
       <p><strong><%= @user.name %></strong></p>
       <p><%= @user.location %></p>
-      <p><a href= <%= @user.instagram %>>@<%= @user.name %></a></p>
     </div>
   </div>
   <div class="user-about">
@@ -17,15 +18,21 @@
 
 <div class="title_container">
   <h2><%= @user.name %> Campaigns</h2>
+  <% if @user.campaigns.empty? %>
+    <br>
+    <h2>Whoops - still no campaigns here!</h2>
+    <br>
+    <%= link_to 'ALL CAMPAIGNS', campaigns_path, class: "more-button" %>
+  <% end %>
 </div>
 
 <div id="card-container">
   <% @user.campaigns.each do |campaign| %>
     <div id="index-card">
       <!--campaign image-->
-      <%= cl_image_tag(campaign.campaign_picture, class:"card-img", width: 333, height: 333, crop: :scale) %>
-      <% if campaign.users.include?(current_user) %>
-        <p class="joined-button">Joined</p>
+      <%= link_to cl_image_tag(campaign.campaign_picture, class:"card-img", width: 333, height: 333, crop: :scale), campaign_path(campaign) %>
+      <% if campaign.live %>
+        <p class="live-flag">LIVE</p>
       <% end %>
       <!--campaign infos-->
       <div id="index-card-infos">
@@ -43,7 +50,7 @@
         <% if campaign.users.include?(current_user) %>
           <%= link_to 'ASSETS', '#', class: 'index-card-btn' %>
         <% else %>
-          <%= link_to 'Join', campaign_selections_path(campaign), method: 'post', class: 'index-card-btn' %>
+          <%= link_to 'JOIN', campaign_selections_path(campaign), method: 'post', class: 'index-card-btn' %>
         <% end %>
       </div>
     </div>

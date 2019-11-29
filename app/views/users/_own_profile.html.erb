@@ -2,12 +2,12 @@
   <div class="user-card">
     <div class="user-image">
       <%= cl_image_tag @user.picture, class: "avatar-user-card", width: 150, height: 150, crop: :thumb, gravity: :face %>
+      <br>
+      <p><a href= <%= @user.instagram %>><i class="fab fa-instagram"></i></a></p>
     </div>
     <div class="user-info">
       <p><strong><%= @user.name %></strong></p>
-      <p><%= @user.email %></p>
       <p><%= @user.location %></p>
-      <p><a href= <%= @user.instagram %>>@<%= @user.name %></a></p>
       <p><%= link_to 'Edit', edit_user_path(@user) %></p>
     </div>
   </div>
@@ -19,13 +19,23 @@
 
 <div class="title_container">
   <h2>My Campaigns</h2>
+  <% if @user.campaigns.empty? %>
+    <br>
+    <h2>Whoops - still no campaigns here!</h2>
+    <br>
+    <%= link_to 'ALL CAMPAIGNS', campaigns_path, class: "more-button" %>
+  <% end %>
 </div>
+
 
 <div id="card-container">
   <% @user.campaigns.each do |campaign| %>
     <div id="index-card">
       <!--campaign image-->
-      <%= cl_image_tag(campaign.campaign_picture, class:"card-img", width: 333, height: 333, crop: :scale) %>
+      <%= link_to cl_image_tag(campaign.campaign_picture, class:"card-img", width: 333, height: 333, crop: :scale), campaign_path(campaign) %>
+      <% if campaign.live %>
+        <p class="live-flag">LIVE</p>
+      <% end %>
       <!--campaign infos-->
       <div id="index-card-infos">
         <div>
