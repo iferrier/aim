@@ -203,21 +203,25 @@ padding:.1px 0;
     .footer-info {
       display:none;
   }
+    .footer-title {
+      font-weight:700;
+      letter-spacing: 2px;
+  }
 }
-
 .footer:hover {
   height: 200px;
   transform: scale(1.1);
   .footer-title {
     display:none;
-    font-weight:400;
-  }
+}
+
+
   .footer-info {
     display:block;
     text-align:center;
     font-size:13px;
+   }
   }
-}
 
 
 .footer-links {
