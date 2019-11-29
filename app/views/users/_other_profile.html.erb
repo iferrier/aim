@@ -32,7 +32,7 @@
         <div>
           <h2><%= link_to campaign.title, campaign_path(campaign) %></h2>
           <p><%= campaign.campaign_description.split(/[!||.||?]/).first %></p>
-          <p><%= campaign.launch_date || 'TBD' %></p>
+          <p><%= campaign.launch_date.strftime("%d. %B %Y") || 'TBD' %></p>
         </div>
         <div id="campaign-users">
           <% campaign.users.each do |user| %>
