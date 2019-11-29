@@ -48,16 +48,18 @@
     <% if @campaign.users.include?(current_user) %>
       <div class="new-comment">
         <br>
-        <%= render 'comments/new' %>
+          <%= render 'comments/form', campaign: @campaign, comment: @comment %>
         <br>
       </div>
-      <div class="all-comments">
+      <div class="all-comments" id="comments">
         <ul>
           <% @campaign.comments.each do |comment| %>
-          <ol><%= comment.content %></ol>
+           <%= render 'comments/show', comment: comment %>
           <% end %>
         </ul>
       </div>
     <% end %>
   </div>
 </div>
+
+
