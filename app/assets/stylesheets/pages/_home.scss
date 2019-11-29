@@ -1,44 +1,43 @@
 
 .banner {
-  display:flex;
-  width: 100vw;
-  margin-top: 57px;
+display:flex;
+width: 100%;
+margin-top: 57px;
 }
+
+.picture {
+height:500px;
+width: 100%;
+}
+
 .frame {
-  width: 50%;
-  //height: 442px;
-  border: black solid .3px;
-  background-color: white;
+height:500px;
+border: black solid .3px;
+width:65%;
 }
 
-
-
-.banner-picture {
-  height: auto;
-  width: 100%;
-}
 
 .logo-big {
-  font-size: 95px;
-  font-weight:700;
-  margin: 50px 0 0 60px;
+font-size: 95px;
+font-weight:700;
+margin: 50px 0 0 60px;
 }
 
 .tagline {
-  margin: -10px 0 45px 60px;
+margin: -5px 0 70px 60px;
 }
 
 .all-campaign-button {
-  margin: -10px 0 0 60px;
+margin: -10px 0 0 60px;
 }
+
 
 .card-flex {
-  display:flex;
+display:flex;
 }
 
 
-
-.all-campaign-button {
+.all-campaign-btn {
 width: 145px;
 height: 70px;
 border: .5px black solid;
@@ -49,56 +48,80 @@ letter-spacing: 0.03em;
 text-indent: 1px;
 padding: 13px 27px;
 color: black;
+margin-left: 65px;
 }
 
-.all-campaign-button:hover {
-  color: blue;
-  text-decoration: none;
+.all-campaign-btn:hover {
+color: blue;
+text-decoration: none;
+background-color: #FFF734;
 }
-
 
 .card-campaign {
-  background: white;
-  width: 333px;
-  margin:50px;
-  font-size: 19px;
-  line-height: 124.9%;
-  letter-spacing: 0.03em;
-  text-indent: 1px;
+background-color: white;
+width: 333px;
+margin:50px;
+font-size: 19px;
+line-height: 124.9%;
+letter-spacing: 0.03em;
+text-indent: 1px;
 }
+
 
 
 
 .how-wrap {
-  margin: 150px 150px 0 150px;
-  border:solid black .5px;
+margin: 150px 150px 0 150px;
+border:solid black .5px;
 }
 
 .how-wrap1 {
-  margin: 0 150px;
-  border:solid black .5px;
+margin: -0.9px 150px;
+border:solid black .5px;
 }
 
+.how-wrap2 {
+margin: -1px 150px;
+border:solid black .5px;
+}
 .flexxxing {
-  display:flex;
-  justify-content: space-between;
-  height:120px;
+display:flex;
+justify-content: space-between;
+height:95px;
 }
 
 
 .how-we-do {
-  margin: 30px 0 0 20px;
-  justify-content: space-between;
+margin: 30px 0 0 20px;
+justify-content: space-between;
+}
+
+.how-p {
+font-size: 20px;
+margin: 5px 0 0 15px;
 }
 
 .link-move{
-  margin-right: 24px;
-  margin-top: 30px;
+margin-right: 24px;
+margin-top: 30px;
 }
 
-.content {
- // display:block;
-  padding: 20px 10px;
+.link-t {
+padding-top:4px;
+font-size:25px;
+margin-right:36px;
+}
+
+.content-how {
+width: 750px;
+margin: 5px auto 20px auto;
+background-color: #e7daf5;
+padding:10px 0;
+}
+.para {
+background-color: #e7daf5;
+padding:.1px 0;
+
 }
 
 
@@ -192,9 +215,6 @@ color: black;
     font-size:13px;
   }
 }
-
-
-
 
 
 .footer-links {
