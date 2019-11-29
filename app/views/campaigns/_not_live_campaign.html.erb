@@ -22,7 +22,7 @@
 <!-- Content -->
 <div class="activation-button">
   <% if @campaign.users.include?(current_user) %>
-    <%= link_to 'Unjoin', campaign_selection_path(@campaign, current_user), method: 'delete', class: 'more-button more-button:hover' %>
+    <%= link_to 'Unjoin', campaign_selection_path(@campaign, current_user), method: 'delete' %>
   <% else %>
     <%= link_to 'Join', campaign_selections_path(@campaign), method: 'post', class: 'more-button more-button:hover' %>
   <% end %>
@@ -33,5 +33,5 @@
 
 <!-- Link Back  -->
 <div class="activation-button">
-  <%= link_to 'Back', campaigns_path, class: 'more-button more-button:hover' %>
+  <%= link_to '<-- All campaigns', campaigns_path, class: 'more-button more-button:hover' %>
 </div>
