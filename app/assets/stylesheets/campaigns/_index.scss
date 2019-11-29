@@ -47,15 +47,16 @@
 }
 
 .live-flag {
-    background-color: white;
+    background-color: #FFF734;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100%;
     color: black;
-    padding: 5px 10px;
-    border-radius: 3px;
-    opacity: .5;
     font-size: 12px;
     position: absolute;
-    top: 30px;
-    right: 30px;
+    top: 0px;
 }
 
   .index-card-btn {
