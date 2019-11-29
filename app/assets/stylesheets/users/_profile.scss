@@ -8,7 +8,7 @@
 
 .user-card {
   margin: 30px 50px 0px 0px;
-  width: 50%;
+  width: 30%;
   border: 0.5px solid #c1baba;
   border-radius: 1px;
   padding: 40px 40px;
@@ -37,6 +37,10 @@ p {
 
 .user-image {
   text-align: center;
+  i {
+    font-size: 20px;
+    padding-top: 10px;
+  }
 }
 
 .avatar-user-card {
@@ -60,4 +64,3 @@ p {
   bottom: 80px;
   right: 30px;
 }
-

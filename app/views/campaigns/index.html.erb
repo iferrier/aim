@@ -1,7 +1,7 @@
 <!--Featured campaign-->
 <div id="featured_campaign">
   <!--Featured campaign image-->
-  <%= link_to cl_image_tag(@featured_campaign.campaign_picture), campaign_path(@featured_campaign) %>
+  <%= link_to cl_image_tag(@featured_campaign.campaign_picture, height: 450, width: 500, crop: :scale), campaign_path(@featured_campaign) %>
   <!--Featured campaign description-->
   <div id="featured_campaign_text">
     <h1>
@@ -10,6 +10,10 @@
     <p>
       <%= @featured_campaign.campaign_description %>
     </p>
+    <br>
+    <% if !@featured_campaign.users.include?(current_user) %>
+      <%= link_to 'Join', campaign_selections_path(@featured_campaign), method: 'post', class: 'more-button more-button:hover' %>
+    <% end %>
   </div>
 </div>
 
@@ -36,3 +40,5 @@
   <h2>FUNDRAISERS</h2>
 </div>
 <%= render 'fundraisers_cards' %>
+<br>
+<br>

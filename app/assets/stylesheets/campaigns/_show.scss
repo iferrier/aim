@@ -1,7 +1,9 @@
+
+
 // banner styling
 .header {
   display: flex;
-  margin: 50px auto;
+  margin: 100px auto;
   border: 0.5px solid #000000;
   width: 1000px;
   height: 400px;
@@ -48,8 +50,10 @@
 }
 
 .activation-button {
-  display: flex;
-  justify-content: space-around;
+   display: flex;
+   margin-bottom:200px;
+   justify-content: space-around;
+
   .more-button {
     padding-top: 17px;
   }

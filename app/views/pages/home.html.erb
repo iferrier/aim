@@ -8,11 +8,12 @@
       <%= link_to 'ALL CAMPAIGNS', campaigns_path, class: "all-campaign-btn" %>
   </div>
   <div class="banner-img">
-    <%= image_tag "protest.png", alt:"protest", class: "picture"%>
+    <%= image_tag "newspaper.png", alt:"protest", class: "picture"%>
   </div>
 </div>
 
 
+<!-- BOX 1 -->
 
 <div class="how-wrap">
   <div class=flexxxing>
@@ -25,7 +26,11 @@
   </div>
 
    <div class="para">
-    <p class="content-how d-none">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, aliquid ullam? Esse aut, nesciunt repellendus aliquid ex fugit iusto velit ullam facere iste nihil, deleniti perspiciatis molestias, sequi veritatis earum?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, aliquid ullam? Esse aut, nesciunt repellendus aliquid ex fugit iusto velit ullam facere iste nihil, deleniti perspiciatis molestias, sequi veritatis earum?
+    <p class="content-how d-none">“Aim Agency aspires to make this world a better place, together. We aim to encourage people to inspire others by participating in charitable events and good causes all around the world.”
+    <br>
+    “Aim Agency aspires to make this world a better place, together. We aim to encourage people to inspire others by participating in charitable events and good causes all around the world.”
+
+
     </p>
  </div>
 </div>
@@ -36,12 +41,12 @@
       <p class="how-p">How you can participate</p>
     </div>
     <div class="link-move">
-      <a href='#' class='link-t'>+</a>
+      <a href='#' class='link-t1'>+</a>
     </div>
   </div>
 
    <div class="para">
-    <p class="content d-none">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, aliquid ullam? Esse aut, nesciunt repellendus aliquid ex fugit iusto velit ullam facere iste nihil, deleniti perspiciatis molestias, sequi veritatis earum?
+    <p class="content-how1 d-none">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, aliquid ullam? Esse aut, nesciunt repellendus aliquid ex fugit iusto velit ullam facere iste nihil, deleniti perspiciatis molestias, sequi veritatis earum?
     </p>
  </div>
 </div>
@@ -57,24 +62,28 @@
   </div>
 
    <div class="para">
-    <p class="content d-none"><br><br> Praesentium, aliquid ullam? Esse aut, nesciunt repellendus aliquid ex fugit iusto velit ullam facere iste nihil, deleniti perspiciatis molestias, sequi veritatis earum?
+    <p class="content2 d-none"><br><br> Praesentium, aliquid ullam? Esse aut, nesciunt repellendus aliquid ex fugit iusto velit ullam facere iste nihil, deleniti perspiciatis molestias, sequi veritatis earum?
     </p>
  </div>
 </div>
 
 
 
+<br>
+<br>
+
+
 <div class="card-flex">
-  <% @campaigns.sample(5).each do |campaign|%>
+  <% @campaigns.sample(4).each do |campaign|%>
     <div class="card-campaign" id="index-card">
-      <%= cl_image_tag(campaign.campaign_picture,  class:"card-img") %>
+      <%= link_to cl_image_tag(campaign.campaign_picture,  class:"card-img", width: 333, height: 333, crop: :scale), campaign_path(campaign) %>
       <% if campaign.live %>
         <p class="live-flag">LIVE</p>
       <% end %>
       <div class="card-campaign-infos">
         <h2><%= link_to campaign.title, campaign_path(campaign) %></h2>
         <p class="descript"><%= campaign.campaign_description.split(/[!||.||?]/).first  %></p>
-        <p class="date"><%= campaign.launch_date || 'TBD' %></p>
+        <p class="date"><%= campaign.launch_date.strftime("%d. %B %Y") || 'TBD' %></p>
       </div>
     </div>
   <% end %>
@@ -86,16 +95,5 @@
 </div>
 
 
-<div class="footer">
-  <p class="footer-title">CONTACT</p>
-  <div class="footer-info">
-    AIM<br>
-    Rudi Dutschke Strasse 26<br>
-    19001 Berlin<br>
-    + 49(0)1522 92 64 729<br>
-    hello@aimagency.com<br>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
-</div>
 
 

@@ -9,4 +9,5 @@ class User < ApplicationRecord
   has_many :comments
   has_many :selections
   has_many :campaigns, through: :selections
+  validates :bio, length: { in: 10..300 }
 end

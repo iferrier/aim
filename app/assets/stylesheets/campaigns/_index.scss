@@ -1,5 +1,6 @@
 #featured_campaign {
   display: flex;
+  align-items: center;
   padding: 120px 0;
   width: 80vw;
   margin: auto;
@@ -27,7 +28,7 @@
 #cause_container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 10px;
+  grid-gap: 16px;
   width: 80vw;
   margin: auto;
 }
@@ -43,18 +44,25 @@
 #index-card {
   position: relative;
   margin: 0 auto;
+  background-color: white;
+  width: 333px;
+}
+
+#index-card-infos {
+  padding: 20px 20px 20px 20px;
 }
 
 .live-flag {
-    background-color: white;
+    background-color: #FFF734;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100%;
     color: black;
-    padding: 5px 10px;
-    border-radius: 3px;
-    opacity: .5;
     font-size: 12px;
     position: absolute;
-    top: 30px;
-    right: 30px;
+    top: 0px;
 }
 
   .index-card-btn {

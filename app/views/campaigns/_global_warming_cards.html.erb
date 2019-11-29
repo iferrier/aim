@@ -2,14 +2,14 @@
   <!--Iterate over campaigns-->
   <% @global_warming_campaigns.each do |campaign|%>
     <div class="card-campaign" id="index-card">
-      <%= cl_image_tag(campaign.campaign_picture,  class:"card-img") %>
+      <%= link_to cl_image_tag(campaign.campaign_picture,  class:"card-img", width: 333, height: 333, crop: :scale), campaign_path(campaign) %>
       <% if campaign.live %>
         <p class="live-flag">LIVE</p>
       <% end %>
       <div class="card-campaign-infos">
         <h2><%= link_to campaign.title, campaign_path(campaign) %></h2>
         <p class="descript"><%= campaign.campaign_description.split(/[!||.||?]/).first  %></p>
-        <p class="date"><%= campaign.launch_date || 'TBD' %></p>
+        <p class="date"><%= campaign.launch_date.strftime("%d. %B %Y") || 'TBD' %></p>
         <div id="campaign-users">
           <% campaign.users.each do |user| %>
             <%= link_to cl_image_tag(user.picture, class: "avatar", width: 40, height: 40, crop: :thumb, gravity: :face), user_path(user) %>
