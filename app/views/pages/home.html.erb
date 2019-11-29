@@ -67,7 +67,7 @@
 <div class="card-flex">
   <% @campaigns.sample(4).each do |campaign|%>
     <div class="card-campaign" id="index-card">
-      <%= cl_image_tag(campaign.campaign_picture,  class:"card-img", height: 250, crop: :scale) %>
+      <%= link_to cl_image_tag(campaign.campaign_picture,  class:"card-img", height: 250, crop: :scale), campaign_path(campaign) %>
       <% if campaign.live %>
         <p class="live-flag">LIVE</p>
       <% end %>
