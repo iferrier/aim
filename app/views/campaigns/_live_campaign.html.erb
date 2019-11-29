@@ -52,11 +52,9 @@
         <br>
       </div>
       <div class="all-comments" id="comments">
-        <ul>
-          <% @campaign.comments.each do |comment| %>
-           <%= render 'comments/show', comment: comment %>
-          <% end %>
-        </ul>
+        <% @campaign.comments.reverse.each do |comment| %>
+         <%= render 'comments/show', comment: comment %>
+        <% end %>
       </div>
     <% end %>
   </div>
