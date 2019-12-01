@@ -1,35 +1,109 @@
 
+// .banner {
+// display:flex;
+// width: 100%;
+// margin-top: 57px;
+// }
+
+// .picture {
+// height:500px;
+// width: 100%;
+// }
+
+// .frame {
+// height:500px;
+// border: black solid .3px;
+// width:65%;
+// }
+
+
+// .logo-big {
+// font-size: 95px;
+// font-weight:700;
+// margin: 50px 0 0 60px;
+// }
+
+// .tagline {
+// margin: -5px 0 70px 60px;
+// }
+
+// .all-campaign-button {
+// margin: -10px 0 0 60px;
+// }
+
+
 .banner {
-display:flex;
-width: 100%;
-margin-top: 57px;
+  display: flex;
+  margin: 50px auto;
+  border: 0.5px solid #000000;
+  width: 1300px;
+  height: 500px;
+  position: relative;
+  .frame {
+    margin-top: 30px;
+    margin-left:50px;
+    padding-right: 25px;
+    width: 650px;
+  }
+  .logo-big {
+    margin-bottom: -20px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 120px;
+    padding: 0 25px;
+  }
+   .tagline {
+    font-size: 40px;
+    max-lines: 2;
+    height: 100px;
+    padding: 0px 25px;
+    margin-bottom:87px;
+  }
+    .all-campaign-btn {
+    width: 145px;
+    height: 70px;
+    border: .5px black solid;
+    font-size: 17px;
+    line-height: 124.9%;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-indent: 1px;
+    padding: 13px 27px;
+    color: black;
+    margin-left: 27px;
+  }
+   .all-campaign-btn:hover {
+    color: blue;
+    text-decoration: none;
+
+}
+  .picture{
+    width: 650px;
+    height:99.9%;
+    // position: absolute;
+    // left: -0.5px;
+    // top: -0.5px;
+  }
 }
 
-.picture {
-height:500px;
-width: 100%;
-}
-
-.frame {
-height:500px;
-border: black solid .3px;
-width:65%;
-}
 
 
-.logo-big {
-font-size: 95px;
-font-weight:700;
-margin: 50px 0 0 60px;
-}
 
-.tagline {
-margin: -5px 0 70px 60px;
-}
 
-.all-campaign-button {
-margin: -10px 0 0 60px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .card-flex {
@@ -37,25 +111,8 @@ display:flex;
 }
 
 
-.all-campaign-btn {
-width: 145px;
-height: 70px;
-border: .5px black solid;
-font-size: 17px;
-line-height: 124.9%;
-text-align: center;
-letter-spacing: 0.03em;
-text-indent: 1px;
-padding: 13px 27px;
-color: black;
-margin-left: 65px;
-}
 
-.all-campaign-btn:hover {
-color: blue;
-text-decoration: none;
-background-color: #FFF734;
-}
+
 
 .card-campaign {
 background-color: white;
