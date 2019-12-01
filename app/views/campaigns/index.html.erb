@@ -1,7 +1,19 @@
+
+
+<!--Other campaigns-->
+
+<!--Global warming-->
+<div class="title_container">
+  <!--CAUSE-->
+  <h2>GLOBAL WARMING</h2>
+</div>
+<%= render 'global_warming_cards' %>
+
 <!--Featured campaign-->
+
 <div id="featured_campaign">
   <!--Featured campaign image-->
-  <%= link_to cl_image_tag(@featured_campaign.campaign_picture, height: 450, width: 500, crop: :scale), campaign_path(@featured_campaign) %>
+  <%= link_to cl_image_tag(@featured_campaign.campaign_picture, height: 350, width: 470, crop: :scale), campaign_path(@featured_campaign) %>
   <!--Featured campaign description-->
   <div id="featured_campaign_text">
     <h1>
@@ -17,14 +29,6 @@
   </div>
 </div>
 
-<!--Other campaigns-->
-
-<!--Global warming-->
-<div class="title_container">
-  <!--CAUSE-->
-  <h2>GLOBAL WARMING</h2>
-</div>
-<%= render 'global_warming_cards' %>
 
 <!--LGBTQ-->
 
@@ -32,6 +36,9 @@
   <h2>LGBTQ</h2>
 </div>
 <%= render 'lgbtq_cards' %>
+
+
+
 
 
 <!--Fundraisers-->
