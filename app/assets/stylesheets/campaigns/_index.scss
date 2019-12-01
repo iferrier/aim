@@ -1,29 +1,52 @@
+
+
+.curent-campaign {
+ margin-top: 57px;
+ margin-bottom: -10px;
+ position:relative;
+}
+
+
+
 #featured_campaign {
   display: flex;
   align-items: center;
-  padding: 120px 0;
-  width: 80vw;
-  margin: auto;
+  padding: 7rem 0;
+  width: 60vw;
+  position: relative;
+  margin: 40px auto;
+  left: 30%;
   a {
     width: 40%;
   }
-  img {
-    width: 450px;
-    object-fit: cover;
-  }
+}
+
+#featured-campaign-image {
+  position:absolute;
+  z-index:1;
+  top: 35%;
+  left: -45%;
+  width: 24rem;
+  object-fit: cover;
 }
 
 #featured_campaign_text {
-  padding-left: 50px;
-  padding-top: 50px;
+  padding:  3rem 2rem 4rem 3rem;
+  background:#8DB567;
+  position:absolute;
+  top: 26%;
+  left: -2%;
+  z-index:100;
+  width:60%;
   a {
-    text-decoration: none;
+    text-decoration: underline;
     color: black;
   }
   a:hover {
-    color: black;
+    color: blue;
   }
 }
+
 
 #cause_container {
   display: grid;
@@ -58,26 +81,34 @@
     text-align: center;
     padding-top: 5px;
     padding-bottom: 5px;
-    width: 100%;
+    width: 100.5%;
     color: black;
     font-size: 12px;
     position: absolute;
-    top: 0px;
+    top: 20px;
 }
 
   .index-card-btn {
     border: .5px solid black;
-    padding: 5px 10px;
-    border-radius: 3px;
+    padding: 5px 14px;
     opacity: .7;
     font-size: 12px;
     color: black;
     position: absolute;
-    bottom: 30px;
-    right: 30px;
+    bottom: 25px;
+    right: 25px;
   }
 
   .remove-link:hover {
     color: blue;
     text-decoration: none;
   }
+
+.fund-container {
+
+}
+.lgbtq-container {
+  margin-top:100px;
+}
+
+
