@@ -4,7 +4,7 @@
   <%= render 'not_live_campaign' %>
 <% end %>
 
-<% if @campaign.location %>
+<% if @campaign.location.present? %>
   <div class="container">
     <div
       id="map"
