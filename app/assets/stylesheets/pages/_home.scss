@@ -62,6 +62,25 @@ display:flex;
 }
 
 
+.all-campaign-btn {
+width: 145px;
+height: 70px;
+border: .5px black solid;
+font-size: 17px;
+line-height: 124.9%;
+text-align: center;
+letter-spacing: 0.03em;
+text-indent: 1px;
+padding: 13px 27px;
+color: black;
+margin-left: 65px;
+}
+
+.all-campaign-btn:hover {
+color: blue;
+text-decoration: none;
+
+}
 
 .card-campaign {
 background-color: white;
@@ -215,13 +234,13 @@ font-size: 23px;
   color: black;
 }
 
-
 .footer {
   background:  #FFF734;
   display: flex;
   align-items: center;
   height: 175px;
   padding: 0px 50px;
+  margin-top: 90px;
   justify-content:center;
   transition: all .4s ease-in;
     .footer-info {
