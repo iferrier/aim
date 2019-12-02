@@ -1,3 +1,4 @@
+// Banner
 
 .banner {
   display: flex;
@@ -54,14 +55,6 @@
   }
 }
 
-
-
-
-.card-flex {
-display:flex;
-}
-
-
 .all-campaign-btn {
 width: 145px;
 height: 70px;
@@ -82,34 +75,31 @@ text-decoration: none;
 
 }
 
-.card-campaign {
-background-color: white;
-width: 333px;
-margin:50px;
-font-size: 19px;
-line-height: 124.9%;
-letter-spacing: 0.03em;
-text-indent: 1px;
+// Explanation business
+
+.business-explanation {
+  margin: 0 auto;
 }
 
-
-
 .how-wrap {
-margin: 150px 150px 0 150px;
-border:solid black .5px;
+  width: 1300px;
+  margin: 150px 150px 0 150px;
+  border:solid black .5px;
 }
 
 .how-wrap1 {
-margin: -0.9px 150px;
-border:solid black .5px;
+  width: 1300px;
+  margin: -0.9px 150px;
+  border:solid black .5px;
 }
 
 .how-wrap2 {
-margin-top: -1px;
-margin-left:150px;
-margin-right:150px;
-margin-bottom: 100px;
-border:solid black .5px;
+  width: 1300px;
+  margin-top: -1px;
+  margin-left:150px;
+  margin-right:150px;
+  margin-bottom: 100px;
+  border:solid black .5px;
 }
 
 .flexxxing {
@@ -129,12 +119,12 @@ font-size: 20px;
 margin: 5px 0 0 15px;
 }
 
-.link-move{
+.link-move {
 margin-right: 24px;
 margin-top: 30px;
 }
 
-.link-t, .link-t1{
+.link-t, .link-t1 {
 padding-top:4px;
 font-size:25px;
 margin-right:36px;
@@ -147,6 +137,21 @@ background-color: #e7daf5;
 padding:10px 0;
 }
 
+// Selection campaigns
+
+.card-flex {
+display:flex;
+}
+
+.card-campaign {
+background-color: white;
+width: 333px;
+margin:50px;
+font-size: 19px;
+line-height: 124.9%;
+letter-spacing: 0.03em;
+text-indent: 1px;
+}
 
 .para {
 background-color: #e7daf5;
@@ -172,24 +177,9 @@ margin-bottom: 100px;
 color:white;
 }
 
-
-
 .latest-c {
 font-size: 23px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .card-campaign-infos {
   padding:20px 0 20px 20px;
@@ -251,13 +241,13 @@ font-size: 23px;
       letter-spacing: 2px;
   }
 }
+
 .footer:hover {
   height: 200px;
   transform: scale(1.1);
   .footer-title {
     display:none;
 }
-
 
   .footer-info {
     display:block;
