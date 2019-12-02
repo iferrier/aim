@@ -15,7 +15,8 @@
       <% end %>
     </div>
   </div>
-  <%= cl_image_tag(@campaign.brand_logo, class: 'brand-logo', width: 70, crop: :scale) %>
+  <%= cl_image_tag(@campaign.brand_logo, class: 'brand-logo',
+      width: 70, crop: :scale) %>
 </div>
 
 <!-- Content -->
@@ -50,9 +51,9 @@
           <%= render 'comments/form', campaign: @campaign, comment: @comment %>
         <br>
       </div>
-      <div id="all-comments">
+      <div class="all-comments" id="comments">
         <% @campaign.comments.reverse.each do |comment| %>
-          <%= render 'comments/show', comment: comment %>
+         <%= render 'comments/show', comment: comment %>
         <% end %>
       </div>
     <% end %>
