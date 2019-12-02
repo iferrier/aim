@@ -38,9 +38,11 @@
 
 
 <!-- Link to Asset -->
-<div class="asset">
-  <%= link_to 'download', download_path %>
-</div>
+<% if @campaign.users.include?(current_user) %>
+  <div class="asset">
+    <%= link_to 'download', download_path %>
+  </div>
+<% end %>
 
 <!-- Comments -->
 <div class="container-comments">
