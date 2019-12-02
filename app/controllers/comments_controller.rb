@@ -1,4 +1,10 @@
 class CommentsController < ApplicationController
+  # def new
+  #   @campaign = Campaign.find(params[:campaign_id])
+  #   @comment = Comment.new
+  #   @comment.user = current_user
+  # end
+
   def create
     @campaign = Campaign.find(params[:campaign_id])
     @comment = Comment.new(comment_params)

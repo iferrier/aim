@@ -1,10 +1,7 @@
-let newComment = document.getElementById('comment_content');
+var comments = document.getElementById('comments');
+var newComment = '<p><%= @comment.content %></p>';
+var inputField = document.getElementById('comment_content');
 
-function addComment(reviewHTML) {
-  const comments = document.getElementById('all-comments');
-  comments.insertAdjacentHTML('afterbegin', reviewHTML);
-}
-
-addComment('<%= j render "comments/show", campaign: @campaign, comment: @comment %>');
-newComment.value = ' ';
+comments.insertAdjacentHTML('afterbegin', newComment);
+inputField.value = '';
 
