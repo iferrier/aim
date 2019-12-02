@@ -60,8 +60,11 @@
     padding-top: 17px;
   }
 }
-
-// Styling comments
+.asset {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
 
 // Big container for all the comments and display them centered in the viewport
 .container-comments {

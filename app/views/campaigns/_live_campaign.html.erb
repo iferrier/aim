@@ -32,13 +32,16 @@
 
 <!-- Link Back  -->
 <div class="activation-button">
-  <%= link_to 'Back', campaigns_path, class: 'more-button more-button:hover' %>
+  <%= link_to 'BACK', campaigns_path, class: 'more-button more-button:hover' %>
 </div>
 
+
 <!-- Link to Asset -->
-<!-- <div class="asset">
-  <p>Link to assets must be added here</p>
-</div> -->
+<% if @campaign.users.include?(current_user) %>
+  <div class="asset">
+    <%= link_to 'ASSETS', download_path, class:'more-button' %>
+  </div>
+<% end %>
 
 <!-- Comments -->
 <div class="container-comments">

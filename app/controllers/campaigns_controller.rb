@@ -33,12 +33,26 @@ class CampaignsController < ApplicationController
     redirect_to campaign_path(@campaign)
   end
 
+  def download
+    authorize current_user
+    @campaign = Campaign.find(params[:id])
+    if @campaign.cause == "Global Warming"
+      send_file "#{Rails.root}/app/assets/campaign_materials/climatechange.zip", x_sendfile: true
+    elsif @campaign.cause == "LGBTQ"
+      send_file "#{Rails.root}/app/assets/campaign_materials/LGBTQ.zip", x_sendfile: true
+    else
+      send_file "#{Rails.root}/app/assets/campaign_materials/fundraiser.zip", x_sendfile: true
+    end
+  end
+
+
   def show
     set_campaign
     if @campaign.live
       @comment = Comment.new
     end
   end
+
 
   private
 
