@@ -3,7 +3,7 @@ class SelectionsController < ApplicationController
     @selection = Selection.new
     @selection.user = current_user
     @selection.campaign = Campaign.find(params[:campaign_id])
-    redirect_to_same
+    redirect_to campaign_path(@selection.campaign)
     if @selection.save
       flash[:notice] = "Thanks for joining!"
     else
