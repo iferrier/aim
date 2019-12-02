@@ -51,6 +51,13 @@ class CampaignsController < ApplicationController
     if @campaign.live
       @comment = Comment.new
     end
+   # @campaigns = Campaign.geocoded
+
+    @marker = {
+        lat: @campaign.latitude,
+        lng: @campaign.longitude,
+        image_url: helpers.asset_url('yellow-marker.png')
+      }
   end
 
 
