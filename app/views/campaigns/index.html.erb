@@ -25,13 +25,12 @@
 <%= render 'global_warming_cards' %>
 
 
-
 <div id="featured_campaign">
-  <!--Featured campaign image-->
-  <%= link_to cl_image_tag(@featured_campaign.campaign_picture, id: 'featured-campaign-image', height: 250, width: 400, crop: :scale), campaign_path(@featured_campaign) %>
-  <!--Featured campaign description-->
+  <div class="d-flex">
+     <%= link_to cl_image_tag(@featured_campaign.campaign_picture, id: 'featured-campaign-image', height: 250, width: 400, crop: :scale), campaign_path(@featured_campaign) %>
+  </div>
   <div id="featured_campaign_text">
-    <h2>
+   <h2>
       <%= link_to @featured_campaign.title.upcase, campaign_path(@featured_campaign) %>
     </h2>
     <p>
@@ -43,7 +42,6 @@
     <% end %>
   </div>
 </div>
-
 
 <!--LGBTQ-->
 
