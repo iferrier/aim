@@ -76,4 +76,36 @@
   margin-bottom: 30px;
 }
 
+#all-comments {
+  padding-bottom: 15px;
+  padding-top: 15px;
+  .comment-avatar {
+    padding: 5px;
+  }
+  .comment-content {
+    padding-left: 20px;
+  }
+  #comment-info {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  #comment-text {
+    font-size: 20px;
+  }
+}
+
+#comments-display {
+  display: flex;
+  margin: 30px;
+  padding-left: 30px;
+}
+
+#new_comment {
+  display: flex;
+  justify-content: space-around;
+  #comment_content {
+  width: 650px;
+  margin-right: 40px;
+  }
+}
 

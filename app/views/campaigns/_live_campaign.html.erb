@@ -15,8 +15,7 @@
       <% end %>
     </div>
   </div>
-  <%= cl_image_tag(@campaign.brand_logo, class: 'brand-logo',
-      width: 70, crop: :scale) %>
+  <%= cl_image_tag(@campaign.brand_logo, class: 'brand-logo', width: 70, crop: :scale) %>
 </div>
 
 <!-- Content -->
@@ -51,10 +50,17 @@
           <%= render 'comments/form', campaign: @campaign, comment: @comment %>
         <br>
       </div>
-      <div class="all-comments" id="comments">
+      <div id="all-comments">
         <% @campaign.comments.reverse.each do |comment| %>
-         <%= comment.user.picture %>
-         <%= render 'comments/show', comment: comment %>
+          <div id="comments-display">
+            <div class="comment-avatar">
+               <%= cl_image_tag(comment.user.picture, id: 'user-comment', class: 'avatar', width: 50, height: 50, crop: :thumb, gravity: :face) %>
+            </div>
+            <div class="comment-content">
+              <p id='comment-info'>Published by <%= comment.user.name %> on <%= comment.created_at.strftime("%d/%m/%Y at %H:%M %p") %></p>
+              <h5 id='comment-text'><%= render 'comments/show', comment: comment %></h5>
+            </div>
+        </div>
         <% end %>
       </div>
     <% end %>
