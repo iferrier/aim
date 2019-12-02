@@ -1,9 +1,5 @@
 let newComment = document.getElementById('comment_content');
 
-// function refreshComment(innerHTML) {
-//   newComment.innerHTML = innerHTML;
-// }
-
 function addComment(reviewHTML) {
   const comments = document.getElementById('all-comments');
   comments.insertAdjacentHTML('afterbegin', reviewHTML);
