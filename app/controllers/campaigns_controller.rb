@@ -33,12 +33,18 @@ class CampaignsController < ApplicationController
     redirect_to campaign_path(@campaign)
   end
 
+  def download
+    send_file "#{Rails.root}/app/assets/downloadables/climatechange.zip", x_sendfile: true
+    authorize current_user
+  end
+
   def show
     set_campaign
     if @campaign.live
       @comment = Comment.new
     end
   end
+
 
   private
 
