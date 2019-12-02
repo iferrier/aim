@@ -43,7 +43,8 @@ class CampaignsController < ApplicationController
     @markers = @campaigns.map do |flat|
       {
         lat: flat.latitude,
-        lng: flat.longitude
+        lng: flat.longitude,
+        image_url: helpers.asset_url('yellow-marker.png')
       }
     end
   end

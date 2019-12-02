@@ -27,9 +27,6 @@
     <%= link_to 'Join', campaign_selections_path(@campaign), method: 'post', class: 'more-button more-button:hover' %>
   <% end %>
 </div>
-<div class="content">
-  <p><%= @campaign.campaign_description  %></p>
-</div>
 
 <!-- Link Back  -->
 <div class="activation-button">
@@ -61,3 +58,10 @@
 </div>
 
 
+    <div
+      id="map"
+      style="width: 100%;
+        height: 300px;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+    ></div>
