@@ -11,14 +11,29 @@
 
 <!--Featured campaign-->
 
+<div class="latest-campaign curent-campaign">
+  <h1 class="latest-c">CURRENT CAMPAIGNS</h1>
+</div>
+
+
+
+<!--Global warming-->
+<div class="title_container">
+  <!--CAUSE-->
+  <h2>GLOBAL WARMING</h2>
+</div>
+<%= render 'global_warming_cards' %>
+
+
+
 <div id="featured_campaign">
   <!--Featured campaign image-->
-  <%= link_to cl_image_tag(@featured_campaign.campaign_picture, height: 350, width: 470, crop: :scale), campaign_path(@featured_campaign) %>
+  <%= link_to cl_image_tag(@featured_campaign.campaign_picture, id: 'featured-campaign-image', height: 250, width: 400, crop: :scale), campaign_path(@featured_campaign) %>
   <!--Featured campaign description-->
   <div id="featured_campaign_text">
-    <h1>
+    <h2>
       <%= link_to @featured_campaign.title.upcase, campaign_path(@featured_campaign) %>
-    </h1>
+    </h2>
     <p>
       <%= @featured_campaign.campaign_description %>
     </p>
@@ -32,7 +47,7 @@
 
 <!--LGBTQ-->
 
-<div class="title_container">
+<div class="title_container lgbtq-container">
   <h2>LGBTQ</h2>
 </div>
 <%= render 'lgbtq_cards' %>
@@ -43,7 +58,7 @@
 
 <!--Fundraisers-->
 
-<div class="title_container">
+<div class="title_container fund-container">
   <h2>FUNDRAISERS</h2>
 </div>
 <%= render 'fundraisers_cards' %>

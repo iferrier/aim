@@ -2,56 +2,64 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
-  width: 80vw;
+  width: 40vw;
   margin: 0px auto 100px auto;
 }
 
-.user-card {
-  margin: 30px 50px 0px 0px;
-  width: 30%;
-  border: 0.5px solid #c1baba;
-  border-radius: 1px;
-  padding: 40px 40px;
+
+
+.user-story {
+  display:flex;
+ margin:150px 180px 400px 180px;
+
 }
+
+.user-card {
+width: 430px;
+height: 550px;
+border: 0.5px solid #c1baba;
+padding: 60px 40px;
+}
+
+
+.user-image {
+text-align:center;
+  .fab {
+   margin-top:25px;
+   font-size:35px;
+  }
+}
+
 
 .user-info {
   font-family: Roboto;
   font-size: 15px;
   line-height: 27px;
-  padding-left: 20px;
+  padding-left: 50px;
   padding-right: 20px;
   padding-top: 30px;
+}
+
+.user-about {
+  margin: 150px 50px 0 50px;
+  max-width: 400px;
+  height: 40px;
 }
 
 p {
   font-weight: 300;
 }
 
-.user-story {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80vw;
-  margin: 0 auto;
-}
 
-.user-image {
-  text-align: center;
-  i {
-    font-size: 20px;
-    padding-top: 10px;
-  }
-}
+
+
+
 
 .avatar-user-card {
-  border-radius: 50%;
+  border-radius: 100%;
 }
 
-.user-about {
-  margin-left: 5px;
-  max-width: 400px;
-  height: 40px;
-}
+
 
 .share-link {
   border: .5px solid black;

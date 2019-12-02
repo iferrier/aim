@@ -1,11 +1,49 @@
-
-
 .curent-campaign {
  margin-top: 57px;
  margin-bottom: -10px;
+ position:relative;
 }
 
 
+
+#featured_campaign {
+  display: flex;
+  align-items: center;
+  padding: 7rem 0;
+  width: 60vw;
+  position: relative;
+  margin: 40px auto;
+  left: 30%;
+  a {
+    width: 40%;
+  }
+}
+
+#featured-campaign-image {
+  position:absolute;
+  z-index:1;
+  top: 35%;
+  left: -45%;
+  width: 24rem;
+  object-fit: cover;
+}
+
+#featured_campaign_text {
+  padding:  3rem 2rem 4rem 3rem;
+  background:#8DB567;
+  position:absolute;
+  top: 26%;
+  left: -2%;
+  z-index:100;
+  width:60%;
+  a {
+    text-decoration: underline;
+    color: black;
+  }
+  a:hover {
+    color: blue;
+  }
+}
 
 #cause_container {
   display: grid;
