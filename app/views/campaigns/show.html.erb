@@ -4,4 +4,12 @@
   <%= render 'not_live_campaign' %>
 <% end %>
 
-
+<div class="container">
+  <div
+    id="map"
+    style="width: 100%;
+      height: 300px;"
+    data-marker="<%= @marker.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+  ></div>
+</div>

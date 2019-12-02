@@ -1,8 +1,8 @@
 import mapboxgl from 'mapbox-gl';
 
-const fitMapToMarkers = (map, markers) => {
+const fitMapToMarkers = (map, marker) => {
   const bounds = new mapboxgl.LngLatBounds();
-  markers.forEach(marker => bounds.extend([ marker.lng, marker.lat ]));
+  bounds.extend([ marker.lng, marker.lat ]);
   map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 });
 };
 
@@ -16,9 +16,8 @@ const initMapbox = () => {
       container: 'map',
       style: 'mapbox://styles/paolabrb/ck3ofbx0807021cqpbw7slwt7'
     });
-    const markers = JSON.parse(mapElement.dataset.markers);
-      markers.forEach((marker) => {
-        const element = document.createElement('div');
+    const marker = JSON.parse(mapElement.dataset.marker);
+    const element = document.createElement('div');
           element.className = 'marker';
           element.style.backgroundImage = `url('${marker.image_url}')`;
           element.style.backgroundSize = 'contain';
@@ -28,8 +27,8 @@ const initMapbox = () => {
         new mapboxgl.Marker(element)
           .setLngLat([ marker.lng, marker.lat ])
           .addTo(map);
-      });
-    fitMapToMarkers(map, markers);
+    map.setCenter(marker)
+    fitMapToMarkers(map, marker);
   }
 };
 
