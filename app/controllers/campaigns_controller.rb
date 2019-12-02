@@ -38,6 +38,14 @@ class CampaignsController < ApplicationController
     if @campaign.live
       @comment = Comment.new
     end
+    @campaigns = Campaign.geocoded
+
+    @markers = @campaigns.map do |flat|
+      {
+        lat: flat.latitude,
+        lng: flat.longitude
+      }
+    end
   end
 
   private
