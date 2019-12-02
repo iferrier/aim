@@ -1,7 +1,14 @@
-var comments = document.getElementById('all-comments');
-var newComment = '<p><%= @comment.content %></p>';
-var inputField = document.getElementById('comment_content');
+let newComment = document.getElementById('comment_content');
 
-comments.insertAdjacentHTML('afterbegin', newComment);
-inputField.value = '';
+// function refreshComment(innerHTML) {
+//   newComment.innerHTML = innerHTML;
+// }
+
+function addComment(reviewHTML) {
+  const comments = document.getElementById('all-comments');
+  comments.insertAdjacentHTML('afterbegin', reviewHTML);
+}
+
+addComment('<%= j render "comments/show", campaign: @campaign, comment: @comment %>');
+newComment.value = ' ';
 
