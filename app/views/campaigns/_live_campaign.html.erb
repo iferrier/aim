@@ -53,6 +53,7 @@
       </div>
       <div class="all-comments" id="comments">
         <% @campaign.comments.reverse.each do |comment| %>
+         <%= comment.user.picture %>
          <%= render 'comments/show', comment: comment %>
         <% end %>
       </div>
