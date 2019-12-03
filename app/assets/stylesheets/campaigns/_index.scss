@@ -1,4 +1,22 @@
+// Selection campaigns
 
+// Purple Banner
+.latest-campaign {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width:100%;
+  height:95px;
+  border: #5c4aff solid 15px;
+  margin-bottom: 100px;
+  color: black;
+}
+
+.latest-c {
+  font-size: 23px;
+  padding-top:7px;
+  font-weight:700;
+}
 
 
 .curent-campaign {
