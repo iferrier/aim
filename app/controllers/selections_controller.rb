@@ -10,6 +10,7 @@ class SelectionsController < ApplicationController
       flash[:alert] = "You already joined!"
     end
     authorize @selection
+    toggle_live_status
   end
 
   def destroy
@@ -23,11 +24,22 @@ class SelectionsController < ApplicationController
       flash[:alert] = "Whoops - something went wrong!"
     end
     authorize @selection
+    toggle_live_status
   end
 
   private
 
   def redirect_to_same
     redirect_back(fallback_location: "/")
+  end
+
+  def toggle_live_status
+    if @selection.campaign.users.count >= 5
+      @selection.campaign.live = true
+      @selection.campaign.save
+    else
+      @selection.campaign.live = false
+      @selection.campaign.save
+    end
   end
 end

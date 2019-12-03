@@ -51,30 +51,30 @@
 }
 
 
- .feature-button {
-margin-top:20px;
- }
+.feature-button {
+  margin-top:20px;
+}
 
-#cause_container {
+.cause-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 16px;
-  margin: 0 auto;
+  //padding: 20px;
 }
 
 @media(max-width: 1440px) {
-  #cause_container {
+  .cause-container {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
 @media(max-width: 992px) {
-  #cause_container {
+  .cause-container {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media(max-width: 768px) {
-  #cause_container {
+  .cause-container {
     grid-template-columns: 1fr;
   }
 }
