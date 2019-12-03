@@ -9,26 +9,66 @@
 
 
 .user-story {
-  display:flex;
- margin:150px 180px 400px 180px;
-
-}
-
-.user-card {
-width: 430px;
-height: 550px;
-border: 0.5px solid #c1baba;
-padding: 60px 40px;
-}
-
-
-.user-image {
-text-align:center;
-  .fab {
-   margin-top:25px;
-   font-size:35px;
+ display:flex;
+ justify-content: center;
+ text-align:center;
+ margin-top:150px;
+  .user-card {
+    width: 430px;
+    height: 550px;
+    padding: 60px 40px;
+    border: 15px solid #5C4AFF;
+  .user-image {
+    text-align:center;
+    .fab {
+      margin-top:25px;
+      font-size:35px;
+    }
   }
+  .user-info {
+    display: inline-block;
+    font-family: Roboto;
+    font-size: 15px;
+    line-height: 27px;
+    padding-left: 50px;
+    padding-right: 20px;
+    padding-top: 30px;
+    display:inline;
+    flex-direction: column;
+  }
+ }
 }
+
+.test {
+  flex-direction: column;
+   .user-about {
+    text-align:center;
+    margin-bottom:34px;
+
+  }
+  .user-assets {
+    border: 15px solid #5C4AFF;
+    margin-left: 50px;
+    max-width: 500px;
+    max-height: 300px;
+}
+   .asset-download {
+      text-decoration: underline ;
+      font-weight:700;
+
+     }
+
+ .asset-download:hover {
+      color:blue;
+     }
+  }
+
+
+
+
+
+
+
 
 
 .user-info {
@@ -41,10 +81,50 @@ text-align:center;
 }
 
 .user-about {
-  margin: 150px 50px 0 50px;
-  max-width: 400px;
-  height: 40px;
+  margin-left: 50px;
+  max-width: 500px;
+  max-height: 300px;
+  border: 15px solid #5C4AFF;
+  padding:40px;
+
 }
+// .user-story {
+//   display:flex;
+//  margin:150px 180px 400px 180px;
+
+// }
+
+// .user-card {
+// width: 430px;
+// height: 550px;
+// border: 0.5px solid #c1baba;
+// padding: 60px 40px;
+// }
+
+
+// .user-image {
+// text-align:center;
+//   .fab {
+//    margin-top:25px;
+//    font-size:35px;
+//   }
+// }
+
+
+// .user-info {
+//   font-family: Roboto;
+//   font-size: 15px;
+//   line-height: 27px;
+//   padding-left: 50px;
+//   padding-right: 20px;
+//   padding-top: 30px;
+// }
+
+// .user-about {
+//   margin: 150px 50px 0 50px;
+//   max-width: 400px;
+//   height: 40px;
+// }
 
 p {
   font-weight: 300;
