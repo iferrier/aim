@@ -1,10 +1,22 @@
+// Overview three campaigns
+
+.card-flex {
+  display:flex;
+  justify-items: space-around;
+  width: 1300px;
+}
+
 
 .card-campaign {
-  background: white;
+  background-color: white;
   width: 333px;
   margin:50px;
   font-size: 19px;
-  line-height: 70%;
+  line-height: 124.9%;
+  letter-spacing: 0.03em;
+  text-indent: 1px;
+  position: relative;
+  border: .5px solid black;
 }
 
 .card-campaign-infos {
@@ -16,18 +28,39 @@
   font-weight: bold;
   font-size: 24px;
   line-height: 125%;
+  letter-spacing: 0.02em;
+  text-indent: 1px;
 }
 
 .card-campaign .descript {
   font-family: "Crimson Text";
   line-height: 124.9%;
+  letter-spacing: -0.02em;
+  text-indent: 1px;
 }
 
 .card-campaign .date {
  font-size:19px;
+ font-weight: bold;
 }
 
 .join  {
   text-decoration: underline;
 }
+
+
+
+.live-flag {
+  width: 100%;
+  background-color: #FFF734;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: black;
+  font-size: 12px;
+  position: absolute;
+  top: 20px;
+}
+
 

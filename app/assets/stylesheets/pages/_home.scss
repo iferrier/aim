@@ -149,69 +149,9 @@ padding:10px 0;
   border-left: solid black .5px;
 }
 
-// Selection campaigns
 
-// Purple Banner
-.latest-campaign {
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  width:100%;
-  height:95px;
-  background-color: #5c4aff;
-  margin-bottom: 100px;
-  color:white;
-}
 
-.latest-c {
-  font-size: 23px;
-  padding-top:7px;
-  font-weight:700;
-}
 
-// Overview three campaigns
-
-.card-flex {
-  display:flex;
-  justify-items: space-around;
-  width: 1300px;
-}
-
-.card-campaign {
-  background-color: white;
-  width: 333px;
-  margin:50px;
-  padding-right: 15px;
-  padding-left: 15px;
-  font-size: 19px;
-  line-height: 124.9%;
-  letter-spacing: 0.03em;
-  text-indent: 1px;
-}
-
-.card-campaign-infos {
-  padding:20px 0 20px 20px;
-  width: 333px;
-}
-
-.card-campaign h2 {
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 124.9%;
-  letter-spacing: 0.02em;
-  text-indent: 1px;
-}
-
-.card-campaign .descript {
-  font-family: "Crimson Text";
-  line-height: 124.9%;
-  letter-spacing: -0.02em;
-  text-indent: 1px;
-}
-
-.card-campaign .date {
-  font-weight: bold;
-}
 
 // Link to all campaigns
 .more-campaign-button {
@@ -231,3 +171,4 @@ padding:10px 0;
   padding: 13px 27px;
   color: black;
 }
+
