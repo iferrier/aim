@@ -19,7 +19,7 @@
         <div class="card-campaign-infos">
           <h2><%= link_to campaign.title, campaign_path(campaign) %></h2>
           <p class="date"><%= campaign.launch_date.strftime("%d. %B %Y") || 'TBD' %></p>
-          <p><%= campaign.campaign_description.split(/[!||.||?]/).first  %></p>
+          <p><%= campaign.campaign_description.first(90)  %>...</p>
 
           <!--user avatars-->
           <div id="campaign-users">
@@ -27,7 +27,7 @@
               <%= link_to cl_image_tag(user.picture, class: "avatar", width: 40, height: 40, crop: :thumb, gravity: :face), user_path(user) %>
             <% end %>
             <% if campaign.users.count > 3 %>
-              <p>and other <%= campaign.users.count - 3 %> joined</p>
+              <p>and <%= campaign.users.count - 3 %> other joined</p>
             <% end %>
           </div>
         </div>

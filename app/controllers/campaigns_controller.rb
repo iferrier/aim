@@ -48,11 +48,6 @@ class CampaignsController < ApplicationController
   def show
     set_campaign
 
-    if @campaign.users.count >= 5
-      @campaign.live = true
-      @campaign.save
-    end
-
     if @campaign.live
       @comment = Comment.new
     end
