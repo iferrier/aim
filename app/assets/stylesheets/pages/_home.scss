@@ -99,12 +99,12 @@ text-decoration: none;
 }
 
 .how-wrap2 {
-  width: 1300px;
-  margin-top: -1px;
-  margin-left:150px;
-  margin-right:150px;
-  margin-bottom: 100px;
-  border:solid black .5px;
+width: 1300px;
+margin-top: -1px;
+margin-left:150px;
+margin-right:150px;
+margin-bottom: 100px;
+border:solid black .5px;
 }
 
 .flexxxing {
@@ -143,30 +143,31 @@ padding:10px 0;
 }
 
 .para {
-  background-color: #e7daf5;
-  padding:.1px 0;
-  border-right: solid black .5px;
-  border-left: solid black .5px;
+background-color: #e7daf5;
+padding:.1px 0;
+border-right: solid black .5px;
+border-left: solid black .5px;
 }
 
 // Selection campaigns
 
 // Purple Banner
 .latest-campaign {
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  width:100%;
-  height:95px;
-  background-color: #5c4aff;
-  margin-bottom: 100px;
-  color:white;
+display:flex;
+align-items: center;
+justify-content: center;
+width:100%;
+height:95px;
+border: 10px solid #5c4aff;
+margin-bottom: 100px;
+color:white;
 }
 
 .latest-c {
-  font-size: 23px;
-  padding-top:7px;
-  font-weight:700;
+font-size: 23px;
+padding-top:7px;
+font-weight:700;
+color: #5c4aff;
 }
 
 // Overview three campaigns
