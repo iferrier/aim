@@ -68,13 +68,24 @@
   display: flex;
   justify-content: space-around;
   margin-top: 100px;
-  margin-bottom: 30px;
+  margin-bottom: 70px;
 }
 
 // styling form to enter a comment
-.comment-content {
+.new_comment {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 800px;
+  .form-control.text.required {
+  width: 550px;
+  }
+  #new-comment {
+    height: 50px;
+  }
 }
+
+
 
 // styling comment show
 #comments-display {
