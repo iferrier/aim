@@ -85,14 +85,12 @@
   }
 }
 
-
-
 // styling comment show
 #comments-display {
   display: flex;
   justify-content: left;
   align-items: center;
-  margin: 0 20px 20px 40px;
+  margin: 0 40px 20px 40px;
 }
 
 #comment-content {
@@ -101,4 +99,9 @@
 
 #comment-info {
   margin: 0 0 3px 0;
+}
+
+#all-comments {
+  width: 800px;
+  text-align: justify;
 }

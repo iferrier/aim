@@ -1,14 +1,12 @@
-let newComment = document.getElementById('comment_content');
 let emptyComment = document.getElementById('empty-comment');
+let newComment = document.getElementById('comment_content');
+let comments = document.getElementById('all-comments');
+
 function addComment(reviewHTML) {
-  const comments = document.getElementById('all-comments');
   comments.insertAdjacentHTML('afterbegin', reviewHTML);
 }
+
 addComment('<%= j render "comments/show", campaign: @campaign, comment: @comment %>');
 newComment.value = ' ';
-
-if (emptyComment) {
-  emptyComment.innerText = ' ';
-}
-
+emptyComment.innerText = ' ';
 

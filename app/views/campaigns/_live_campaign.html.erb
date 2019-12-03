@@ -48,7 +48,7 @@
         <% if @campaign.comments.empty? %>
           <p id='empty-comment'><%= 'Be the first to leave a comment!'%></p>
         <% else %>
-          <% @campaign.comments.reverse.each do |comment| %>
+          <% @campaign.comments.each do |comment| %>
             <%= render 'comments/show', comment: comment %>
           <% end %>
         <% end %>
@@ -56,5 +56,6 @@
     <% end %>
   </div>
 </div>
+
 
 
