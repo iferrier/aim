@@ -7,26 +7,23 @@
       <p><a href= <%= @user.instagram %> target="_blank" <i class="fab fa-instagram insta"></i></a></p>
     </div>
 
-      <div class="user-info">
-        <p><strong><%= @user.name %></strong></p>
-        <p><%= @user.location %></p>
-        <p><%= link_to 'Edit', edit_user_path(@user) %></p>
-      </div>
+    <div class="user-info">
+      <h2><strong><%= @user.name %></strong></h2>
+      <h4><%= @user.location %></h4>
+      <p><%= link_to 'Edit', edit_user_path(@user), class: "edit-user" %></p>
     </div>
-<div class="test">
+  </div>
+  <div class="test">
     <div class="user-about">
       <p><%= @user.bio %></p>
-    </div>
-
-      <div class="user-assets">
-    <p>YOU CAN FIND YOUR PRESSKITS HERE </p>
-  </div>
-  </div>
   </div>
 
+  <div class="user-assets">
+    <p>HERE IS YOUR PRESS KITS FOR THE NEXT UPCOMING CAMPAIGN!<br><br><span class="asset-download">DOWNLOAD<span></p>
+  </div>
+  </div>
 
-</div>
-
+  </div>
 
 
   <div class="title_container">
@@ -60,13 +57,14 @@
               <%= link_to cl_image_tag(user.picture, class: "avatar",  width: 40, height: 40, crop: :thumb, gravity: :face), user_path(user) %>
             <% end %>
           </div>
-          <!-- link to participate-->
-          <% if campaign.users.include?(current_user) %>
-            <%= link_to 'REMOVE', campaign_selection_path(campaign, current_user), method: 'delete', class: 'index-card-btn' %>
-            <%= link_to 'SHARE', '#', class: 'share-link' %>
-          <% else %>
-          <% end %>
-        </div>
-    <% end %>
-  </div>
+        <!-- link to participate-->
+        <% if campaign.users.include?(current_user) %>
+       <!--    <%= link_to 'REMOVE', campaign_selection_path(campaign, current_user), method: 'delete', class: 'index-card-btn' %> -->
+          <%= link_to 'SHARE', '#', class: 'share-link' %>
+        <% else %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>
 
