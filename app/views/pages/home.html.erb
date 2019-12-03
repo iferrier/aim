@@ -63,13 +63,14 @@
 </div>
 
 <!--LATEST CAMPAIGN CARDS -->
-
-<div class="latest-campaign">
-  <h1 class="latest-c">Latest Campaigns</h1>
+<div class="container">
+  <div class="latest-campaign">
+    <h1 class="latest-c">Latest Campaigns</h1>
+  </div>
 </div>
 
 <div class="container">
-  <div class="campaign-selection">
+  <div id="cause_container">
     <div class="card-flex">
       <% @campaigns.sample(3).each do |campaign|%>
         <div class="card-campaign" id="index-card">
@@ -85,10 +86,11 @@
         </div>
       <% end %>
     </div>
-    <div class="more-campaign-button">
-      <%= link_to 'MORE', campaigns_path, class: "more-button .more-button:hover"  %>
-    </div>
   </div>
+</div>
+
+<div class="more-campaign-button">
+  <%= link_to 'MORE', campaigns_path, class: "more-button .more-button:hover"  %>
 </div>
 
 
