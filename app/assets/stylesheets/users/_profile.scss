@@ -1,3 +1,4 @@
+
 #card-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -9,30 +10,76 @@
 
 
 .user-story {
-  display:flex;
- margin:150px 180px 400px 180px;
-
+ display:flex;
+ justify-content: center;
+ text-align:center;
+ margin:150px 120px 0 120px;
+ padding: 70px 0 50px 0;
+ background: rgba(92, 74, 255, 0.06);
 }
+  .user-card {
+    width: 430px;
+    height: 550px;
+    padding: 60px 40px;
+    border: 15px solid #5C4AFF;
+  }
+  .user-image {
+    text-align:center;
+    .fab {
+      margin-top:25px;
+      font-size:35px;
+    }
+  }
+  .user-info {
+    font-family: Roboto;
+    font-size: 15px;
+    line-height: 27px;
+    padding-left: 50px;
+    padding-right: 20px;
+    padding-top: 30px;
+    display:inline;
+    flex-direction: column;
+    text-align:left;
+  }
 
-.user-card {
-width: 430px;
-height: 550px;
-border: 0.5px solid #c1baba;
-padding: 60px 40px;
-}
+ .edit-user {
+    text-decoration:underline;
+  }
 
+  .user-assets {
+    border: 15px solid #5C4AFF;
+    margin-left: 50px;
+    max-width: 500px;
+    max-height: 300px;
+  }
 
-.user-image {
-text-align:center;
-  .fab {
-   margin-top:25px;
-   font-size:35px;
+.test {
+  flex-direction: column;
+   .user-about {
+    text-align:center;
+    margin-bottom:34px;
+    max-width: 500px;
+    min-height: 258px;
   }
 }
 
 
+  .user-assets {
+    border: 15px solid #5C4AFF;
+    margin-left: 50px;
+  }
+
+   .asset-download {
+      text-decoration: underline ;
+      font-weight:700;
+     }
+
+  .asset-download:hover {
+      color:blue;
+     }
+
 .user-info {
-  font-family: Roboto;
+  font-family: 'Poppins', sans-serif;
   font-size: 15px;
   line-height: 27px;
   padding-left: 50px;
@@ -40,35 +87,22 @@ text-align:center;
   padding-top: 30px;
 }
 
-.user-about {
-  margin: 150px 50px 0 50px;
-  max-width: 400px;
-  height: 40px;
-}
-
 p {
   font-weight: 300;
 }
-
-
-
-
 
 
 .avatar-user-card {
   border-radius: 100%;
 }
 
-
-
 .share-link {
   border: .5px solid black;
-  padding: 5px 10px;
-  border-radius: 3px;
+  padding: 9px 14px;
   opacity: .7;
   font-size: 12px;
   color: black;
   position: absolute;
-  bottom: 80px;
-  right: 30px;
+  bottom: 20px;
+  right: 20px;
 }

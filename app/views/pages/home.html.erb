@@ -1,17 +1,4 @@
-
-
-<!-- <div class="banner">
-  <div class="frame">
-    <p class="logo-big">AIM</p>
-    <h1 class="tagline">Do things that matter<br>
-    better, together</h1>
-      <%= link_to 'ALL CAMPAIGNS', campaigns_path, class: "all-campaign-btn" %>
-  </div>
-  <div class="banner-img">
-    <%= image_tag "newspaper.png", alt:"protest", class: "picture"%>
-  </div>
-</div> -->
-
+<!-- Banner  -->
 
 <div class="banner">
   <div class="frame">
@@ -26,89 +13,80 @@
 </div>
 
 
-
-
-
-<!-- JSBOX -->
-
-<div class="how-wrap">
-  <div class=flexxxing>
-    <div class="how-we-do">
-      <p class="how-p">Why we do it</p>
+<div class="container">
+  <div class="business-explanation">
+    <div class="how-wrap">
+      <div class=flexxxing>
+        <div class="how-we-do">
+          <p class="how-p">How we do it</p>
+        </div>
+        <div class="link-move">
+          <a href='#' class='link-t'>+</a>
+        </div>
+      </div>
+       <div class="para">
+        <p class="content-how d-none">Helping others benefits those in need but can be deeply rewarding to you too. Supporting a cause you believe in has a positive effect on your own live. The knowledge that you’re serving a good cause is hugely empowering and, in turn, can make you feel happier and more fulfilled.</p>
+     </div>
     </div>
-    <div class="link-move">
-      <a href='#' class='link-t'>+</a>
+
+    <div class="how-wrap1">
+      <div class=flexxxing>
+        <div class="how-we-do">
+          <p class="how-p">How you can participate</p>
+        </div>
+        <div class="link-move">
+          <a href='#' class='link-t'>+</a>
+        </div>
+      </div>
+       <div class="para">
+        <p class="content-how1 d-none">Against this backdrop, Aim Agency aspires to make this world a better place, together. We aim to encourage people to inspire others by participating in and donating to charitable events and good causes all around the world. Be part of a global movement and contribute to good karma through positive intent and deed.
+        </p>
+     </div>
     </div>
-  </div>
-   <div class="para">
-    <p class="content-how d-none">Helping others benefits those in need but can be deeply rewarding to you too. Supporting a cause you believe in has a positive effect on your own live. The knowledge that you’re serving a good cause is hugely empowering and, in turn, can make you feel happier and more fulfilled.
 
-    <br>
+    <div class="how-wrap2">
+      <div class=flexxxing>
+        <div class="how-we-do">
+          <p class="how-p">What are campaigns</p>
+        </div>
+        <div class="link-move">
+          <a href='#' class='link-t'>+</a>
+        </div>
+      </div>
 
-    </p>
- </div>
-</div>
-
-<div class="how-wrap1">
-  <div class=flexxxing>
-    <div class="What we do">
-      <p class="how-p">How you can participate</p>
-    </div>
-    <div class="link-move">
-      <a href='#' class='link-t1'>+</a>
-    </div>
-  </div>
-
-   <div class="para">
-    <p class="content-how1 d-none">Against this backdrop, Aim Agency aspires to make this world a better place, together. We aim to encourage people to inspire others by participating in and donating to charitable events and good causes all around the world. Be part of a global movement and contribute to good karma through positive intent and deed.
-
-    </p>
- </div>
-</div>
-
-<div class="how-wrap2">
-  <div class=flexxxing>
-    <div class="how-we-do">
-      <p class="how-p">How to participate</p>
-    </div>
-    <div class="link-move">
-      <a href='#' class='link-t'>+</a>
+       <div class="para">
+        <p class="content2 d-none"><br><br> Aim Agency makes it easy to find a campaign that’s working for causes important to you; wether you want to make a donation or find out how to donate your time or be of help in any way. We offer an overview of world-wide campaigns that can change your life and those of others for the better.
+        </p>
+     </div>
     </div>
   </div>
-
-   <div class="para">
-    <p class="content2 d-none"><br><br> Aim Agency makes it easy to find a campaign that’s working for causes important to you; wether you want to make a donation or find out how to donate your time or be of help in any way. We offer an overview of world-wide campaigns that can change your life and those of others for the better.
-
-    </p>
- </div>
 </div>
-
 
 <!--LATEST CAMPAIGN CARDS -->
-
-
-<div class="latest-campaign">
-  <h1 class="latest-c">Latest Campaigns</h1>
+<div class="container">
+  <div class="latest-campaign">
+    <h1 class="latest-c">Latest Campaigns</h1>
+  </div>
 </div>
 
-
-<div class="card-flex">
-  <% @campaigns.sample(3).each do |campaign|%>
-    <div class="card-campaign" id="index-card">
-      <%= link_to cl_image_tag(campaign.campaign_picture,  class:"card-img", width: 360, height:240, crop: :scale), campaign_path(campaign) %>
-      <% if campaign.live %>
-        <p class="live-flag">LIVE</p>
-      <% end %>
-      <div class="card-campaign-infos">
-        <h2><%= link_to campaign.title, campaign_path(campaign) %></h2>
-        <p class="descript"><%= campaign.campaign_description.split(/[!||.||?]/).first  %></p>
-        <p class="date"><%= campaign.launch_date.strftime("%d. %B %Y") || 'TBD' %></p>
+<div class="container">
+  <div id="cause_container">
+    <% @campaigns.sample(3).each do |campaign|%>
+      <div class="card-campaign" id="index-card">
+        <%= link_to cl_image_tag(campaign.campaign_picture,  class:"card-img", width: 360, height:240, crop: :scale), campaign_path(campaign) %>
+        <% if campaign.live %>
+          <p class="live-flag">LIVE</p>
+        <% end %>
+        <div class="card-campaign-infos">
+          <h2><%= link_to campaign.title, campaign_path(campaign) %></h2>
+          <p class="descript"><%= campaign.campaign_description.split(/[!||.||?]/).first  %></p>
+          <p class="date"><%= campaign.launch_date.strftime("%d. %B %Y") || 'TBD' %></p>
+        </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
 
-<br><br>
 <div class="more-campaign-button">
   <%= link_to 'MORE', campaigns_path, class: "more-button .more-button:hover"  %>
 </div>
