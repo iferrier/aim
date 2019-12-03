@@ -37,16 +37,20 @@
 <!-- Comments -->
 <div class="container-comments">
   <div class="comments">
-    <h2>Share your thoughts!</h2>
     <% if @campaign.users.include?(current_user) %>
+      <h2>Share your thoughts!</h2>
       <div class="new-comment">
         <br>
           <%= render 'comments/form', campaign: @campaign, comment: @comment %>
         <br>
       </div>
       <div id="all-comments">
-        <% @campaign.comments.reverse.each do |comment| %>
-          <%= render 'comments/show', comment: comment %>
+        <% if @campaign.comments.empty? %>
+          <p id='empty-comment'><%= 'Be the first to leave a comment!'%></p>
+        <% else %>
+          <% @campaign.comments.reverse.each do |comment| %>
+            <%= render 'comments/show', comment: comment %>
+          <% end %>
         <% end %>
       </div>
     <% end %>

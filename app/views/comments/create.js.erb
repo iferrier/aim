@@ -1,7 +1,14 @@
 let newComment = document.getElementById('comment_content');
+let emptyComment = document.getElementById('empty-comment');
 function addComment(reviewHTML) {
   const comments = document.getElementById('all-comments');
   comments.insertAdjacentHTML('afterbegin', reviewHTML);
 }
 addComment('<%= j render "comments/show", campaign: @campaign, comment: @comment %>');
 newComment.value = ' ';
+
+if (emptyComment) {
+  emptyComment.innerText = ' ';
+}
+
+
