@@ -7,9 +7,13 @@
 
 // Banner
 
+body {
+  background:#f7f5f5;
+}
+
 .banner {
   display: flex;
-  margin: 50px auto;
+  margin: 135px auto;
   border: 0.5px solid #000000;
   width: 1300px;
   height: 500px;
@@ -51,8 +55,8 @@
    .all-campaign-btn:hover {
     color: blue;
     text-decoration: none;
+  }
 
-}
   .picture{
     width: 650px;
     height:99.9%;
@@ -161,6 +165,8 @@ padding:10px 0;
 
 .latest-c {
   font-size: 23px;
+  padding-top:7px;
+  font-weight:700;
 }
 
 // Overview three campaigns
