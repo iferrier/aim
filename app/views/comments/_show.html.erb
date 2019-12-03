@@ -1,1 +1,9 @@
-<p><%= comment.content %></p>
+<div id="comments-display">
+  <div class="comment-avatar">
+     <%= cl_image_tag(comment.user.picture, id: 'user-comment', class: 'avatar', width: 40, height: 40, crop: :thumb, gravity: :face) %>
+  </div>
+  <div id="comment-content">
+    <p id='comment-info'>Published by <%= comment.user.name %> on <%= comment.created_at.strftime("%d/%m/%Y at %H:%M %p") %></p>
+    <h5 id='comment-text'><%= comment.content %></h5>
+  </div>
+</div>
