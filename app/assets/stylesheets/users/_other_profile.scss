@@ -1,0 +1,114 @@
+
+#card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  width: 40vw;
+  margin: 0px auto 100px auto;
+}
+
+.user-story {
+   display:flex;
+   justify-content: center;
+   text-align:center;
+   margin:150px 120px 0 120px;
+   padding: 70px 0 50px 0;
+   background: rgba(196, 196, 196, 0.47);;
+}
+  .user-card {
+    width: 430px;
+    height: 550px;
+    padding: 60px 40px;
+    border: 15px solid #F4F084;
+  }
+  .user-image {
+    text-align:center;
+    .fab {
+      margin-top:25px;
+      font-size:35px;
+    }
+  }
+
+  .user-info {
+    font-family: Roboto;
+    font-size: 15px;
+    line-height: 27px;
+    padding-left: 50px;
+    padding-right: 20px;
+    padding-top: 30px;
+    display:inline;
+    flex-direction: column;
+    text-align:left;
+  }
+
+ .edit-user {
+    text-decoration:underline;
+  }
+
+  .user-about {
+    border: 15px solid #F4F084;
+    display:inline-block;
+    height: 250px;
+    max-width: 450px;
+    min-width:450px;
+    margin-bottom:43px;
+    margin-left: 50px;
+    padding:30px;
+  }
+
+.test {
+  flex-direction: column;
+   .user-about {
+    text-align:center;
+    margin-bottom:43px;
+  }
+}
+
+  .user-assets {
+    border: 15px solid #F4F084;
+    margin-left: 50px;
+    max-width: 450px;
+    height: 250px;
+    padding-top:50px;
+}
+
+   .asset-download {
+      text-decoration: underline ;
+      font-weight:700;
+     }
+
+   .asset-download:hover {
+      color:blue;
+     }
+
+
+
+p {
+  font-weight: 300;
+}
+
+#index-card {
+  background-color: white;
+  width: 333px;
+  margin:50px;
+  font-size: 19px;
+  line-height: 124.9%;
+  letter-spacing: 0.03em;
+  text-indent: 1px;
+  position: relative;
+  border: .5px solid black;
+}
+.avatar-user-card {
+  border-radius: 100%;
+}
+
+.share-link {
+  border: .5px solid black;
+  padding: 9px 14px;
+  opacity: .7;
+  font-size: 12px;
+  color: black;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
