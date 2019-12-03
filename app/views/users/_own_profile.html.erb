@@ -55,8 +55,10 @@
         <!-- link to participate-->
         <% if campaign.users.include?(current_user) %>
           <%= link_to 'REMOVE', campaign_selection_path(campaign, current_user), method: 'delete', class: 'index-card-btn' %>
-          <%= link_to 'SHARE', '#', class: 'share-link' %>
-        <% else %>
+          <!-- Link to Asset -->
+          <% if campaign.live %>
+            <%= link_to 'ASSETS', download_path, class:'share-link' %>
+          <% end %>
         <% end %>
       </div>
     </div>
