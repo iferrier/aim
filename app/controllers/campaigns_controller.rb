@@ -45,19 +45,23 @@ class CampaignsController < ApplicationController
     end
   end
 
-
   def show
     set_campaign
+
+    if @campaign.users.count >= 5
+      @campaign.live = true
+      @campaign.save
+    end
+
     if @campaign.live
       @comment = Comment.new
     end
-   # @campaigns = Campaign.geocoded
 
     @marker = {
-        lat: @campaign.latitude,
-        lng: @campaign.longitude,
-        image_url: helpers.asset_url('yellow-marker.png')
-      }
+      lat: @campaign.latitude,
+      lng: @campaign.longitude,
+      image_url: helpers.asset_url('yellow-marker.png')
+    }
   end
 
 
