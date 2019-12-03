@@ -8,18 +8,18 @@
 }
 
 .user-story {
-   display:flex;
-   justify-content: center;
-   text-align:center;
-   margin:150px 120px 0 120px;
-   padding: 70px 0 50px 0;
-   background: rgba(196, 196, 196, 0.47);;
+ display:flex;
+ justify-content: center;
+ text-align:center;
+ margin:150px 120px 0 120px;
+ padding: 70px 0 50px 0;
+ //background: rgba(92, 74, 255, 0.06);
 }
   .user-card {
     width: 430px;
     height: 550px;
-    padding: 60px 40px;
-    border: 15px solid #F4F084;
+    padding: 40px 30px;
+    border: solid 1px black;
   }
   .user-image {
     text-align:center;
@@ -28,7 +28,6 @@
       font-size:35px;
     }
   }
-
   .user-info {
     font-family: Roboto;
     font-size: 15px;
@@ -38,22 +37,17 @@
     padding-top: 30px;
     display:inline;
     flex-direction: column;
-    text-align:left;
+    text-align:center;
   }
 
- .edit-user {
-    text-decoration:underline;
-  }
 
   .user-about {
-    border: 15px solid #F4F084;
-    display:inline-block;
-    height: 250px;
-    max-width: 450px;
-    min-width:450px;
-    margin-bottom:43px;
-    margin-left: 50px;
-    padding:30px;
+    text-align:left;
+    margin-top:90px;
+    margin-bottom:34px;
+    margin-left:50px;
+    max-width: 500px;
+    min-height: 258px;
   }
 
 .test {
@@ -64,22 +58,7 @@
   }
 }
 
-  .user-assets {
-    border: 15px solid #F4F084;
-    margin-left: 50px;
-    max-width: 450px;
-    height: 250px;
-    padding-top:50px;
-}
 
-   .asset-download {
-      text-decoration: underline ;
-      font-weight:700;
-     }
-
-   .asset-download:hover {
-      color:blue;
-     }
 
 
 
