@@ -1,6 +1,4 @@
-
-
-
+<!-- Banner  -->
 
 <div class="banner">
   <div class="frame">
@@ -14,89 +12,83 @@
   </div>
 </div>
 
-
-
-
-
 <!-- JSBOX -->
-
-<div class="how-wrap">
-  <div class=flexxxing>
-    <div class="how-we-do">
-      <p class="how-p">How we do it</p>
+<div class="container">
+  <div class="business-explanation">
+    <div class="how-wrap">
+      <div class=flexxxing>
+        <div class="how-we-do">
+          <p class="how-p">How we do it</p>
+        </div>
+        <div class="link-move">
+          <a href='#' class='link-t'>+</a>
+        </div>
+      </div>
+       <div class="para">
+        <p class="content-how d-none">“Aim Agency aspires to make this world a better place, together. We aim to encourage people to inspire others by participating in charitable events and good causes all around the world.”</p>
+     </div>
     </div>
-    <div class="link-move">
-      <a href='#' class='link-t'>+</a>
+
+    <div class="how-wrap1">
+      <div class=flexxxing>
+        <div class="how-we-do">
+          <p class="how-p">How you can participate</p>
+        </div>
+        <div class="link-move">
+          <a href='#' class='link-t'>+</a>
+        </div>
+      </div>
+       <div class="para">
+        <p class="content-how1 d-none">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, aliquid ullam? Esse aut, nesciunt repellendus aliquid ex fugit iusto velit ullam facere iste nihil, deleniti perspiciatis molestias, sequi veritatis earum?
+        </p>
+     </div>
+    </div>
+
+    <div class="how-wrap2">
+      <div class=flexxxing>
+        <div class="how-we-do">
+          <p class="how-p">What are campaigns</p>
+        </div>
+        <div class="link-move">
+          <a href='#' class='link-t'>+</a>
+        </div>
+      </div>
+
+       <div class="para">
+        <p class="content2 d-none"><br><br> Praesentium, aliquid ullam? Esse aut, nesciunt repellendus aliquid ex fugit iusto velit ullam facere iste nihil, deleniti perspiciatis molestias, sequi veritatis earum?
+        </p>
+     </div>
     </div>
   </div>
-   <div class="para">
-    <p class="content-how d-none">“Aim Agency aspires to make this world a better place, together. We aim to encourage people to inspire others by participating in charitable events and good causes all around the world.”
-    <br>
-    “Aim Agency aspires to make this world a better place, together. We aim to encourage people to inspire others by participating in charitable events and good causes all around the world.”
-    </p>
- </div>
 </div>
-
-<div class="how-wrap1">
-  <div class=flexxxing>
-    <div class="how-we-do">
-      <p class="how-p">How you can participate</p>
-    </div>
-    <div class="link-move">
-      <a href='#' class='link-t1'>+</a>
-    </div>
-  </div>
-
-   <div class="para">
-    <p class="content-how1 d-none">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, aliquid ullam? Esse aut, nesciunt repellendus aliquid ex fugit iusto velit ullam facere iste nihil, deleniti perspiciatis molestias, sequi veritatis earum?
-    </p>
- </div>
-</div>
-
-<div class="how-wrap2">
-  <div class=flexxxing>
-    <div class="how-we-do">
-      <p class="how-p">What are campaigns</p>
-    </div>
-    <div class="link-move">
-      <a href='#' class='link-t'>+</a>
-    </div>
-  </div>
-
-   <div class="para">
-    <p class="content2 d-none"><br><br> Praesentium, aliquid ullam? Esse aut, nesciunt repellendus aliquid ex fugit iusto velit ullam facere iste nihil, deleniti perspiciatis molestias, sequi veritatis earum?
-    </p>
- </div>
-</div>
-
 
 <!--LATEST CAMPAIGN CARDS -->
-
 
 <div class="latest-campaign">
   <h1 class="latest-c">Latest Campaigns</h1>
 </div>
 
-
-<div class="card-flex">
-  <% @campaigns.sample(3).each do |campaign|%>
-    <div class="card-campaign" id="index-card">
-      <%= link_to cl_image_tag(campaign.campaign_picture,  class:"card-img", width: 360, height:240, crop: :scale), campaign_path(campaign) %>
-      <% if campaign.live %>
-        <p class="live-flag">LIVE</p>
+<div class="container">
+  <div class="campaign-selection">
+    <div class="card-flex">
+      <% @campaigns.sample(3).each do |campaign|%>
+        <div class="card-campaign" id="index-card">
+          <%= link_to cl_image_tag(campaign.campaign_picture,  class:"card-img", width: 360, height:240, crop: :scale), campaign_path(campaign) %>
+          <% if campaign.live %>
+            <p class="live-flag">LIVE</p>
+          <% end %>
+          <div class="card-campaign-infos">
+            <h2><%= link_to campaign.title, campaign_path(campaign) %></h2>
+            <p class="descript"><%= campaign.campaign_description.split(/[!||.||?]/).first  %></p>
+            <p class="date"><%= campaign.launch_date.strftime("%d. %B %Y") || 'TBD' %></p>
+          </div>
+        </div>
       <% end %>
-      <div class="card-campaign-infos">
-        <h2><%= link_to campaign.title, campaign_path(campaign) %></h2>
-        <p class="descript"><%= campaign.campaign_description.split(/[!||.||?]/).first  %></p>
-        <p class="date"><%= campaign.launch_date.strftime("%d. %B %Y") || 'TBD' %></p>
-      </div>
     </div>
-  <% end %>
-</div>
-
-<br><br>
-<div class="more-campaign-button">
-  <%= link_to 'MORE', campaigns_path, class: "more-button .more-button:hover"  %>
+    <div class="more-campaign-button">
+      <%= link_to 'MORE', campaigns_path, class: "more-button .more-button:hover"  %>
+    </div>
+  </div>
 </div>
 
 
