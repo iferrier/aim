@@ -36,8 +36,10 @@
           <br><br>
           <span class="asset-download">
             <!-- Link to Asset -->
-              <% if @user.campaigns.last %>
+              <% if @user.selections.last.campaign.live %>
                 <%= link_to 'ASSETS', download_path%>
+              <% else %>
+                <p>Waiting for next live campaign...</p>
               <% end %>
           </span>
         </p>
