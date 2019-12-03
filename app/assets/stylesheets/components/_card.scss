@@ -20,8 +20,10 @@
 }
 
 .card-campaign-infos {
-  padding:20px 0 20px 20px;
-  width: 333px;
+  padding:20px 20px 20px 20px;
+  min-height: 240px;
+  max-height: 240px;
+  // width: 333px;
 }
 
 .card-campaign h2 {
