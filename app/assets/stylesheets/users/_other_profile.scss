@@ -13,13 +13,13 @@
    text-align:center;
    margin:150px 120px 0 120px;
    padding: 70px 0 50px 0;
-   background: rgba(92, 74, 255, 0.06);
+   background: rgba(196, 196, 196, 0.47);;
 }
   .user-card {
     width: 430px;
     height: 550px;
     padding: 60px 40px;
-    border: 15px solid #5C4AFF;
+    border: 15px solid #F4F084;
   }
   .user-image {
     text-align:center;
@@ -28,6 +28,7 @@
       font-size:35px;
     }
   }
+
   .user-info {
     font-family: Roboto;
     font-size: 15px;
@@ -45,51 +46,45 @@
   }
 
   .user-about {
-    border: 15px solid #5C4AFF;
+    border: 15px solid #F4F084;
     display:inline-block;
     height: 250px;
     max-width: 450px;
-    margin-bottom:40px;
+    min-width:450px;
+    margin-bottom:43px;
     margin-left: 50px;
     padding:30px;
   }
 
-  .test {
+.test {
   flex-direction: column;
    .user-about {
     text-align:center;
-    margin-bottom:50px;
+    margin-bottom:43px;
   }
 }
 
   .user-assets {
-    border: 15px solid #5C4AFF;
+    border: 15px solid #F4F084;
     margin-left: 50px;
     max-width: 450px;
     height: 250px;
     padding-top:50px;
-    }
+}
 
    .asset-download {
       text-decoration: underline ;
       font-weight:700;
-    }
+     }
 
    .asset-download:hover {
       color:blue;
-    }
+     }
 
 
 
 p {
   font-weight: 300;
-}
-
-#card-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 16px;
-  margin: 0 auto;
 }
 
 #index-card {
@@ -103,12 +98,6 @@ p {
   position: relative;
   border: .5px solid black;
 }
-
-#index-card-infos {
-padding: 20px 0 20px 20px;
-    width: 333px;
-}
-
 .avatar-user-card {
   border-radius: 100%;
 }
