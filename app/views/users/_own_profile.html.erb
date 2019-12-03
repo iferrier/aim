@@ -1,33 +1,55 @@
 <div class="user-frame">
   <div class="user-story">
+
+    <!--card-->
      <div class="user-card">
+
+      <!--image-->
       <div class="user-image">
-      <%= cl_image_tag @user.picture, class: "avatar-user-card dashboard-img", width: 200, height: 200, crop: :thumb, gravity: :face %>
-      <br>
-      <p><a href= <%= @user.instagram %> target="_blank" <i class="fab fa-instagram insta"></i></a></p>
+        <%= cl_image_tag @user.picture, class: "avatar-user-card dashboard-img", width: 200, height: 200, crop: :thumb, gravity: :face %>
+        <br>
+        <p>
+          <a href= <%= @user.instagram %> target="_blank">
+            <i class="fab fa-instagram insta"></i>
+          </a>
+        </p>
+      </div>
+
+     <!--infos-->
+      <div class="user-info">
+        <h2><strong><%= @user.name %></strong></h2>
+        <h4><%= @user.location %></h4>
+        <p>
+          <%= link_to 'Edit', edit_user_path(@user), class: "edit-user" %>
+        </p>
+      </div>
     </div>
 
-    <div class="user-info">
-      <h2><strong><%= @user.name %></strong></h2>
-      <h4><%= @user.location %></h4>
-      <p><%= link_to 'Edit', edit_user_path(@user), class: "edit-user" %></p>
+   <!--bio and assets-->
+    <div class="test">
+      <div class="user-about">
+        <p><%= @user.bio %></p>
+      </div>
+
+      <div class="user-assets">
+        <p>HERE IS YOUR PRESS KITS FOR THE NEXT UPCOMING CAMPAIGN!
+          <br><br>
+          <span class="asset-download">
+            <!-- Link to Asset -->
+              <% if @user.campaigns.last %>
+                <%= link_to 'ASSETS', download_path%>
+              <% end %>
+          </span>
+        </p>
+      </div>
     </div>
   </div>
-  <div class="test">
-    <div class="user-about">
-      <p><%= @user.bio %></p>
-  </div>
 
-  <div class="user-assets">
-    <p>HERE IS YOUR PRESS KITS FOR THE NEXT UPCOMING CAMPAIGN!<br><br><span class="asset-download">DOWNLOAD<span></p>
-  </div>
-  </div>
-
-  </div>
-
-
+  <!-- title -->
   <div class="title_container">
     <h2>My Campaigns</h2>
+
+    <!-- if no campaigns -->
     <% if @user.campaigns.empty? %>
       <br>
       <h2>Whoops - still no campaigns here!</h2>
@@ -36,35 +58,44 @@
     <% end %>
   </div>
 
-
-  <div id="card-container">
+  <!-- campaign cards -->
+  <div class="cause-container">
     <% @user.campaigns.each do |campaign| %>
-      <div id="index-card">
-        <!--campaign image-->
-        <%= link_to cl_image_tag(campaign.campaign_picture, class:"card-img", width: 360, height: 240, crop: :scale), campaign_path(campaign) %>
+      <div class="card-campaign">
+
+        <!--live flag-->
         <% if campaign.live %>
           <p class="live-flag">LIVE</p>
         <% end %>
-        <!--campaign infos-->
-        <div id="index-card-infos">
-          <div>
-            <h2><%= link_to campaign.title, campaign_path(campaign) %></h2>
-            <p><%= campaign.campaign_description.split(/[!||.||?]/).first %></p>
-            <p><%= campaign.launch_date.strftime("%d. %B %Y") || 'TBD' %></p>
-          </div>
+
+        <!--image-->
+        <%= link_to cl_image_tag(campaign.campaign_picture, width: 333, height: 240, :crop=>"fill", :effect=>"grayscale"), campaign_path(campaign) %>
+
+        <!--infos-->
+        <div class="card-campaign-infos">
+          <h2><%= link_to campaign.title, campaign_path(campaign) %></h2>
+          <p class="date"><%= campaign.launch_date.strftime("%d. %B %Y") || 'TBD' %></p>
+          <p><%= campaign.campaign_description.first(90)  %>...</p>
+
+          <!--user avatars-->
           <div id="campaign-users">
-            <% campaign.users.each do |user| %>
-              <%= link_to cl_image_tag(user.picture, class: "avatar",  width: 40, height: 40, crop: :thumb, gravity: :face), user_path(user) %>
+            <% campaign.users.first(3).each do |user| %>
+              <%= link_to cl_image_tag(user.picture, class: "avatar", width: 40, height: 40, crop: :thumb, gravity: :face), user_path(user) %>
+            <% end %>
+            <% if campaign.users.count > 3 %>
+              <p>and <%= campaign.users.count - 3 %> other joined</p>
             <% end %>
           </div>
+        </div>
+        <br>
+        <br>
         <!-- link to participate-->
         <% if campaign.users.include?(current_user) %>
        <!--    <%= link_to 'REMOVE', campaign_selection_path(campaign, current_user), method: 'delete', class: 'index-card-btn' %> -->
-          <%= link_to 'SHARE', '#', class: 'share-link' %>
         <% else %>
         <% end %>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
 

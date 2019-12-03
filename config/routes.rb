@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'campaigns/:id/download', to: "campaigns#download", as: 'download'
+  get 'users/:id/download', to: "users#download", as: 'download'
   devise_for :users
   root to: 'pages#home'
   resources :users, only: [:new, :create, :show, :edit, :update]
