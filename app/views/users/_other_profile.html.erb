@@ -16,42 +16,46 @@
 </div>
 
 
-<div class="title_container">
-  <h2><%= @user.name %> Campaigns</h2>
+<div id="profile-h2">
+  <h2><%= @user.name.capitalize %> joined Campaigns</h2>
   <% if @user.campaigns.empty? %>
     <br>
-    <h2>Whoops - still no campaigns here!</h2>
+    <h2>Whoops - <%= @user.name.capitalize %> hasn't joined any campaigns yet!</h2>
     <br>
-    <%= link_to 'ALL CAMPAIGNS', campaigns_path, class: "more-button" %>
   <% end %>
 </div>
 
-<div id="card-container">
-  <% @user.campaigns.each do |campaign| %>
-    <div id="index-card">
-      <!--campaign image-->
-      <%= link_to cl_image_tag(campaign.campaign_picture, class:"card-img", width: 360, height: 240, crop: :scale), campaign_path(campaign) %>
+<div id="profile-campaigns-container">
+  <!--Iterate over campaigns-->
+  <% @user.campaigns.each do |campaign|%>
+
+    <!--campaign cards-->
+    <div class="card-campaign">
+
+      <!--live flag-->
       <% if campaign.live %>
         <p class="live-flag">LIVE</p>
       <% end %>
-      <!--campaign infos-->
-      <div id="index-card-infos">
-        <div>
-          <h2><%= link_to campaign.title, campaign_path(campaign) %></h2>
-          <p><%= campaign.campaign_description.split(/[!||.||?]/).first %></p>
-          <p><%= campaign.launch_date.strftime("%d. %B %Y") || 'TBD' %></p>
-        </div>
+
+      <!--image-->
+      <%= link_to cl_image_tag(campaign.campaign_picture, width: 280, height: 180, :crop=>"fill"), campaign_path(campaign) %>
+
+      <!--infos-->
+      <div class="card-campaign-infos">
+        <h2><%= link_to campaign.title, campaign_path(campaign) %></h2>
+        <p class="date"><%= campaign.launch_date.strftime("%d. %B %Y") || 'TBD' %></p>
+        <p><%= campaign.campaign_description.first(30)  %>...</p>
+
+
+        <!--user avatars-->
         <div id="campaign-users">
-          <% campaign.users.each do |user| %>
-            <%= link_to cl_image_tag(user.picture, class: "avatar",  width: 40, height: 40, crop: :thumb, gravity: :face), user_path(user) %>
+          <% campaign.users.last(2).each do |user| %>
+            <%= link_to cl_image_tag(user.picture, class: "avatar", width: 40, height: 40, crop: :thumb, gravity: :face), user_path(user) %>
+          <% end %>
+          <% if campaign.users.count > 3 %>
+            + <%= campaign.users.count - 3 %> more
           <% end %>
         </div>
-        <!-- link to participate-->
-        <% if campaign.users.include?(current_user) %>
-          <%= link_to 'ASSETS', '#', class: 'index-card-btn' %>
-        <% else %>
-          <%= link_to 'JOIN', campaign_selections_path(campaign), method: 'post', class: 'index-card-btn' %>
-        <% end %>
       </div>
     </div>
   <% end %>
