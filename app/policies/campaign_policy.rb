@@ -20,4 +20,8 @@ class CampaignPolicy < ApplicationPolicy
   def download?
     true
   end
+
+  def download_last?
+    true
+  end
 end

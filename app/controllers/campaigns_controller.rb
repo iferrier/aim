@@ -60,6 +60,18 @@ class CampaignsController < ApplicationController
     end
   end
 
+  def download_last
+    @campaign = current_user.selections.last.campaign
+    authorize @campaign
+    if @campaign.cause == "Global Warming"
+      send_file "#{Rails.root}/app/assets/campaign_materials/climatechange.zip", x_sendfile: true
+    elsif @campaign.cause == "LGBTQ"
+      send_file "#{Rails.root}/app/assets/campaign_materials/LGBTQ.zip", x_sendfile: true
+    else
+      send_file "#{Rails.root}/app/assets/campaign_materials/fundraiser.zip", x_sendfile: true
+    end
+  end
+
   private
 
   def set_campaign
