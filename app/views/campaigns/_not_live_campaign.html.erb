@@ -11,12 +11,12 @@
     <br>
     <div id="campaign-users">
       <% @campaign.users.each do |user| %>
-        <%= link_to cl_image_tag(user.picture, width: 40, height: 40, crop: :thumb, gravity: :face, class: "avatar" "campaign-avatar", ), user_path(user) %>
+        <%= link_to cl_image_tag(user.picture, width: 40, height: 40, crop: :thumb, gravity: :face, class: "avatar"), user_path(user) %>
       <% end %>
     </div>
   </div>
   <%= cl_image_tag(@campaign.brand_logo, class: 'brand-logo',
-      width: 80, crop: :scale) %>
+      width: 70, crop: :scale) %>
 </div>
 
 <!-- Buttons -->
@@ -37,5 +37,3 @@
  <div class="content">
     <p><%= @campaign.campaign_description  %></p>
   </div>
-
-
