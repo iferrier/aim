@@ -8,15 +8,14 @@
     <h1><%= @campaign.title %></h1>
     <h2> <%= @campaign.campaign_description.split(/[!||.||?]/).first %></h2>
     <p><%= @campaign.launch_date.strftime("%d. %B %Y") %></p>
-    <br>
     <div id="campaign-users">
       <% @campaign.users.each do |user| %>
-        <%= link_to cl_image_tag(user.picture, width: 40, height: 40, crop: :thumb, gravity: :face, class: "avatar" "campaign-avatar", ), user_path(user) %>
+        <%= link_to cl_image_tag(user.picture, width: 40, height: 40, crop: :thumb, gravity: :face, class: 'avatar' ), user_path(user) %>
       <% end %>
     </div>
-  </div>
-  <%= cl_image_tag(@campaign.brand_logo, class: 'brand-logo',
+    <%= cl_image_tag(@campaign.brand_logo, class: 'brand-logo',
       width: 80, crop: :scale) %>
+  </div>
 </div>
 
 <!-- Content -->
@@ -24,14 +23,15 @@
  <!--  <% if @campaign.users.include?(current_user) %>
     <%= link_to 'Unjoin', campaign_selection_path(@campaign, current_user), method: 'delete' %>
   <% else %> -->
-    <%= link_to 'Join', campaign_selections_path(@campaign), method: 'post', class: 'more-button more-button:hover' %>
+    <%= link_to 'Join', campaign_selections_path(@campaign), method: 'post', class: 'all-campaign-button all-campaign-button:hover' %>
   <% end %>
 </div>
+
 <div class="content">
   <p><%= @campaign.campaign_description  %></p>
 </div>
 
 <!-- Link Back  -->
 <div class="activation-button">
-  <%= link_to '<-- All campaigns', campaigns_path, class: 'more-button more-button:hover' %>
+  <%= link_to 'All campaigns', campaigns_path, class: 'all-campaign-button all-campaign-button:hover' %>
 </div>
