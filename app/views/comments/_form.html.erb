@@ -2,7 +2,7 @@
     <%= simple_form_for([campaign, comment], remote: true) do |f| %>
     <%= f.input :content, label: false, class: 'comment-content' %>
     <div class="btn-container">
-      <%= f.submit 'Comment', class: 'more-button more-button:hover', id: 'new-comment' %>
+      <%= f.submit 'Comment', class: 'all-campaign-button all-campaign-button:hover', id: 'new-comment' %>
     </div>
     <% end %>
 </div>
