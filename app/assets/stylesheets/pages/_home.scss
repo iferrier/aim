@@ -85,70 +85,39 @@ text-decoration: none;
 
 // Explanation of aim
 
-.how-wrap {
-  width: 1300px;
-  margin: 150px 150px 0 150px;
-  border: solid black .5px;
+.aim-explanation {
+  margin-bottom: 150px;
 }
 
-.how-wrap1 {
-  width: 1300px;
-  margin: -0.9px 150px;
-  border-left: solid black .5px;
-  border-right: solid black .5px;
+.part-explanation {
+  width: 1050px;
 }
 
-.how-wrap2 {
-width: 1300px;
-margin-top: -1px;
-margin-left:150px;
-margin-right:150px;
-margin-bottom: 100px;
-border:solid black .5px;
-}
+.explanation-title {
+  button {
+    text-decoration: none;
+    color: black;
+  }
+  button:hover {
+    text-decoration: none;
+    color: blue;
+  }
+  button:focus {
+    text-decoration: none;
+  }
+  h2 {
+    vertical-align: middle;
+  }
+  height: 100px;
+  display:flex;
+  align-items: center;
 
-.flexxxing {
-display:flex;
-justify-content: space-between;
-height:95px;
-}
-
-
-.how-we-do {
-margin: 30px 0 0 20px;
-justify-content: space-between;
-}
-
-.how-p {
-font-size: 20px;
-margin: 5px 0 0 15px;
-}
-
-.link-move {
-margin-right: 24px;
-margin-top: 30px;
-}
-
-.link-t {
-padding-top:4px;
-font-size:25px;
-margin-right:36px;
 }
 
 .content-how {
-width: 750px;
-margin: 5px auto 20px auto;
-background-color: #e7daf5;
-padding:10px 0;
+  background-color: #e7daf5;
+  padding: 40px;
 }
-
-.para {
-background-color: #e7daf5;
-padding:.1px 0;
-border-right: solid black .5px;
-border-left: solid black .5px;
-}
-
 
 // Link to all campaigns
 .more-campaign-button {

@@ -32,20 +32,25 @@
       </div>
 
       <div class="user-assets">
-        <p>HERE IS YOUR PRESS KITS FOR THE NEXT UPCOMING CAMPAIGN!
+        <p>HERE IS YOUR PRESS KITS<br> FOR THE NEXT UPCOMING CAMPAIGN!
           <br><br>
           <span class="asset-download">
             <!-- Link to Asset -->
-              <% if @user.selections.last.campaign.live %>
-                <%= link_to 'ASSETS', download_last_path %>
+              <% if @user.selections.empty? %>
+                  <p>You haven't joined any campaign yet!</p>
+              <% elsif @user.selections.last.campaign.live %>
+                  <%= link_to 'DOWNLOAD', download_path%>
               <% else %>
-                <p>Waiting for next live campaign...</p>
+                  <p>Waiting for your next live campaign...</p>
               <% end %>
           </span>
         </p>
       </div>
     </div>
   </div>
+
+
+
 
   <!-- title -->
   <div id="profile-h2">

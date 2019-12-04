@@ -26,14 +26,13 @@
  justify-content: center;
  text-align:center;
  margin:150px 120px 0 120px;
- padding: 70px 0 50px 0;
- background: rgba(92, 74, 255, 0.06);
-}
+ padding: 70px;
+background: rgba(96, 85, 192, 0.2);}
   .user-card {
     width: 430px;
-    height: 550px;
-    padding: 60px 40px;
-    border: 15px solid #5C4AFF;
+    height: 500px;
+    padding: 40px 30px;
+    border: solid 1px black;
   }
   .user-image {
     text-align:center;
@@ -51,7 +50,7 @@
     padding-top: 30px;
     display:inline;
     flex-direction: column;
-    text-align:left;
+    text-align:center;
   }
 
  .edit-user {
@@ -59,7 +58,6 @@
   }
 
   .user-assets {
-    border: 15px solid #5C4AFF;
     margin-left: 50px;
     max-width: 500px;
     max-height: 300px;
@@ -67,18 +65,25 @@
 
 .test {
   flex-direction: column;
+
    .user-about {
-    text-align:center;
-    margin-bottom:34px;
+    margin-top:10px;
+    text-align:left;
+    margin-bottom:30px;
+    margin-left: 30px;
+
     max-width: 500px;
     min-height: 258px;
+    padding:40px 30px;
+    border:black 1px solid;
   }
 }
-
-
   .user-assets {
-    border: 15px solid #5C4AFF;
-    margin-left: 50px;
+    text-align:left;
+    border: black solid 1px;
+    padding:30px;
+    margin-left: 30px;
+    font-family:700;
   }
 
    .asset-download {
@@ -90,7 +95,7 @@
       color:blue;
      }
 
-.user-info {
+  .user-info {
   font-family: 'Poppins', sans-serif;
   font-size: 15px;
   line-height: 27px;

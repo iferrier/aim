@@ -1,0 +1,88 @@
+
+#card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  width: 40vw;
+  margin: 0px auto 100px auto;
+}
+
+.user-story {
+ display:flex;
+ justify-content: center;
+ text-align:center;
+ margin:150px 120px 0 120px;
+ padding: 70px 0 50px 0;
+}
+  .user-card {
+    width: 430px;
+    height: 550px;
+    padding: 40px 30px;
+    border: solid 1px black;
+  }
+  .user-image {
+    text-align:center;
+    .fab {
+      margin-top:25px;
+      font-size:35px;
+    }
+  }
+  .user-info {
+    font-family: Roboto;
+    font-size: 15px;
+    line-height: 27px;
+    padding-left: 50px;
+    padding-right: 20px;
+    padding-top: 30px;
+    display:inline;
+    flex-direction: column;
+    text-align:center;
+  }
+
+  .user-about {
+    text-align:left;
+    margin-top:90px;
+    margin-bottom:34px;
+    margin-left:50px;
+    max-width: 500px;
+    min-height: 258px;
+  }
+
+.test {
+  flex-direction: column;
+   .user-about {
+    text-align:center;
+    margin-bottom:43px;
+  }
+}
+
+
+p {
+  font-weight: 300;
+}
+
+#index-card {
+  background-color: white;
+  width: 333px;
+  margin:50px;
+  font-size: 19px;
+  line-height: 124.9%;
+  letter-spacing: 0.03em;
+  text-indent: 1px;
+  position: relative;
+  border: .5px solid black;
+}
+.avatar-user-card {
+  border-radius: 100%;
+}
+
+.share-link {
+  border: .5px solid black;
+  padding: 9px 14px;
+  opacity: .7;
+  font-size: 12px;
+  color: black;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
