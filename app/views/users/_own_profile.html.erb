@@ -37,7 +37,7 @@
           <span class="asset-download">
             <!-- Link to Asset -->
               <% if @user.selections.last.campaign.live %>
-                <%= link_to 'ASSETS', download_path%>
+                <%= link_to 'ASSETS', download_path %>
               <% else %>
                 <p>Waiting for next live campaign...</p>
               <% end %>
@@ -93,11 +93,9 @@
               + <%= campaign.users.count - 3 %> more
             <% end %>
           </div>
-          <!-- link to participate or remove-->
-          <% if campaign.users.include?(current_user) %>
-            <!--<p class='index-card-btn'>UNJOIN</p>-->
-          <% else %>
-            <%= link_to 'JOIN', campaign_selections_path(campaign), method: 'post', class:'index-card-btn' %>
+          <!-- link to asset download-->
+          <% if campaign.live %>
+            <%= link_to 'ASSETS', download_path(campaign), class:'index-card-btn' %>
           <% end %>
         </div>
       </div>
