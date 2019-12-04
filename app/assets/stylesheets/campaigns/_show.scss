@@ -49,6 +49,14 @@
   margin-top:28px;
 }
 
+.container-button {
+  display: flex;
+  justify-content: space-between;
+  width: 1100px;
+  margin: 40px auto;
+}
+
+
 // content styling
 .content {
   width: 750px;
@@ -65,19 +73,17 @@
 }
 
 
-.activation-button {
-   margin-bottom: 20px;
+// .activation-button {
+//    margin-bottom: 20px;
 
-  .more-button {
-   padding-top: 17px;
-   justify-content:center;
- }
-
-  }
-  .delete-button {
-    padding-top: 17px;
-  }
-
+//   .more-button {
+//    padding-top: 17px;
+//    justify-content:center;
+//   }
+//   .delete-button {
+//     padding-top: 17px;
+//   }
+// }
 
 
 // Styling comments

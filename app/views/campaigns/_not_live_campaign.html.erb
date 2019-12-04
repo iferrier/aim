@@ -19,19 +19,23 @@
       width: 80, crop: :scale) %>
 </div>
 
-<!-- Content -->
-<div class="activation-button">
- <!--  <% if @campaign.users.include?(current_user) %>
-    <%= link_to 'Unjoin', campaign_selection_path(@campaign, current_user), method: 'delete' %>
-  <% else %> -->
-    <%= link_to 'Join', campaign_selections_path(@campaign), method: 'post', class: 'more-button more-button:hover' %>
-  <% end %>
-</div>
-<div class="content">
-  <p><%= @campaign.campaign_description  %></p>
+<!-- Buttons -->
+<div class="container-button">
+  <div class="activation-button">
+    <%= link_to 'All campaigns', campaigns_path, class: 'all-campaign-button all-campaign-button:hover'%>
+  </div>
+  <div class="activation-button">
+   <% if @campaign.users.include?(current_user) %>
+      <%= link_to 'Joined!', user_path(current_user), class: 'all-campaign-button all-campaign-button:hover'%>
+    <% else %>
+      <%= link_to 'Join', campaign_selections_path(@campaign), method: 'post', class: 'all-campaign-button all-campaign-button:hover' %>
+    <% end %>
+  </div>
 </div>
 
-<!-- Link Back  -->
-<div class="activation-button">
-  <%= link_to '<-- All campaigns', campaigns_path, class: 'more-button more-button:hover' %>
-</div>
+<!-- Campaign description  -->
+ <div class="content">
+    <p><%= @campaign.campaign_description  %></p>
+  </div>
+
+
