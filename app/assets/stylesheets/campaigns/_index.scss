@@ -4,12 +4,22 @@
 
 .feature-button {
   margin-top:20px;
+  border: .5px solid #5c4aff;
+  padding: 5px 14px;
+  opacity: .7;
+  font-size: 12px;
+  font-weight: bolder;
+  color: #5c4aff;
 }
 
 .cause-container {
+  width: 80vw;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+  display: flex;
+  justify-content: space-around;
   //padding: 20px;
 }
 
@@ -30,23 +40,15 @@
   }
 }
 
-.title_container {
-  width: 80vw;
-  margin: auto;
-  padding-bottom: 25px;
-  padding-top: 100px;
-}
-
   .remove-link:hover {
     color: blue;
     text-decoration: none;
   }
 
-.fund-container {
-
-}
-.lgbtq-container {
-  margin-top: 0;
+#index-page {
+  margin-top: 150px;
 }
 
-
+.index-title {
+  margin: 50px 0 50px 80px;
+}

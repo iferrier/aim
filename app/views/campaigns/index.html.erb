@@ -1,30 +1,23 @@
-<!--page title-->
-<div class="container">
-  <div class="latest-campaign curent-campaign">
-    <h1 class="latest-c">CURRENT CAMPAIGNS</h1>
+<div id="index-page">
+
+  <!--Global warming-->
+  <div class="index-title">
+    <h2>GLOBAL WARMING</h2>
   </div>
+  <%= render 'global_warming_cards' %>
+
+  <div class="index-title">
+    <h2>LGBTQ</h2>
+  </div>
+  <%= render 'lgbtq_cards' %>
+
+  <!--Fundraisers-->
+
+  <div class="index-title">
+    <h2>FUNDRAISERS</h2>
+  </div>
+  <%= render 'fundraisers_cards' %>
+  <br>
+  <br>
+
 </div>
-
-<!--Global warming-->
-<div class="title_container">
-  <h2>GLOBAL WARMING</h2>
-</div>
-<%= render 'global_warming_cards' %>
-
-
-
-<!--LGBTQ-->
-
-<div class="title_container lgbtq-container">
-  <h2>LGBTQ</h2>
-</div>
-<%= render 'lgbtq_cards' %>
-
-<!--Fundraisers-->
-
-<div class="title_container fund-container">
-  <h2>FUNDRAISERS</h2>
-</div>
-<%= render 'fundraisers_cards' %>
-<br>
-<br>

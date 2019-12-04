@@ -9,9 +9,9 @@
 
 .card-campaign {
   background-color: white;
-  width: 333px;
-  margin:50px;
-  font-size: 19px;
+  width: 280px;
+  height: 400px;
+  font-size: 14px;
   line-height: 124.9%;
   letter-spacing: 0.03em;
   text-indent: 1px;
@@ -24,6 +24,9 @@
   min-height: 240px;
   max-height: 240px;
   // width: 333px;
+  h2 {
+
+  }
 }
 
 .card-campaign h2 {
@@ -42,7 +45,7 @@
 }
 
 .card-campaign .date {
- font-size:19px;
+ font-size:16px;
  font-weight: bold;
 }
 
@@ -62,7 +65,11 @@
   color: black;
   font-size: 12px;
   position: absolute;
-  top: 20px;
+  top: 160px;
 }
 
-
+#campaign-users {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+}

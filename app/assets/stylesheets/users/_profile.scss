@@ -1,3 +1,15 @@
+#profile-campaigns-container {
+  width: 80vw;
+  margin: 0 auto;
+  display: grid;
+  justify-content: left;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 80px;
+}
+
+#profile-h2 {
+  margin: 50px 0 50px 120px;
+}
 
 #card-container {
   display: grid;
