@@ -1,7 +1,7 @@
 <div class="cause-container">
 
   <!--Iterate over campaigns-->
-  <% @lgbtq_campaigns.first(3).each do |campaign|%>
+  <% @lgbtq_campaigns.last(3).each do |campaign|%>
 
     <!--campaign cards-->
     <div class="card-campaign">
@@ -27,7 +27,7 @@
             <%= link_to cl_image_tag(user.picture, class: "avatar", width: 40, height: 40, crop: :thumb, gravity: :face), user_path(user) %>
           <% end %>
           <% if campaign.users.count > 3 %>
-            and <%= campaign.users.count - 3 %> more
+            + <%= campaign.users.count - 3 %> more
           <% end %>
         </div>
         <!-- link to participate or remove-->
@@ -40,4 +40,3 @@
     </div>
   <% end %>
 </div>
-
