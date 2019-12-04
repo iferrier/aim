@@ -36,7 +36,7 @@
 </div>
 
 <div class="profile-container">
-  <div id="profile-campaigns-container">
+  <div class="profile-campaigns-container">
     <!--Iterate over campaigns-->
     <% @user.campaigns.each do |campaign|%>
 
@@ -56,7 +56,6 @@
           <h2><%= link_to campaign.title, campaign_path(campaign) %></h2>
           <p class="date"><%= campaign.launch_date.strftime("%d. %B %Y") || 'TBD' %></p>
           <p><%= campaign.campaign_description.first(30)  %>...</p>
-
 
           <!--user avatars-->
           <div id="campaign-users">
