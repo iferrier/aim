@@ -13,6 +13,8 @@
     margin-top: 105px;
     margin-left:50px;
     padding: 24px;
+    position: relative;
+
     h1 {
       font-family: 'Poppins', sans-serif;
       font-style: normal;
@@ -58,7 +60,7 @@
 // content styling
 .content {
   width: 750px;
-  margin: 10px auto;
+  margin: 100px auto;
   padding-top: 20px;
   padding-bottom: 20px;
 }
