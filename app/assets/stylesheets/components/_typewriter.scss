@@ -1,19 +1,19 @@
 .typewriter {
-    font-family: Courier, monospace;
+
     display: inline-block;
     width: auto;
 }
 
 .typewriter-text {
     width: auto;
-    display: inline-block;
+    //display: inline-block;
     overflow: hidden;
     letter-spacing: 2px;
-    animation: typing 5s steps(60, end), blink .75s step-end none;
+    animation: typing 5s steps(80), blink .75s step-end none;
     white-space: nowrap;
-    font-size: 12px;
-    font-weight: 700;
-    border-right: 4px solid black;
+    //font-size: 12px;
+    //font-weight: 700;
+    border-right: 1px solid black;
     box-sizing: border-box;
 }
 
