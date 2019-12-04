@@ -69,22 +69,29 @@
   </div>
 </div>
 
-<div class="container">
-  <div class="cause-container">
-    <% @campaigns.sample(3).each do |campaign|%>
-      <div class="card-campaign" id="index-card">
-        <%= link_to cl_image_tag(campaign.campaign_picture,  class:"card-img", width: 360, height:240, crop: :scale), campaign_path(campaign) %>
-        <% if campaign.live %>
-          <p class="live-flag">LIVE</p>
-        <% end %>
-        <div class="card-campaign-infos">
-          <h2><%= link_to campaign.title, campaign_path(campaign) %></h2>
-          <p class="date"><%= campaign.launch_date.strftime("%d. %B %Y") || 'TBD' %></p>
-          <p><%= campaign.campaign_description.split(/[!||.||?]/).first  %></p>
-        </div>
+
+<div class="cause-container">
+  <% @campaigns.sample(3).each do |campaign|%>
+
+    <!--campaign cards-->
+    <div class="card-campaign">
+
+      <!--live flag-->
+      <% if campaign.live %>
+        <p class="live-flag">LIVE</p>
+      <% end %>
+
+      <!--image-->
+      <%= link_to cl_image_tag(campaign.campaign_picture, width: 280, height: 180, :crop=>"fill"), campaign_path(campaign) %>
+
+      <!--infos-->
+      <div class="card-campaign-infos">
+        <h2><%= link_to campaign.title, campaign_path(campaign) %></h2>
+        <p class="date"><%= campaign.launch_date.strftime("%d. %B %Y") || 'TBD' %></p>
+        <p><%= campaign.campaign_description.first(30)  %>...</p>
       </div>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 </div>
 
 <div class="more-campaign-button">
