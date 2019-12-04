@@ -32,12 +32,12 @@
       </div>
 
       <div class="user-assets">
-        <p>HERE IS YOUR PRESS KITS FOR THE NEXT UPCOMING CAMPAIGN!
+        <p>HERE IS YOUR PRESS KITS<br> FOR THE NEXT UPCOMING CAMPAIGN!
           <br><br>
           <span class="asset-download">
             <!-- Link to Asset -->
               <% if @user.selections.last.campaign.live %>
-                <%= link_to 'ASSETS', download_path%>
+                <%= link_to 'DOWNLOAD', download_path%>
               <% else %>
                 <p>Waiting for next live campaign...</p>
               <% end %>

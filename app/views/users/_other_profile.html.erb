@@ -1,21 +1,25 @@
 <div class="user-story">
-  <div class="user-card">
-    <div class="user-image">
-      <%= cl_image_tag @user.picture, class: "avatar-user-card", width: 150, height: 150, crop: :thumb, gravity: :face %>
-      <br>
-      <p><a href= <%= @user.instagram %>><i class="fab fa-instagram"></i></a></p>
+    <!--card-->
+     <div class="user-card">
+      <!--image-->
+      <div class="user-image">
+        <%= cl_image_tag @user.picture, class: "avatar-user-card dashboard-img", width: 200, height: 200, crop: :thumb, gravity: :face %>
+        <br>
+        <p>
+          <a href= <%= @user.instagram %> target="_blank">
+            <i class="fab fa-instagram insta"></i>
+          </a>
+        </p>
+      </div>
+
+     <!--infos-->
+      <div class="user-info">
+        <h2><strong><%= @user.name %></strong></h2>
+        <h4><%= @user.location %></h4>
+      </div>
     </div>
-    <div class="user-info">
-      <p><strong><%= @user.name %></strong></p>
-      <p><%= @user.location %></p>
-    </div>
-  </div>
-  <div class="user-about">
-    <p><%= @user.bio %></p>
   </div>
 </div>
-
-
 <div class="title_container">
   <h2><%= @user.name %> Campaigns</h2>
   <% if @user.campaigns.empty? %>
@@ -48,8 +52,6 @@
         </div>
         <!-- link to participate-->
         <% if campaign.users.include?(current_user) %>
-          <%= link_to 'ASSETS', '#', class: 'index-card-btn' %>
-        <% else %>
           <%= link_to 'JOIN', campaign_selections_path(campaign), method: 'post', class: 'index-card-btn' %>
         <% end %>
       </div>
