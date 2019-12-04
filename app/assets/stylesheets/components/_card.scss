@@ -19,14 +19,15 @@
   border: .5px solid black;
 }
 
+.card-campaign-img {
+  margin: -1px;
+}
+
 .card-campaign-infos {
   padding:20px 20px 20px 20px;
   min-height: 240px;
   max-height: 240px;
   // width: 333px;
-  h2 {
-
-  }
 }
 
 .card-campaign h2 {
