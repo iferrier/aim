@@ -14,12 +14,11 @@
  justify-content: center;
  text-align:center;
  margin:150px 120px 0 120px;
- padding: 70px 0 50px 0;
- //background: rgba(92, 74, 255, 0.06);
-}
+ padding: 70px;
+background: rgba(96, 85, 192, 0.2);}
   .user-card {
     width: 430px;
-    height: 550px;
+    height: 500px;
     padding: 40px 30px;
     border: solid 1px black;
   }
@@ -54,20 +53,25 @@
 
 .test {
   flex-direction: column;
+
    .user-about {
+    margin-top:10px;
     text-align:left;
-    margin-top:90px;
-    margin-bottom:34px;
-    margin-left:50px;
+    margin-bottom:30px;
+    margin-left: 30px;
+
     max-width: 500px;
     min-height: 258px;
+    padding:40px 30px;
+    border:black 1px solid;
   }
 }
-
-
   .user-assets {
-    margin-left: 50px;
     text-align:left;
+    border: black solid 1px;
+    padding:30px;
+    margin-left: 30px;
+    font-family:700;
   }
 
    .asset-download {

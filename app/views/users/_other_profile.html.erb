@@ -1,4 +1,4 @@
-<div class="user-story">
+<div class="user-story" style="background:#EACEC5;">
     <!--card-->
      <div class="user-card">
       <!--image-->
@@ -11,15 +11,21 @@
           </a>
         </p>
       </div>
-
      <!--infos-->
       <div class="user-info">
         <h2><strong><%= @user.name %></strong></h2>
         <h4><%= @user.location %></h4>
       </div>
     </div>
+    <div class="test">
+      <div class="user-about">
+        <p><%= @user.bio %></p>
+      </div>
+    </div>
   </div>
-</div>
+
+
+
 <div class="title_container">
   <h2><%= @user.name %> Campaigns</h2>
   <% if @user.campaigns.empty? %>
