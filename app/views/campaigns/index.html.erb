@@ -1,47 +1,23 @@
-<!--page title-->
-<div class="container">
-  <div class="latest-campaign curent-campaign">
-    <h1 class="latest-c">CURRENT CAMPAIGNS</h1>
+<div id="index-page">
+
+  <!--Global warming-->
+  <div class="index-title">
+    <h2>GLOBAL WARMING</h2>
   </div>
-</div>
+  <%= render 'global_warming_cards' %>
 
-<!--Global warming-->
-<div class="title_container">
-  <h2>GLOBAL WARMING</h2>
-</div>
-<%= render 'global_warming_cards' %>
-
-<!--featured campaign-->
-<div class="featured_campaign">
-  <div class="d-flex">
-     <%= link_to cl_image_tag(@featured_campaign.campaign_picture, class: 'featured-campaign-image', height: 266, width: 400, crop: :scale), campaign_path(@featured_campaign) %>
+  <div class="index-title">
+    <h2>LGBTQ</h2>
   </div>
-  <div class="featured_campaign_text">
-   <h2>
-      <%= link_to @featured_campaign.title.upcase, campaign_path(@featured_campaign) %>
-   </h2>
-    <p>
-      <%= @featured_campaign.campaign_description %>
-    </p>
-    <br>
-    <% if !@featured_campaign.users.include?(current_user) %>
-      <%= link_to 'JOIN', campaign_selections_path(@featured_campaign), method: 'post' , class: 'more-button more-button:hover feature-btn' %>
-    <% end %>
+  <%= render 'lgbtq_cards' %>
+
+  <!--Fundraisers-->
+
+  <div class="index-title">
+    <h2>FUNDRAISERS</h2>
   </div>
+  <%= render 'fundraisers_cards' %>
+  <br>
+  <br>
+
 </div>
-
-<!--LGBTQ-->
-
-<div class="title_container lgbtq-container">
-  <h2>LGBTQ</h2>
-</div>
-<%= render 'lgbtq_cards' %>
-
-<!--Fundraisers-->
-
-<div class="title_container fund-container">
-  <h2>FUNDRAISERS</h2>
-</div>
-<%= render 'fundraisers_cards' %>
-<br>
-<br>

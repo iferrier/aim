@@ -41,6 +41,9 @@ class UsersController < ApplicationController
     else
       send_file "#{Rails.root}/app/assets/campaign_materials/fundraiser.zip", x_sendfile: true
     end
+
+    authorize current_user
+
   end
 
   private
