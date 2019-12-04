@@ -12,4 +12,11 @@
 <%= f.input :brand_logo_cache, as: :hidden %>
 <%= f.input :live %>
 <%= f.submit %>
+<br>
+<br>
+<br>
+<% if @campaign.users.include?(current_user) %>
+  <%= link_to 'UNJOIN', campaign_selection_path(@campaign, current_user), method: 'delete', class: 'more-button more-button:hover remove-link' %>
 <% end %>
+<% end %>
+
