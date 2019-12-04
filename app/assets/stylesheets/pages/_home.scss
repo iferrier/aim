@@ -1,5 +1,4 @@
 // Container for centering content
-
 .container {
   display: flex;
   justify-content: space-around;
@@ -13,7 +12,7 @@ body {
 
 .banner {
   display: flex;
-  margin: 135px auto;
+  margin: 135px auto 100px auto;
   border: 0.5px solid #000000;
   width: 1300px;
   height: 500px;
@@ -86,7 +85,7 @@ text-decoration: none;
 // Explanation of aim
 
 .aim-explanation {
-  margin-bottom: 150px;
+  margin: 100px auto;
 }
 
 .part-explanation {
@@ -119,12 +118,16 @@ text-decoration: none;
   padding: 40px;
 }
 
+// Overview campaigns
+.card-campaign {
+}
+
+
 // Link to all campaigns
 .more-campaign-button {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  padding-top: 100px;
+  text-align: center;
 }
 
 .more-button {
