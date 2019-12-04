@@ -2,6 +2,7 @@
 .header {
   display: flex;
   margin: 100px auto;
+  margin-bottom:50px;
   border: 0.5px solid #000000;
   width: 1300px;
   height: 500px;
@@ -9,13 +10,14 @@
   .header-content {
     margin-top: 105px;
     margin-left:50px;
-    padding-right: 25px;
+    padding: 24px;
+
     h1 {
-      font-family: Roboto;
+      font-family: 'Poppins', sans-serif;
       font-style: normal;
       font-weight: bold;
       font-size: 30px;
-      padding-bottom: 25px;
+      margin-bottom: 1.5rem;
     }
     h2 {
       font-size: 18px;
@@ -40,6 +42,13 @@
   }
 }
 
+.campaign-avatar {
+  width:65px;
+  height:65px;
+  border-radius: 50%;
+  margin-top:28px;
+}
+
 // content styling
 .content {
   width: 750px;
@@ -48,40 +57,60 @@
   padding-bottom: 20px;
 }
 
+.container-show-btn{
+  display:flex;
+  margin-bottom:160px;
+      //justify-content:space-between;
+
+}
+
+
 .activation-button {
-   display: flex;
-   margin-bottom:20px;
-   justify-content: space-around;
+   margin-bottom: 20px;
+
+
 
   .more-button {
-    padding-top: 17px;
+   padding-top: 17px;
+      justify-content:center;
+
+ }
+
   }
   .delete-button {
     padding-top: 17px;
   }
-}
+
 
 
 // Styling comments
 
+.comment-header {
+  margin-bottom:35px;
+  text-align: center;
+  //justify-content:center;
+}
+
 .container-comments {
   display: flex;
   justify-content: space-around;
-  margin-top: 100px;
-  margin-bottom: 70px;
+  background: red;
+  padding-top: 60px;
+  margin: 0 345px 180px 345px;
+  background: rgba(96, 85, 192, 0.2);
 }
 
 // styling form to enter a comment
 .new_comment {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 800px;
+  //justify-content: space-between;
+  width: 650px;
+   margin: 0 auto;
   .form-control.text.required {
   width: 550px;
+
   }
   #new-comment {
-    height: 50px;
+  height: 50px;
   }
 }
 
@@ -104,4 +133,6 @@
 #all-comments {
   width: 800px;
   text-align: justify;
+  justify-content:center;
+  padding-left:80px;
 }
