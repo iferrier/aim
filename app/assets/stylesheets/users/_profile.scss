@@ -1,6 +1,6 @@
 // User Summary
 #profile-h2 {
-  margin: 50px 0 50px 120px;
+  margin: 50px 0 10px 120px;
 }
 
 .user-story {
@@ -100,10 +100,11 @@ p {
 .container-no-campaign {
   display: flex;
   justify-content: flex-start;
+  margin: 0 120px;
 }
 
 .no-campaign-yet {
-  margin: 40px;
+  margin: 20px;
 }
 
 .profile-container {
@@ -121,12 +122,4 @@ p {
     margin: 40px;
   }
 }
-
-// #card-container {
-//   display: grid;
-//   grid-template-columns: 1fr 1fr 1fr;
-//   grid-gap: 16px;
-//   width: 40vw;
-//   margin: 0px auto 100px auto;
-// }
 
