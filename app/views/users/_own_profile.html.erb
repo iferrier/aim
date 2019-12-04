@@ -98,8 +98,8 @@
               <% campaign.users.last(2).each do |user| %>
                 <%= link_to cl_image_tag(user.picture, class: "avatar", width: 40, height: 40, crop: :thumb, gravity: :face), user_path(user) %>
               <% end %>
-              <% if campaign.users.count > 3 %>
-                + <%= campaign.users.count - 3 %> more
+              <% if campaign.users.count >= 3 %>
+                + <%= campaign.users.count - 2 %> more
               <% end %>
             </div>
             <!-- link to asset download-->
