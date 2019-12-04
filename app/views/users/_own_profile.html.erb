@@ -57,9 +57,10 @@
     <h2>Campaigns you've joined</h2>
 
     <!-- if no campaigns -->
+   <div id="profile-campaigns-container">
     <% if @user.campaigns.empty? %>
       <br>
-      <h3>Whoops - still no campaigns here!</h2>
+      <h3>We need your support! Have a look to our campaigns:</h3>
       <br>
       <%= link_to 'ALL CAMPAIGNS', campaigns_path, class: "more-button" %>
     <% end %>
