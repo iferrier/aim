@@ -11,7 +11,7 @@
     <br>
     <div id="campaign-users">
       <% @campaign.users.each do |user| %>
-        <%= link_to cl_image_tag(user.picture, width: 40, height: 40, crop: :thumb, gravity: :face, class: "avatar"), user_path(user) %>
+        <%= link_to cl_image_tag(user.picture, width: 40, height: 40, crop: :thumb, gravity: :face, class: "avatar campaign-avatar"), user_path(user) %>
       <% end %>
     </div>
   </div>
@@ -20,39 +20,43 @@
 </div>
 
 <!-- Content -->
-<div class="activation-button">
-  <% if @campaign.users.include?(current_user) %>
-    <%= link_to 'REMOVE', campaign_selection_path(@campaign, current_user), method: 'delete', class: 'more-button more-button:hover remove-link' %>
-  <% else %>
-    <%= link_to 'JOIN', campaign_selections_path(@campaign), method: 'post', class: 'more-button more-button:hover' %>
-  <% end %>
-</div>
+<div class="container-show-btn">
+  <!-- Link Back  -->
+  <div class="activation-button">
+    <%= link_to 'ALL CAMPAIGNS', campaigns_path, class: 'more-button more-button:hover all-campaigns-button' %>
+  </div>
 
-<!-- Link Back  -->
-<div class="activation-button">
-  <%= link_to 'BACK', campaigns_path, class: 'more-button more-button:hover' %>
+  <div class="activation-button">
+    <%# if @campaign.users.include?(current_user) %>
+      <%#= link_to 'REMOVE', campaign_selection_path(@campaign, current_user), method: 'delete', class: 'more-button more-button:hover remove-link' %>
+    <%# else %>
+      <%= link_to 'JOIN', campaign_selections_path(@campaign), method: 'post', class: 'more-button more-button:hover' %>
+    <%# end %>
+  </div>
+
 </div>
 
 
 <!-- Comments -->
+ <% if @campaign.users.include?(current_user) %>
+      <h2 class="comment-header">Share your thoughts !</h2>
 <div class="container-comments">
-  <div class="comments">
-    <% if @campaign.users.include?(current_user) %>
-      <h2>Share your thoughts!</h2>
+      <div class="comments">
       <div class="new-comment">
-        <br>
-          <%= render 'comments/form', campaign: @campaign, comment: @comment %>
-        <br>
-      </div>
-      <div id="all-comments">
+        <div id="all-comments">
         <% if @campaign.comments.empty? %>
           <p id='empty-comment'><%= 'Be the first to leave a comment!'%></p>
         <% else %>
-          <% @campaign.comments.each do |comment| %>
+          <% @campaign.comments.reverse.each do |comment| %>
             <%= render 'comments/show', comment: comment %>
           <% end %>
         <% end %>
       </div>
+        <br>
+          <%= render 'comments/form', campaign: @campaign,  comment: @comment %>
+        <br>
+      </div>
+
     <% end %>
   </div>
 </div>
