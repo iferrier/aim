@@ -1,5 +1,4 @@
 <!-- Banner  -->
-
 <div class="banner">
   <div class="frame">
     <p class="logo-big">AIM</p>
@@ -12,6 +11,8 @@
   </div>
 </div>
 
+
+<!-- Accordeon  -->
 <div class="container">
   <div class="accordion aim-explanation" id="accordionExample">
     <div class="card part-explanation border-dark">
@@ -22,7 +23,7 @@
           </button>
         </h2>
       </div>
-      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
         <div class="card-body content-how">
           Helping others benefits those in need but can be deeply rewarding to you too. Supporting a cause you believe in has a positive effect on your own life. The knowledge that you’re serving a good cause is hugely empowering and, in turn, can make you feel happier and more fulfilled.
         </div>
@@ -84,9 +85,13 @@
   </div>
 </div>
 
-<div class="more-campaign-button">
-  <%= link_to 'MORE', campaigns_path, class: "more-button .more-button:hover"  %>
+<div class="container">
+  <div class="more-campaign-button">
+    <%= link_to 'MORE', campaigns_path, class: "more-button .more-button:hover"  %>
+  </div>
 </div>
+
+
 
 
 

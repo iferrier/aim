@@ -1,5 +1,4 @@
 // Container for centering content
-
 .container {
   display: flex;
   justify-content: space-around;
@@ -13,7 +12,7 @@ body {
 
 .banner {
   display: flex;
-  margin: 135px auto;
+  margin: 135px auto 60px auto;
   border: 0.5px solid #000000;
   width: 1300px;
   height: 500px;
@@ -86,7 +85,7 @@ text-decoration: none;
 // Explanation of aim
 
 .aim-explanation {
-  margin-bottom: 150px;
+  margin: 60px auto 60px auto;
 }
 
 .part-explanation {
@@ -119,22 +118,23 @@ text-decoration: none;
   padding: 40px;
 }
 
+// Overview campaigns
+.latest-campaign {
+  margin: 40px auto 40px auto;
+}
+
+
 // Link to all campaigns
 .more-campaign-button {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  padding-top: 100px;
+  text-align: center;
 }
 
 .more-button {
   border: .5px black solid;
   font-size: 17px;
-  line-height: 124.9%;
-  text-align: center;
   letter-spacing: 0.03em;
-  text-indent: 1px;
-  padding: 13px 27px;
+  padding: 18px 27px 0px 27px;
   color: black;
 }
-
