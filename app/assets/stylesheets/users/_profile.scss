@@ -1,10 +1,17 @@
-#profile-campaigns-container {
+.profile-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.profile-campaigns-container {
   width: 80vw;
   margin: 0 auto;
-  display: grid;
-  justify-content: left;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 80px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  .card-campaign {
+    margin: 40px;
+  }
 }
 
 #profile-h2 {
