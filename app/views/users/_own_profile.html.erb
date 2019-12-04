@@ -55,55 +55,60 @@
   <!-- title -->
   <div id="profile-h2">
     <h2>Campaigns you've joined</h2>
+  </div>
 
     <!-- if no campaigns -->
-    <% if @user.campaigns.empty? %>
-      <br>
-      <h3>Whoops - still no campaigns here!</h2>
-      <br>
-      <%= link_to 'ALL CAMPAIGNS', campaigns_path, class: "more-button" %>
-    <% end %>
+   <div class="container-no-campaign">
+    <div class="no-campaign-yet">
+      <% if @user.campaigns.empty? %>
+        <br>
+        <h4>We need your support! Have a look to our campaigns :</h4>
+        <br>
+        <%= link_to 'ALL CAMPAIGNS', campaigns_path, class: "more-button" %>
+      <% end %>
+    </div>
   </div>
 
   <!-- campaign cards -->
-  <div id="profile-campaigns-container">
+  <div class="profile-container">
+    <div class="profile-campaigns-container">
 
-    <!--Iterate over campaigns-->
-    <% @user.campaigns.each do |campaign|%>
+      <!--Iterate over campaigns-->
+      <% @user.campaigns.each do |campaign|%>
 
-      <!--campaign cards-->
-      <div class="card-campaign">
+        <!--campaign cards-->
+        <div class="card-campaign">
 
-        <!--live flag-->
-        <% if campaign.live %>
-          <p class="live-flag">LIVE</p>
-        <% end %>
+          <!--live flag-->
+          <% if campaign.live %>
+            <p class="live-flag">LIVE</p>
+          <% end %>
 
-        <!--image-->
-        <%= link_to cl_image_tag(campaign.campaign_picture, class:"card-campaign-img", width: 280, height: 180, :crop=>"fill"), campaign_path(campaign) %>
+          <!--image-->
+          <%= link_to cl_image_tag(campaign.campaign_picture, class:"card-campaign-img", width: 280, height: 180, :crop=>"fill"), campaign_path(campaign) %>
 
-        <!--infos-->
-        <div class="card-campaign-infos">
-          <h2><%= link_to campaign.title, campaign_path(campaign) %></h2>
-          <p class="date"><%= campaign.launch_date.strftime("%d. %B %Y") || 'TBD' %></p>
-          <p><%= campaign.campaign_description.first(30)  %>...</p>
+          <!--infos-->
+          <div class="card-campaign-infos">
+            <h2><%= link_to campaign.title, campaign_path(campaign) %></h2>
+            <p class="date"><%= campaign.launch_date.strftime("%d. %B %Y") || 'TBD' %></p>
+            <p><%= campaign.campaign_description.first(30)  %>...</p>
 
-
-          <!--user avatars-->
-          <div id="campaign-users">
-            <% campaign.users.last(2).each do |user| %>
-              <%= link_to cl_image_tag(user.picture, class: "avatar", width: 40, height: 40, crop: :thumb, gravity: :face), user_path(user) %>
-            <% end %>
-            <% if campaign.users.count > 3 %>
-              + <%= campaign.users.count - 3 %> more
+            <!--user avatars-->
+            <div id="campaign-users">
+              <% campaign.users.last(2).each do |user| %>
+                <%= link_to cl_image_tag(user.picture, class: "avatar", width: 40, height: 40, crop: :thumb, gravity: :face), user_path(user) %>
+              <% end %>
+              <% if campaign.users.count >= 3 %>
+                + <%= campaign.users.count - 2 %> more
+              <% end %>
+            </div>
+            <!-- link to asset download-->
+            <% if campaign.live %>
+              <%= link_to 'ASSETS', download_path(campaign), class:'index-card-btn' %>
             <% end %>
           </div>
-          <!-- link to asset download-->
-          <% if campaign.live %>
-            <%= link_to 'ASSETS', download_path(campaign), class:'index-card-btn' %>
-          <% end %>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
 
