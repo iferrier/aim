@@ -1,6 +1,9 @@
 // Selection campaigns
 
-
+#index-main-title {
+  margin: 0 auto;
+  text-align: center;
+}
 
 .feature-button {
   margin-top:20px;
@@ -14,7 +17,7 @@
 
 .cause-container {
   width: 80vw;
-  margin: 0 auto;
+  margin: 50px auto 80px auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
