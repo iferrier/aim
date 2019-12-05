@@ -132,21 +132,17 @@
 .comment-header {
   margin-bottom:35px;
   text-align: center;
-  //justify-content:center;
 }
 
 .container-comments {
-  display: flex;
-  justify-content: space-around;
-  background: red;
+  width: 1100px;
   padding-top: 60px;
-  margin: 0 345px 180px 345px;
+  margin: 0 auto 180px auto;
   background: rgba(96, 85, 192, 0.2);
 }
 
 // styling form to enter a comment
 .new_comment {
-  //justify-content: space-between;
   width: 650px;
    margin: 0 auto;
   .form-control.text.required {
@@ -159,13 +155,6 @@
 }
 
 // styling comment show
-#comments-display {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  margin: 0 40px 20px 40px;
-}
-
 #comment-content {
   margin-left: 30px;
 }
@@ -175,8 +164,18 @@
 }
 
 #all-comments {
-  width: 800px;
-  text-align: justify;
-  justify-content:center;
-  padding-left:80px;
+    width: 800px;
+    text-align: justify;
+    justify-content:center;
+    margin: 20px auto;
+  #empty-comment {
+    margin : 0 auto;
+    text-align: center;
+  }
+  #comments-display {
+    align-items: center;
+    margin: 20px auto;
+    padding-left: 100px;
+    display: flex;
+  }
 }
