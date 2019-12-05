@@ -51,25 +51,13 @@ class CampaignsController < ApplicationController
   def download
     @campaign = Campaign.find(params[:id])
     authorize @campaign
-    if @campaign.cause == "Global Warming"
-      send_file "#{Rails.root}/app/assets/campaign_materials/climatechange.zip", x_sendfile: true
-    elsif @campaign.cause == "LGBTQ"
-      send_file "#{Rails.root}/app/assets/campaign_materials/LGBTQ.zip", x_sendfile: true
-    else
-      send_file "#{Rails.root}/app/assets/campaign_materials/fundraiser.zip", x_sendfile: true
-    end
+    send_file "#{Rails.root}/app/assets/campaign_materials/campaign-material.zip", x_sendfile: true
   end
 
   def download_last
     @campaign = current_user.selections.last.campaign
     authorize @campaign
-    if @campaign.cause == "Global Warming"
-      send_file "#{Rails.root}/app/assets/campaign_materials/climatechange.zip", x_sendfile: true
-    elsif @campaign.cause == "LGBTQ"
-      send_file "#{Rails.root}/app/assets/campaign_materials/LGBTQ.zip", x_sendfile: true
-    else
-      send_file "#{Rails.root}/app/assets/campaign_materials/fundraiser.zip", x_sendfile: true
-    end
+    send_file "#{Rails.root}/app/assets/campaign_materials/campaign-material.zip", x_sendfile: true
   end
 
   private
