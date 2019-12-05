@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create, :show, :edit, :update]
   resources :campaigns, only: [:index, :new, :create, :show, :edit, :update] do
     resources :selections, only: [:new, :create, :destroy]
-    resources :comments, only: :create
+    resources :comments, only: [:create, :destroy]
   end
 end

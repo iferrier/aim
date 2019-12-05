@@ -19,4 +19,10 @@
   <%= link_to 'UNJOIN', campaign_selection_path(@campaign, current_user), method: 'delete', class: 'more-button more-button:hover remove-link' %>
 <% end %>
 <% end %>
-
+<br>
+<div class="container">
+<% @campaign.comments.each do |comment| %>
+  <%= comment.content %> | <%= link_to "🗑", campaign_comment_path(comment), method: "delete" %>
+    <br>
+<% end %>
+</div>
