@@ -1,4 +1,4 @@
 meta_product_name: "AIM"
 meta_title: "Do things that matter together"
 meta_description: "An app that inspires influencers to participate in good causes"
-meta_image: "newspaper.png" # should exist in `app/assets/images/`
+meta_image: "meta_newspaper.png" # should exist in `app/assets/images/`
