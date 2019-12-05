@@ -7,9 +7,9 @@
   <div class="header-content">
     <h1><%= @campaign.title %></h1>
     <h2> <%= @campaign.campaign_description.split(/[!||.||?]/).first %></h2>
-    <p><%= @campaign.launch_date.strftime("%d. %B %Y") %></p>
+    <p><%= @campaign.location %>, <%= @campaign.launch_date.strftime("%d. %B %Y") %></p>
     <br>
-    <div id="campaign-users">
+    <div id="show-campaign-users">
       <% @campaign.users.each do |user| %>
         <%= link_to cl_image_tag(user.picture, width: 40, height: 40, crop: :thumb, gravity: :face, class: "avatar"), user_path(user) %>
       <% end %>
