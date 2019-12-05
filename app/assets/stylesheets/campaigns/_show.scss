@@ -4,18 +4,18 @@
 
 #live-div {
   display: flex;
-  align-content: center;
+  //align-content: center;
 }
 #live-stamp {
-  color: #FFF734;
+  color: rgba(10, 10, 10, 0.5);
   font-family: 'Anonymous Pro', monospace;
-  font-size: 20px;
+  font-size: 23px;
   margin-left: 10px;
   }
 .pulse {
   display: block;
-  width: 22px;
-  height: 22px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   background: #FFF734;
   cursor: pointer;
