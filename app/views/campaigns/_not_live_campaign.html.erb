@@ -26,9 +26,9 @@
   </div>
   <div class="activation-button">
    <% if @campaign.users.include?(current_user) %>
-      <%= link_to 'Joined!', user_path(current_user), class: 'all-campaign-button all-campaign-button:hover'%>
+      <%= link_to 'Joined!', user_path(current_user), class: 'join-button all-campaign-button all-campaign-button:hover'%>
     <% else %>
-      <%= link_to 'Join', campaign_selections_path(@campaign), method: 'post', class: 'all-campaign-button all-campaign-button:hover' %>
+      <%= link_to 'Join', campaign_selections_path(@campaign), method: 'post', class: 'join-button all-campaign-button all-campaign-button:hover' %>
     <% end %>
   </div>
 </div>

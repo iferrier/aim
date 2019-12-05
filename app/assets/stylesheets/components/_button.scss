@@ -12,6 +12,12 @@ padding: 13px 27px;
 color: black;
 }
 
+.more-button:hover {
+color: blue;
+text-decoration: none;
+}
+
+
 #asset-button {
   border: .5px solid black;
   padding: 5px 14px;
@@ -21,10 +27,6 @@ color: black;
   margin-top: 10px;
 }
 
-.more-button:hover {
-  color: blue;
-  text-decoration: none;
-}
 
 .index-card-btn {
   border: .5px solid #5c4aff;
@@ -57,6 +59,7 @@ color: black;
   color: blue;
   text-decoration: none;
 }
+
 
 
 .btn-container {
