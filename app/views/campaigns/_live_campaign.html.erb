@@ -46,27 +46,23 @@
 
 <!-- Comments -->
  <% if @campaign.users.include?(current_user) %>
-      <h2 class="comment-header">Share your thoughts !</h2>
-<div class="container-comments">
-      <div class="comments">
-      <div class="new-comment">
-        <div id="all-comments">
-        <% if @campaign.comments.empty? %>
-          <p id='empty-comment'><%= 'Be the first to leave a comment!'%></p>
-        <% else %>
-          <% @campaign.comments.each do |comment| %>
-            <%= render 'comments/show', comment: comment %>
+    <h2 class="comment-header">Share your thoughts!</h2>
+      <div class="container-comments">
+        <div class="new-comment">
+          <div id="all-comments">
+            <% if @campaign.comments.empty? %>
+              <p id='empty-comment'><%= 'Be the first to leave a comment!'%></p>
+            <% else %>
+              <% @campaign.comments.each do |comment| %>
+              <%= render 'comments/show', comment: comment %>
+            <% end %>
           <% end %>
-        <% end %>
-      </div>
+        </div>
         <br>
           <%= render 'comments/form', campaign: @campaign,  comment: @comment %>
         <br>
       </div>
-
-    <% end %>
-  </div>
-</div>
-
+    </div>
+  <% end %>
 
 
