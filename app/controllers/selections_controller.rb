@@ -4,8 +4,10 @@ class SelectionsController < ApplicationController
     @selection.user = current_user
     @selection.campaign = Campaign.find(params[:campaign_id])
     redirect_to campaign_path(@selection.campaign)
-    if @selection.save
-      flash[:notice] = "Thanks for joining!"
+    if @selection.save && @selection.campaign.live
+      flash[:notice] = "Thanks for joining - the campaign is now live!"
+    elsif @selection.save
+      flash[:notice] = "Thanks for joining! Only #{5 - @selection.campaign.users.count} people missing for the campaign go live"
     else
       flash[:alert] = "You already joined!"
     end
