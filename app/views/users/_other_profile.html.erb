@@ -1,4 +1,5 @@
-<div class="user-story" style="background:#EACEC5;">
+<div class="dashboard">
+  <div class="user-frame frame-color">
     <!--card-->
      <div class="user-card">
       <!--image-->
@@ -7,22 +8,30 @@
         <br>
         <p>
           <a href= <%= @user.instagram %> target="_blank">
-            <i class="fab fa-instagram insta"></i>
+            <i class="fab fa-instagram" id="insta"></i>
           </a>
         </p>
       </div>
+
+
      <!--infos-->
-      <div class="user-info">
+      <div class="user-details">
         <h2><strong><%= @user.name %></strong></h2>
         <h4><%= @user.location %></h4>
+        <p>
+          <%= link_to 'Edit', edit_user_path(@user), class: "dashboard-edit" %>
+        </p>
       </div>
     </div>
+
+
+   <!--bio and assets-->
     <div class="test">
       <div class="user-about">
         <p><%= @user.bio %></p>
       </div>
     </div>
-  </div>
+ </div>
 
 
 
