@@ -32,7 +32,11 @@
       </div>
 
       <div class="user-assets">
-        <p>HERE IS YOUR PRESS KIT FOR <br><strong><%= @user.selections.last.campaign.title %></strong>!
+        <% if @user.selections.empty? %>
+          <p>Please select a campaign.</p>
+        <% else %>
+          <p>HERE IS YOUR PRESS KIT FOR <br><strong><%= @user.selections.last.campaign.title %></strong>!
+        <% end %>
           <br><br>
           <span class="asset-download">
             <!-- Link to Asset -->
