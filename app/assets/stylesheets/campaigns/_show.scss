@@ -61,6 +61,7 @@
   width: 1300px;
   height: 500px;
   position: relative;
+  padding-right: 30px;
   .header-content {
     display: flex;
     flex-direction: column;
@@ -68,6 +69,8 @@
     margin-left:50px;
     padding: 24px;
     position: relative;
+    overflow: hidden;
+    word-wrap: break-word;
 
     h1 {
       font-family: 'Poppins', sans-serif;
