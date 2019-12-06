@@ -1,29 +1,29 @@
-<div class="user-frame">
-  <div class="user-story">
-
+<div class="dashboard">
+  <div class="user-frame">
     <!--card-->
      <div class="user-card">
-
       <!--image-->
       <div class="user-image">
         <%= cl_image_tag @user.picture, class: "avatar-user-card dashboard-img", width: 200, height: 200, crop: :thumb, gravity: :face %>
         <br>
         <p>
           <a href= <%= @user.instagram %> target="_blank">
-            <i class="fab fa-instagram insta"></i>
+            <i class="fab fa-instagram" id="insta"></i>
           </a>
         </p>
       </div>
 
+
      <!--infos-->
-      <div class="user-info">
+      <div class="user-details">
         <h2><strong><%= @user.name %></strong></h2>
         <h4><%= @user.location %></h4>
         <p>
-          <%= link_to 'Edit', edit_user_path(@user), class: "edit-user" %>
+          <%= link_to 'Edit', edit_user_path(@user), class: "dashboard-edit" %>
         </p>
       </div>
     </div>
+
 
    <!--bio and assets-->
     <div class="test">
@@ -51,7 +51,7 @@
         </p>
       </div>
     </div>
-  </div>
+ </div>
 
 
 
@@ -115,4 +115,4 @@
       <% end %>
     </div>
   </div>
-
+</div>
