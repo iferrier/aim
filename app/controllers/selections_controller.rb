@@ -7,7 +7,7 @@ class SelectionsController < ApplicationController
     if @selection.save && @selection.campaign.live
       flash[:notice] = "Thanks for joining - the campaign is now live!"
     elsif @selection.save
-      flash[:notice] = "Thanks for joining! Only #{5 - @selection.campaign.users.count} people missing for the campaign go live"
+      flash[:notice] = "Thanks for joining! Only #{5 - @selection.campaign.users.count} people missing for the campaign to go live"
     else
       flash[:alert] = "You already joined!"
     end
