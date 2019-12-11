@@ -1,11 +1,16 @@
-let emptyComment = document.getElementById('empty-comment');
-let newComment = document.getElementById('comment_content');
+function refreshForm(innerHTML) {
+  const newComment = document.getElementById('comment_content');
+  newComment.innerHTML = innerHTML;
+  newComment.reset();
 
 function addComment(reviewHTML) {
   let comments = document.getElementById('all-comments');
   comments.insertAdjacentHTML('beforeend', reviewHTML);
 }
 
-addComment('<%= j render "comments/show", campaign: @campaign, comment: @comment %>');
-newComment.value = ' ';
-emptyComment.innerText = ' ';
+<% if @comment.errors.any? %>
+ refreshForm('<%= j render "comments/form", campaign: @campaign, comment: @comment %>')
+<% else %>
+  addComment('<%= j render "comments/show", campaign: @campaign, comment: @comment %>');
+  refreshForm('<%= j render "comments/form", campaign: @campaign, comment: Comment.new %>')
+<% end %>
