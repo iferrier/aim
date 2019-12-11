@@ -1,3 +1,10 @@
+function deleteEmptyComment() {
+  const emptyComment = document.getElementById('empty-comment');
+  if (emptyComment != null) {
+    emptyComment.innerHTML = ' ';
+  }
+}
+
 function refreshForm(innerHTML) {
   const newComment = document.getElementById('comment_content');
   newComment.value = ' ';
@@ -9,12 +16,7 @@ function addComment(reviewHTML) {
   comments.insertAdjacentHTML('beforeend', reviewHTML);
 }
 
-function deleteEmptyComment() {
-  const emptyComment = document.getElementById('empty-comment');
-  if (emptyComment != null) {
-    emptyComment.innerHTML = ' ';
-  }
-}
+
 
 <% if @comment.errors.any? %>
   refreshForm('<%= j render "comments/form", campaign: @campaign, comment: @comment %>');
