@@ -11,7 +11,9 @@ function addComment(reviewHTML) {
 
 function deleteEmptyComment() {
   const emptyComment = document.getElementById('empty-comment');
-  emptyComment.innerHTML = ' ';
+  if (emptyComment != null) {
+    emptyComment.innerHTML = ' ';
+  }
 }
 
 <% if @comment.errors.any? %>
