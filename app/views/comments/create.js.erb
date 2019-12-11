@@ -1,5 +1,6 @@
 function refreshForm(innerHTML) {
   const newComment = document.getElementById('comment_content');
+  newComment.value = ' ';
   newComment.innerHTML = innerHTML;
 }
 
@@ -9,7 +10,7 @@ function addComment(reviewHTML) {
 }
 
 <% if @comment.errors.any? %>
- refreshForm('<%= j render "comments/form", campaign: @campaign, comment: @comment %>');
+  refreshForm('<%= j render "comments/form", campaign: @campaign, comment: @comment %>');
 <% else %>
   addComment('<%= j render "comments/show", campaign: @campaign, comment: @comment %>');
   refreshForm('<%= j render "comments/form", campaign: @campaign, comment: Comment.new %>');
