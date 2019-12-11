@@ -1,7 +1,7 @@
 function refreshForm(innerHTML) {
   const newComment = document.getElementById('comment_content');
   newComment.innerHTML = innerHTML;
-  newComment.reset();
+}
 
 function addComment(reviewHTML) {
   let comments = document.getElementById('all-comments');
@@ -9,8 +9,8 @@ function addComment(reviewHTML) {
 }
 
 <% if @comment.errors.any? %>
- refreshForm('<%= j render "comments/form", campaign: @campaign, comment: @comment %>')
+ refreshForm('<%= j render "comments/form", campaign: @campaign, comment: @comment %>');
 <% else %>
   addComment('<%= j render "comments/show", campaign: @campaign, comment: @comment %>');
-  refreshForm('<%= j render "comments/form", campaign: @campaign, comment: Comment.new %>')
+  refreshForm('<%= j render "comments/form", campaign: @campaign, comment: Comment.new %>');
 <% end %>
