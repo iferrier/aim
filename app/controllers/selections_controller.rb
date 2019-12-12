@@ -3,12 +3,17 @@ class SelectionsController < ApplicationController
     @selection = Selection.new
     @selection.user = current_user
     @selection.campaign = Campaign.find(params[:campaign_id])
-    redirect_to campaign_path(@selection.campaign)
-    if @selection.save
-      flash[:notice] = "Thanks for joining - the campaign is now live!"
-    end
-    authorize @selection
     toggle_live_status
+    redirect_to campaign_path(@selection.campaign)
+    if @selection.save && @selection.campaign.users.count == 5
+      flash[:notice] = "Thanks for joining - the campaign is now live!"
+    elsif @selection.save && @selection.campaign.users.count < 5
+      flash[:notice] = "Thanks for joining! Only #{5 - @selection.campaign.users.count} people missing for the campaign to go live"
+    elsif @selection.save && @selection.campaign.users.count > 5
+      flash[:alert] = "Thanks for joining!"
+    end
+    toggle_live_status
+    authorize @selection
   end
 
   def destroy
