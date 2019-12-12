@@ -1,11 +1,27 @@
-let emptyComment = document.getElementById('empty-comment');
-let newComment = document.getElementById('comment_content');
+function deleteEmptyComment() {
+  const emptyComment = document.getElementById('empty-comment');
+  if (emptyComment != null) {
+    emptyComment.innerHTML = ' ';
+  }
+}
+
+function refreshForm(innerHTML) {
+  const newComment = document.getElementById('comment_content');
+  newComment.value = ' ';
+  newComment.innerHTML = innerHTML;
+}
 
 function addComment(reviewHTML) {
   let comments = document.getElementById('all-comments');
   comments.insertAdjacentHTML('beforeend', reviewHTML);
 }
 
-addComment('<%= j render "comments/show", campaign: @campaign, comment: @comment %>');
-newComment.value = ' ';
-emptyComment.innerText = ' ';
+
+
+<% if @comment.errors.any? %>
+  refreshForm('<%= j render "comments/form", campaign: @campaign, comment: @comment %>');
+<% else %>
+  deleteEmptyComment();
+  addComment('<%= j render "comments/show", campaign: @campaign, comment: @comment %>');
+  refreshForm('<%= j render "comments/form", campaign: @campaign, comment: Comment.new %>');
+<% end %>
